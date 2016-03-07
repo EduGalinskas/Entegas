@@ -19,12 +19,9 @@ int main()
 
 
 void swap(int *p1, int *p2){
-    int *temp;
-    printf("p1 = %d, valor = %d\n", p1, *p1);
-    printf("p2 = %d, valor = %d\n", p2, *p2);
-    printf("temp = %d, valor = %d\n", temp, &temp);
-    *temp = *p1; //valor de temp <- valor de x.
+    int temp;
+	
+	temp = *p1; //valor de temp <- valor de x.
     *p1 = *p2; //valor de x <- valor de y.
-    *p2 = *temp; //valor de y <- valor de temp.
-    
+    *p2 = temp; //valor de y <- valor de temp.    
 }
