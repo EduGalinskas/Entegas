@@ -1,0 +1,619 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0074)https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7 -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="en"><HEAD prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+     
+<META charset="utf-8">     <LINK href="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/frameworks-0e500ca0ed7ce24ec1e3d688d938a656e4b3bdb7d7b54aa7857ce55f18064f3c.css" 
+rel="stylesheet" media="all" crossorigin="anonymous">     <LINK href="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/github-a1333082f449e26bcb2762f36d7c449652b67d17e60997dab555b3050b618193.css" 
+rel="stylesheet" media="all" crossorigin="anonymous">                 <LINK 
+href="https://assets-cdn.github.com/assets/frameworks-e677f2022a5d36e8f5ad35d0fcb01f83f1cdb613eda0449f533197693bcc6bda.js" 
+rel="preload" as="script">     <LINK href="https://assets-cdn.github.com/assets/github-6cd1d29bddd4e9715e00006a56a7792e3358fceb186db25f63fea410e747cfaa.js" 
+rel="preload" as="script">     
+<META http-equiv="X-UA-Compatible" content="IE=edge">     
+<META http-equiv="Content-Language" content="en">     
+<META name="viewport" content="width=1020">             <TITLE>Getting Startted 
+Atmel Studio 7 · corsiferrao/EEN251 Wiki</TITLE>     <LINK title="GitHub" href="/opensearch.xml" 
+rel="search" type="application/opensearchdescription+xml">     <LINK title="GitHub" 
+href="https://github.com/fluidicon.png" rel="fluid-icon">     <LINK href="/apple-touch-icon.png" 
+rel="apple-touch-icon">     <LINK href="/apple-touch-icon-57x57.png" rel="apple-touch-icon" 
+sizes="57x57">     <LINK href="/apple-touch-icon-60x60.png" rel="apple-touch-icon" 
+sizes="60x60">     <LINK href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" 
+sizes="72x72">     <LINK href="/apple-touch-icon-76x76.png" rel="apple-touch-icon" 
+sizes="76x76">     <LINK href="/apple-touch-icon-114x114.png" rel="apple-touch-icon" 
+sizes="114x114">     <LINK href="/apple-touch-icon-120x120.png" rel="apple-touch-icon" 
+sizes="120x120">     <LINK href="/apple-touch-icon-144x144.png" rel="apple-touch-icon" 
+sizes="144x144">     <LINK href="/apple-touch-icon-152x152.png" rel="apple-touch-icon" 
+sizes="152x152">     <LINK href="/apple-touch-icon-180x180.png" rel="apple-touch-icon" 
+sizes="180x180">     
+<META content="1401488693436528" property="fb:app_id">       
+<META name="twitter:image:src" content="https://avatars1.githubusercontent.com/u/1039615?v=3&amp;s=400">
+<META name="twitter:site" content="@github">
+<META name="twitter:card" content="summary">
+<META name="twitter:title" content="corsiferrao/EEN251">
+<META name="twitter:description" content=" EEN251 - Microcontroladores e Sistemas Embarcado"> 
+      
+<META content="https://avatars1.githubusercontent.com/u/1039615?v=3&amp;s=400" 
+property="og:image">
+<META content="GitHub" property="og:site_name">
+<META content="object" property="og:type">
+<META content="corsiferrao/EEN251" property="og:title">
+<META content="https://github.com/corsiferrao/EEN251" property="og:url">
+<META content=" EEN251 - Microcontroladores e Sistemas Embarcado" property="og:description"> 
+      
+<META name="browser-stats-url" content="https://api.github.com/_private/browser/stats"> 
+    
+<META name="browser-errors-url" content="https://api.github.com/_private/browser/errors"> 
+    <LINK href="https://assets-cdn.github.com/" rel="assets">     <LINK href="wss://live.github.com/_sockets/NzUxMjYzMzpkZDc1MjI1ZjFiY2JlNjc4Yzg2OGEyMzc3Njc0NzY2NTpmZjU4ZGI2ZTUzMDVjYTVlOGVlYTVlMjc0NDZlZTk1ZDEwNjBmN2Q4NGJkZmM2MTYxMTE0Y2U2MWQzNzE0YjYz--b8e427b0836965ad8553c0a4722f6ae0a96af421" 
+rel="web-socket">     
+<META name="pjax-timeout" content="1000">     <LINK href="/sessions/sudo_modal" 
+rel="sudo-modal">     
+<META name="msapplication-TileImage" content="/windows-tile.png">     
+<META name="msapplication-TileColor" content="#ffffff">     
+<META name="selected-link" data-pjax-transient="" value="repo_wiki">     
+<META name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU"> 
+<META name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA"> 
+    
+<META name="google-analytics" content="UA-3769691-2"> 
+<META name="octolytics-host" content="collector.githubapp.com">
+<META name="octolytics-app-id" content="github">
+<META name="octolytics-dimension-request_id" content="C93FD202:2E2A:8D76DE0:56E08D04">
+<META name="octolytics-actor-id" content="7512633">
+<META name="octolytics-actor-login" content="ericmcgomes">
+<META name="octolytics-actor-hash" content="94067e9110303f7c723f92016a94a6793a26b3cc9973c04b8d3961e71e7c8d29"> 
+<META name="analytics-location" content="/<user-name>/<repo-name>/wiki/show" 
+data-pjax-transient="true">   
+<META name="dimension1" class="js-ga-set" content="Logged In">         
+<META name="hostname" content="github.com">     
+<META name="user-login" content="ericmcgomes">         
+<META name="expected-hostname" content="github.com">       
+<META name="js-proxy-site-detection-payload" content="MDAwYTA0YzdkY2ZmOTNiZmY3MDExYjIwMzhkNmVmMDEzNDU1MzAzYTYwYjk3MTBkMTZjYTg3ZTBmYmE4OTg1M3x7InJlbW90ZV9hZGRyZXNzIjoiMjAxLjYzLjIxMC4yIiwicmVxdWVzdF9pZCI6IkM5M0ZEMjAyOjJFMkE6OEQ3NkRFMDo1NkUwOEQwNCJ9"> 
+      <LINK href="https://assets-cdn.github.com/pinned-octocat.svg" rel="mask-icon" 
+color="#4078c0">       <LINK href="https://assets-cdn.github.com/favicon.ico" 
+rel="icon" type="image/x-icon">     
+<META name="form-nonce" content="f16c4569dad6bd741db371ec278986b3bed53d6a">     
+<META http-equiv="x-pjax-version" content="738b9c5597c225ddcc70282bd3a010d8">    
+         
+<META name="description" content=" EEN251 - Microcontroladores e Sistemas Embarcado"> 
+  
+<META name="go-import" content="github.com/corsiferrao/EEN251 git https://github.com/corsiferrao/EEN251.git"> 
+  
+<META name="octolytics-dimension-user_id" content="1039615">
+<META name="octolytics-dimension-user_login" content="corsiferrao">
+<META name="octolytics-dimension-repository_id" content="47494359">
+<META name="octolytics-dimension-repository_nwo" content="corsiferrao/EEN251">
+<META name="octolytics-dimension-repository_public" content="true">
+<META name="octolytics-dimension-repository_is_fork" content="false">
+<META name="octolytics-dimension-repository_network_root_id" content="47494359">
+<META name="octolytics-dimension-repository_network_root_nwo" content="corsiferrao/EEN251"> 
+  <LINK title="Recent Commits to EEN251:master" href="https://github.com/corsiferrao/EEN251/commits/master.atom" 
+rel="alternate" type="application/atom+xml">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.18163"></HEAD>   
+<BODY class="logged_in   env-production windows vis-public"><A tabindex="1" 
+class="accessibility-aid js-skip-to-content" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#start-of-content">Skip 
+to content</A>                   
+<DIV class="header header-logged-in true" role="banner">
+<DIV class="container clearfix"><A class="header-logo-invertocat" aria-label="Homepage" 
+href="https://github.com/" data-ga-click="Header, go to dashboard, icon:logo" 
+data-hotkey="g d"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-mark-github" 
+role="img" aria-hidden="true" viewBox="0 0 16 16" width="28" height="28" 
+version="1.1"><path d="M 8 0 C 3.58 0 0 3.58 0 8 c 0 3.54 2.29 6.53 5.47 7.59 c 0.4 0.07 0.55 -0.17 0.55 -0.38 c 0 -0.19 -0.01 -0.82 -0.01 -1.49 c -2.01 0.37 -2.53 -0.49 -2.69 -0.94 c -0.09 -0.23 -0.48 -0.94 -0.82 -1.13 c -0.28 -0.15 -0.68 -0.52 -0.01 -0.53 c 0.63 -0.01 1.08 0.58 1.23 0.82 c 0.72 1.21 1.87 0.87 2.33 0.66 c 0.07 -0.52 0.28 -0.87 0.51 -1.07 c -1.78 -0.2 -3.64 -0.89 -3.64 -3.95 c 0 -0.87 0.31 -1.59 0.82 -2.15 c -0.08 -0.2 -0.36 -1.02 0.08 -2.12 c 0 0 0.67 -0.21 2.2 0.82 c 0.64 -0.18 1.32 -0.27 2 -0.27 c 0.68 0 1.36 0.09 2 0.27 c 1.53 -1.04 2.2 -0.82 2.2 -0.82 c 0.44 1.1 0.16 1.92 0.08 2.12 c 0.51 0.56 0.82 1.27 0.82 2.15 c 0 3.07 -1.87 3.75 -3.65 3.95 c 0.29 0.25 0.54 0.73 0.54 1.48 c 0 1.07 -0.01 1.93 -0.01 2.2 c 0 0.21 0.15 0.46 0.55 0.38 C 13.71 14.53 16 11.53 16 8 C 16 3.58 12.42 0 8 0 Z" 
+/></svg> </A>       
+<DIV class="site-search repo-scope js-site-search" role="search"><!-- </textarea> --><!-- '"` -->
+<FORM class="js-site-search-form" action="/corsiferrao/EEN251/search" method="get" 
+accept-charset="UTF-8" data-repo-search-url="/corsiferrao/EEN251/search" 
+data-global-search-url="/search">
+<DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"></DIV> 
+  <LABEL class="js-chromeless-input-container form-control">
+<DIV class="scope-badge">This 
+repository</DIV><INPUT name="q" tabindex="1" class="js-site-search-focus js-site-search-field is-clearable chromeless-input" aria-label="Search this repository" type="text" placeholder="Search" value="" data-hotkey="s" autocapitalize="off" data-repo-scope-placeholder="Search" data-global-scope-placeholder="Search GitHub"> 
+  </LABEL></FORM></DIV>
+<UL class="header-nav left" role="navigation">
+  <LI class="header-nav-item"><A class="js-selected-navigation-item header-nav-link" 
+  href="https://github.com/pulls" data-ga-click="Header, click, Nav menu - item:pulls context:user" 
+  data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls"> 
+             Pull requests </A></LI>
+  <LI class="header-nav-item"><A class="js-selected-navigation-item header-nav-link" 
+  href="https://github.com/issues" data-ga-click="Header, click, Nav menu - item:issues context:user" 
+  data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues"> 
+             Issues </A></LI>
+  <LI class="header-nav-item"><A class="header-nav-link" href="https://gist.github.com/" 
+  data-ga-click="Header, go to gist, text:gist">Gist</A></LI></UL>
+<UL class="header-nav user-nav right" id="user-links">
+  <LI class="header-nav-item"><SPAN class="js-socket-channel js-updatable-content" 
+  data-url="/notifications/header" data-channel="notification-changed:ericmcgomes"><A 
+  class="header-nav-link notification-indicator tooltipped tooltipped-s" 
+  aria-label="You have no unread notifications" href="https://github.com/notifications" 
+  data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n"><SPAN 
+  class="mail-status all-read"></SPAN>           <svg xmlns="http://www.w3.org/2000/svg" 
+  class="octicon octicon-bell" role="img" aria-hidden="true" viewBox="0 0 14 16" 
+  width="14" height="16" version="1.1"><path d="M 14 12 v 1 H 0 v -1 l 0.73 -0.58 c 0.77 -0.77 0.81 -2.55 1.19 -4.42 c 0.77 -3.77 4.08 -5 4.08 -5 c 0 -0.55 0.45 -1 1 -1 s 1 0.45 1 1 c 0 0 3.39 1.23 4.16 5 c 0.38 1.88 0.42 3.66 1.19 4.42 l 0.66 0.58 Z m -7 4 c 1.11 0 2 -0.89 2 -2 H 5 c 0 1.11 0.89 2 2 2 Z" 
+  /></svg> </A></SPAN>   </LI>
+  <LI class="header-nav-item dropdown js-menu-container"><A class="header-nav-link tooltipped tooltipped-s js-menu-target" 
+  aria-label="Create new…" href="https://github.com/new" data-ga-click="Header, create new, icon:add"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-plus left" 
+  role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+  version="1.1"><path d="M 12 9 H 7 v 5 H 5 V 9 H 0 V 7 h 5 V 2 h 2 v 5 h 5 v 2 Z" 
+  /></svg>       <SPAN class="dropdown-caret"></SPAN>     </A>
+  <DIV class="dropdown-menu-content js-menu-content">
+  <UL class="dropdown-menu dropdown-menu-sw"><A class="dropdown-item" href="https://github.com/new" 
+    data-ga-click="Header, create new repository">  New repository </A><A class="dropdown-item" 
+    href="https://github.com/organizations/new" data-ga-click="Header, create new organization"> 
+       New organization   </A>
+    <DIV class="dropdown-divider"></DIV>
+    <DIV class="dropdown-header"><SPAN title="corsiferrao/EEN251">This 
+    repository</SPAN>   </DIV><A class="dropdown-item" href="https://github.com/corsiferrao/EEN251/issues/new" 
+    data-ga-click="Header, create new issue">      New issue     
+  </A></UL></DIV></LI>
+  <LI class="header-nav-item dropdown js-menu-container"><A class="header-nav-link name tooltipped tooltipped-sw js-menu-target" 
+  aria-label="View profile and more" href="https://github.com/ericmcgomes" 
+  data-ga-click="Header, show menu, icon:avatar"><IMG width="20" height="20" 
+  class="avatar" alt="@ericmcgomes" src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/7512633.png"> 
+        <SPAN class="dropdown-caret"></SPAN>     </A>
+  <DIV class="dropdown-menu-content js-menu-content">
+  <DIV class="dropdown-menu  dropdown-menu-sw">
+  <DIV class=" dropdown-header header-nav-current-user css-truncate">            
+  Signed in as <STRONG class="css-truncate-target">ericmcgomes</STRONG>         
+  </DIV>
+  <DIV class="dropdown-divider"></DIV><A class="dropdown-item" href="https://github.com/ericmcgomes" 
+  data-ga-click="Header, go to profile, text:your profile">            Your 
+  profile           </A><A class="dropdown-item" href="https://github.com/stars" 
+  data-ga-click="Header, go to starred repos, text:your stars">          Your 
+  stars         </A><A class="dropdown-item" href="https://github.com/explore" 
+  data-ga-click="Header, go to explore, text:explore">            Explore        
+     </A><A class="dropdown-item" href="https://github.com/integrations" 
+  data-ga-click="Header, go to integrations, text:integrations">            
+  Integrations           </A><A class="dropdown-item" href="https://help.github.com/" 
+  data-ga-click="Header, go to help, text:help">          Help         </A>
+  <DIV class="dropdown-divider"></DIV><A class="dropdown-item" href="https://github.com/settings/profile" 
+  data-ga-click="Header, go to settings, icon:settings">            Settings     
+        </A><!-- </textarea> --><!-- '"` -->
+  <FORM class="logout-form" action="/logout" method="post" accept-charset="UTF-8" 
+  data-form-nonce="f16c4569dad6bd741db371ec278986b3bed53d6a">
+  <DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"><INPUT name="authenticity_token" type="hidden" value="7lE7yCdEa1WW8/l5s9e8Kz325PXRZMGEMAvBCwbx9J2cqFjUBMc44g3xeUwAIm/+RMf3BagOZW0pQwXIbwKgwQ=="></DIV> 
+              <BUTTON class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout"> 
+               Sign out             
+</BUTTON></FORM></DIV></DIV></LI></UL></DIV></DIV>
+<DIV class="accessibility-aid" id="start-of-content"></DIV>
+<DIV id="js-flash-container"></DIV>
+<DIV class="main-content" role="main">
+<DIV itemtype="http://schema.org/SoftwareSourceCode" itemscope="">
+<DIV class="context-loader-container js-repo-nav-next" id="js-repo-pjax-container" 
+data-pjax-container="">
+<DIV class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+<DIV class="container repohead-details-container">
+<UL class="pagehead-actions">
+  <LI><!-- </textarea> --><!-- '"` -->
+  <FORM class="js-social-container" action="/notifications/subscribe" method="post" 
+  accept-charset="UTF-8" data-form-nonce="f16c4569dad6bd741db371ec278986b3bed53d6a" 
+  data-remote="true" data-autosubmit="true">
+  <DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"><INPUT name="authenticity_token" type="hidden" value="gvxMPmt0Fr/pNq6/TTZk9bGbb8RteOnjSNBq9T7uSHd4VU0dtASWVZ37cZJ5pBBjYKLmNTuQILn0BqAcSjycaw=="></DIV> 
+       <INPUT name="repository_id" id="repository_id" type="hidden" value="47494359"> 
+          
+  <DIV class="select-menu js-menu-container js-select-menu"><A tabindex="0" 
+  class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" 
+  aria-haspopup="true" href="https://github.com/corsiferrao/EEN251/subscription" 
+  data-ga-click="Repository, click Watch settings, action:wiki#show"><SPAN 
+  class="js-select-button"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-eye" 
+  role="img" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+  version="1.1"><path d="M 8.06 2 C 3 2 0 8 0 8 s 3 6 8.06 6 c 4.94 0 7.94 -6 7.94 -6 S 13 2 8.06 2 Z m -0.06 10 c -2.2 0 -4 -1.78 -4 -4 c 0 -2.2 1.8 -4 4 -4 c 2.22 0 4 1.8 4 4 c 0 2.22 -1.78 4 -4 4 Z m 2 -4 c 0 1.11 -0.89 2 -2 2 s -2 -0.89 -2 -2 s 0.89 -2 2 -2 s 2 0.89 2 2 Z" 
+  /></svg>              Unwatch             </SPAN>           </A>           <A 
+  class="social-count js-social-count" href="https://github.com/corsiferrao/EEN251/watchers"> 
+             14           </A>         
+  <DIV class="select-menu-modal-holder">
+  <DIV class="select-menu-modal subscription-menu-modal js-menu-content" 
+  aria-hidden="true">
+  <DIV class="select-menu-header"><svg xmlns="http://www.w3.org/2000/svg" 
+  class="octicon octicon-x js-menu-close" role="img" aria-label="Close" 
+  viewBox="0 0 12 16" width="12" height="16" version="1.1"><path d="M 7.48 8 l 3.75 3.75 l -1.48 1.48 l -3.75 -3.75 l -3.75 3.75 l -1.48 -1.48 l 3.75 -3.75 L 0.77 4.25 l 1.48 -1.48 l 3.75 3.75 l 3.75 -3.75 l 1.48 1.48 l -3.75 3.75 Z" 
+  /></svg><SPAN class="select-menu-title">Notifications</SPAN>             
+</DIV>
+  <DIV class="select-menu-list js-navigation-container" role="menu">
+  <DIV tabindex="0" class="select-menu-item js-navigation-item " 
+  role="menuitem"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-check select-menu-item-icon" 
+  role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+  version="1.1"><path d="M 12 5 L 4 13 L 0 9 l 1.5 -1.5 l 2.5 2.5 l 6.5 -6.5 l 1.5 1.5 Z" 
+  /></svg>                   
+  <DIV class="select-menu-item-text"><INPUT name="do" id="do_included" type="radio" 
+  value="included">                     <SPAN 
+  class="select-menu-item-heading">Not watching</SPAN><SPAN 
+  class="description">Be notified when participating or @mentioned.</SPAN><SPAN 
+  class="js-select-button-text hidden-select-button-text"><svg xmlns="http://www.w3.org/2000/svg" 
+  class="octicon octicon-eye" role="img" aria-hidden="true" viewBox="0 0 16 16" 
+  width="16" height="16" version="1.1"><path d="M 8.06 2 C 3 2 0 8 0 8 s 3 6 8.06 6 c 4.94 0 7.94 -6 7.94 -6 S 13 2 8.06 2 Z m -0.06 10 c -2.2 0 -4 -1.78 -4 -4 c 0 -2.2 1.8 -4 4 -4 c 2.22 0 4 1.8 4 4 c 0 2.22 -1.78 4 -4 4 Z m 2 -4 c 0 1.11 -0.89 2 -2 2 s -2 -0.89 -2 -2 s 0.89 -2 2 -2 s 2 0.89 2 2 Z" 
+  /></svg>                      Watch                     </SPAN>                
+     </DIV></DIV>
+  <DIV tabindex="0" class="select-menu-item js-navigation-item selected" role="menuitem"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-check select-menu-item-icon" 
+  role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+  version="1.1"><path d="M 12 5 L 4 13 L 0 9 l 1.5 -1.5 l 2.5 2.5 l 6.5 -6.5 l 1.5 1.5 Z" 
+  /></svg>                   
+  <DIV class="select-menu-item-text"><INPUT name="do" id="do_subscribed" type="radio" 
+  value="subscribed">                     <SPAN 
+  class="select-menu-item-heading">Watching</SPAN><SPAN class="description">Be 
+  notified of all conversations.</SPAN><SPAN class="js-select-button-text hidden-select-button-text"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-eye" role="img" 
+  aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+  version="1.1"><path d="M 8.06 2 C 3 2 0 8 0 8 s 3 6 8.06 6 c 4.94 0 7.94 -6 7.94 -6 S 13 2 8.06 2 Z m -0.06 10 c -2.2 0 -4 -1.78 -4 -4 c 0 -2.2 1.8 -4 4 -4 c 2.22 0 4 1.8 4 4 c 0 2.22 -1.78 4 -4 4 Z m 2 -4 c 0 1.11 -0.89 2 -2 2 s -2 -0.89 -2 -2 s 0.89 -2 2 -2 s 2 0.89 2 2 Z" 
+  /></svg>                      Unwatch                     </SPAN>              
+       </DIV></DIV>
+  <DIV tabindex="0" class="select-menu-item js-navigation-item " 
+  role="menuitem"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-check select-menu-item-icon" 
+  role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+  version="1.1"><path d="M 12 5 L 4 13 L 0 9 l 1.5 -1.5 l 2.5 2.5 l 6.5 -6.5 l 1.5 1.5 Z" 
+  /></svg>                   
+  <DIV class="select-menu-item-text"><INPUT name="do" id="do_ignore" type="radio" 
+  value="ignore">                     <SPAN 
+  class="select-menu-item-heading">Ignoring</SPAN><SPAN 
+  class="description">Never be notified.</SPAN><SPAN class="js-select-button-text hidden-select-button-text"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-mute" role="img" 
+  aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+  version="1.1"><path d="M 8 2.81 v 10.38 c 0 0.67 -0.81 1 -1.28 0.53 L 3 10 H 1 c -0.55 0 -1 -0.45 -1 -1 V 7 c 0 -0.55 0.45 -1 1 -1 h 2 l 3.72 -3.72 c 0.47 -0.47 1.28 -0.14 1.28 0.53 Z m 7.53 3.22 l -1.06 -1.06 l -1.97 1.97 l -1.97 -1.97 l -1.06 1.06 l 1.97 1.97 l -1.97 1.97 l 1.06 1.06 l 1.97 -1.97 l 1.97 1.97 l 1.06 -1.06 l -1.97 -1.97 l 1.97 -1.97 Z" 
+  /></svg>                      Stop ignoring                     </SPAN>        
+             </DIV></DIV></DIV></DIV></DIV></DIV></FORM></LI>
+  <LI>
+  <DIV class="js-toggler-container js-social-container starring-container "><!-- </textarea> --><!-- '"` -->
+  <FORM class="js-toggler-form starred" action="/corsiferrao/EEN251/unstar" 
+  method="post" accept-charset="UTF-8" data-form-nonce="f16c4569dad6bd741db371ec278986b3bed53d6a" 
+  data-remote="true">
+  <DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"><INPUT name="authenticity_token" type="hidden" value="wpOXkR/DzYAOqAnW7MEkbSH34C6I0Qh1iHGO+ZNov7BIYYK5U4lwG+97PPBuJoeytFHLvZpexFk8cmRKhT6jfw=="></DIV> 
+        <BUTTON title="Unstar corsiferrao/EEN251" class="btn btn-sm btn-with-count js-toggler-target" 
+  aria-label="Unstar this repository" data-ga-click="Repository, click unstar button, action:wiki#show; text:Unstar"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-star" role="img" 
+  aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+  version="1.1"><path d="M 14 6 l -4.9 -0.64 L 7 1 L 4.9 5.36 L 0 6 l 3.6 3.26 L 2.67 14 l 4.33 -2.33 l 4.33 2.33 L 10.4 9.26 L 14 6 Z" 
+  /></svg>        Unstar       </BUTTON>         <A class="social-count js-social-count" 
+  href="https://github.com/corsiferrao/EEN251/stargazers">          1         
+  </A> </FORM><!-- </textarea> --><!-- '"` -->
+  <FORM class="js-toggler-form unstarred" action="/corsiferrao/EEN251/star" 
+  method="post" accept-charset="UTF-8" data-form-nonce="f16c4569dad6bd741db371ec278986b3bed53d6a" 
+  data-remote="true">
+  <DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"><INPUT name="authenticity_token" type="hidden" value="7IwxGA6UsnV0HQ3y017cl6KNjnTmkb8aINOCipSJRB8e2VNu77DbR/BOlf/Q/bWCckP/qowKbPupInnxJ8nwpw=="></DIV> 
+        <BUTTON title="Star corsiferrao/EEN251" class="btn btn-sm btn-with-count js-toggler-target" 
+  aria-label="Star this repository" data-ga-click="Repository, click star button, action:wiki#show; text:Star"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-star" role="img" 
+  aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+  version="1.1"><path d="M 14 6 l -4.9 -0.64 L 7 1 L 4.9 5.36 L 0 6 l 3.6 3.26 L 2.67 14 l 4.33 -2.33 l 4.33 2.33 L 10.4 9.26 L 14 6 Z" 
+  /></svg>        Star       </BUTTON>         <A class="social-count js-social-count" 
+  href="https://github.com/corsiferrao/EEN251/stargazers">          1         
+  </A> </FORM></DIV></LI>
+  <LI><!-- </textarea> --><!-- '"` -->
+  <FORM class="btn-with-count" action="/corsiferrao/EEN251/fork" method="post" 
+  accept-charset="UTF-8" data-form-nonce="f16c4569dad6bd741db371ec278986b3bed53d6a">
+  <DIV 
+style="margin: 0px; padding: 0px; display: inline;"><INPUT name="utf8" type="hidden" value="✓"><INPUT name="authenticity_token" type="hidden" value="OAdvbiO2h9MSVJqz1mcT8/KFTKL04N/4FRxm/05zn7Zxvptu/++RTEj47/GfqkBW00wHXa3QTzh8AGXOfCyyAQ=="></DIV> 
+              <BUTTON title="Fork your own copy of corsiferrao/EEN251 to your account" 
+  class="btn btn-sm btn-with-count" aria-label="Fork your own copy of corsiferrao/EEN251 to your account" 
+  type="submit" data-ga-click="Repository, show fork modal, action:wiki#show; text:Fork"><svg 
+  xmlns="http://www.w3.org/2000/svg" class="octicon octicon-repo-forked" role="img" 
+  aria-hidden="true" viewBox="0 0 10 16" width="10" height="16" 
+  version="1.1"><path d="M 8 1 c -1.11 0 -2 0.89 -2 2 c 0 0.73 0.41 1.38 1 1.72 v 1.28 L 5 8 L 3 6 v -1.28 c 0.59 -0.34 1 -0.98 1 -1.72 c 0 -1.11 -0.89 -2 -2 -2 S 0 1.89 0 3 c 0 0.73 0.41 1.38 1 1.72 v 1.78 l 3 3 v 1.78 c -0.59 0.34 -1 0.98 -1 1.72 c 0 1.11 0.89 2 2 2 s 2 -0.89 2 -2 c 0 -0.73 -0.41 -1.38 -1 -1.72 V 9.5 l 3 -3 V 4.72 c 0.59 -0.34 1 -0.98 1 -1.72 c 0 -1.11 -0.89 -2 -2 -2 Z M 2 4.2 c -0.66 0 -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 s -0.55 1.2 -1.2 1.2 Z m 3 10 c -0.66 0 -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 s -0.55 1.2 -1.2 1.2 Z m 3 -10 c -0.66 0 -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 s -0.55 1.2 -1.2 1.2 Z" 
+  /></svg>              Fork             </BUTTON> </FORM><A class="social-count" 
+  href="https://github.com/corsiferrao/EEN251/network">      9     </A>   
+</LI></UL>
+<H1 class="entry-title public "><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-repo" 
+role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+version="1.1"><path d="M 4 9 h -1 v -1 h 1 v 1 Z m 0 -3 h -1 v 1 h 1 v -1 Z m 0 -2 h -1 v 1 h 1 v -1 Z m 0 -2 h -1 v 1 h 1 v -1 Z m 8 -1 v 12 c 0 0.55 -0.45 1 -1 1 H 6 v 2 l -1.5 -1.5 l -1.5 1.5 V 14 H 1 c -0.55 0 -1 -0.45 -1 -1 V 1 C 0 0.45 0.45 0 1 0 h 10 c 0.55 0 1 0.45 1 1 Z m -1 10 H 1 v 2 h 2 v -1 h 3 v 1 h 5 V 11 Z m 0 -10 H 2 v 9 h 9 V 1 Z" 
+/></svg>   <SPAN class="author" itemprop="author"><A class="url fn" href="https://github.com/corsiferrao" 
+rel="author">corsiferrao</A></SPAN><!--
+--><SPAN class="path-divider">/</SPAN><!--
+--><STRONG 
+itemprop="name"><A href="https://github.com/corsiferrao/EEN251" data-pjax="#js-repo-pjax-container">EEN251</A></STRONG> 
+  <SPAN class="page-context-loader"><IMG width="16" height="16" alt="" src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/octocat-spinner-32.gif"> 
+  </SPAN> </H1></DIV>
+<DIV class="container"><NAV class="reponav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" 
+role="navigation" itemtype="http://schema.org/BreadcrumbList" itemscope="" 
+data-pjax="#js-repo-pjax-container"><SPAN itemtype="http://schema.org/ListItem" 
+itemscope="" itemprop="itemListElement"><A class="js-selected-navigation-item reponav-item" 
+href="https://github.com/corsiferrao/EEN251" data-hotkey="g c" 
+data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /corsiferrao/EEN251" 
+itemprop="url"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-code" 
+role="img" aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+version="1.1"><path d="M 9.5 3 l -1.5 1.5 l 3.5 3.5 L 8 11.5 l 1.5 1.5 l 4.5 -5 L 9.5 3 Z M 4.5 3 L 0 8 l 4.5 5 l 1.5 -1.5 L 2.5 8 l 3.5 -3.5 L 4.5 3 Z" 
+/></svg>       <SPAN itemprop="name">Code</SPAN>       
+<META content="1" itemprop="position"> </A>  </SPAN>     <SPAN itemtype="http://schema.org/ListItem" 
+itemscope="" itemprop="itemListElement"><A class="js-selected-navigation-item reponav-item" 
+href="https://github.com/corsiferrao/EEN251/issues" data-hotkey="g i" 
+data-selected-links="repo_issues repo_labels repo_milestones /corsiferrao/EEN251/issues" 
+itemprop="url"><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-issue-opened" 
+role="img" aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+version="1.1"><path d="M 7 2.3 c 3.14 0 5.7 2.56 5.7 5.7 S 10.14 13.7 7 13.7 S 1.3 11.14 1.3 8 s 2.56 -5.7 5.7 -5.7 m 0 -1.3 C 3.14 1 0 4.14 0 8 s 3.14 7 7 7 s 7 -3.14 7 -7 S 10.86 1 7 1 Z m 1 3 H 6 v 5 h 2 V 4 Z m 0 6 H 6 v 2 h 2 V 10 Z" 
+/></svg>         <SPAN itemprop="name">Issues</SPAN>         <SPAN class="counter">1</SPAN> 
+        
+<META content="2" itemprop="position"> </A>    </SPAN>   <SPAN itemtype="http://schema.org/ListItem" 
+itemscope="" itemprop="itemListElement"><A class="js-selected-navigation-item reponav-item" 
+href="https://github.com/corsiferrao/EEN251/pulls" data-hotkey="g p" 
+data-selected-links="repo_pulls /corsiferrao/EEN251/pulls" itemprop="url"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-git-pull-request" 
+role="img" aria-hidden="true" viewBox="0 0 12 16" width="12" height="16" 
+version="1.1"><path d="M 11 11.28 c 0 -1.73 0 -6.28 0 -6.28 c -0.03 -0.78 -0.34 -1.47 -0.94 -2.06 s -1.28 -0.91 -2.06 -0.94 c 0 0 -1.02 0 -1 0 V 0 L 4 3 l 3 3 V 4 h 1 c 0.27 0.02 0.48 0.11 0.69 0.31 s 0.3 0.42 0.31 0.69 v 6.28 c -0.59 0.34 -1 0.98 -1 1.72 c 0 1.11 0.89 2 2 2 s 2 -0.89 2 -2 c 0 -0.73 -0.41 -1.38 -1 -1.72 Z m -1 2.92 c -0.66 0 -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 s -0.55 1.2 -1.2 1.2 Z M 4 3 c 0 -1.11 -0.89 -2 -2 -2 S 0 1.89 0 3 c 0 0.73 0.41 1.38 1 1.72 c 0 1.55 0 5.56 0 6.56 c -0.59 0.34 -1 0.98 -1 1.72 c 0 1.11 0.89 2 2 2 s 2 -0.89 2 -2 c 0 -0.73 -0.41 -1.38 -1 -1.72 V 4.72 c 0.59 -0.34 1 -0.98 1 -1.72 Z m -0.8 10 c 0 0.66 -0.55 1.2 -1.2 1.2 s -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 Z m -1.2 -8.8 c -0.66 0 -1.2 -0.55 -1.2 -1.2 s 0.55 -1.2 1.2 -1.2 s 1.2 0.55 1.2 1.2 s -0.55 1.2 -1.2 1.2 Z" 
+/></svg>       <SPAN itemprop="name">Pull requests</SPAN>       <SPAN class="counter">0</SPAN> 
+      
+<META content="3" itemprop="position"> </A>  </SPAN>     <A class="js-selected-navigation-item selected reponav-item" 
+aria-selected="true" href="https://github.com/corsiferrao/EEN251/wiki" 
+data-hotkey="g w" data-selected-links="repo_wiki /corsiferrao/EEN251/wiki"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-book" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 2 5 h 4 v 1 H 2 v -1 Z m 0 3 h 4 v -1 H 2 v 1 Z m 0 2 h 4 v -1 H 2 v 1 Z m 11 -5 H 9 v 1 h 4 v -1 Z m 0 2 H 9 v 1 h 4 v -1 Z m 0 2 H 9 v 1 h 4 v -1 Z m 2 -6 v 9 c 0 0.55 -0.45 1 -1 1 H 8.5 l -1 1 l -1 -1 H 1 c -0.55 0 -1 -0.45 -1 -1 V 3 c 0 -0.55 0.45 -1 1 -1 h 5.5 l 1 1 l 1 -1 h 5.5 c 0.55 0 1 0.45 1 1 Z m -8 0.5 l -0.5 -0.5 H 1 v 9 h 6 V 3.5 Z m 7 -0.5 H 8.5 l -0.5 0.5 v 8.5 h 6 V 3 Z" 
+/></svg>      Wiki </A>   <A class="js-selected-navigation-item reponav-item" 
+href="https://github.com/corsiferrao/EEN251/pulse" data-selected-links="pulse /corsiferrao/EEN251/pulse"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-pulse" role="img" 
+aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+version="1.1"><path d="M 11.5 8 L 8.8 5.4 L 6.6 8.5 L 5.5 1.6 L 2.38 8 H 0 V 10 h 3.6 L 4.5 8.2 l 0.9 5.4 L 9 8.5 l 1.6 1.5 H 14 V 8 H 11.5 Z" 
+/></svg>    Pulse </A>   <A class="js-selected-navigation-item reponav-item" 
+href="https://github.com/corsiferrao/EEN251/graphs" data-selected-links="repo_graphs repo_contributors /corsiferrao/EEN251/graphs"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-graph" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 16 14 v 1 H 0 V 0 h 1 v 14 h 15 Z m -11 -1 H 3 V 8 h 2 v 5 Z m 4 0 H 7 V 3 h 2 v 10 Z m 4 0 H 11 V 6 h 2 v 7 Z" 
+/></svg>    Graphs </A> </NAV></DIV></DIV>
+<DIV class="container new-discussion-timeline experiment-repo-nav">
+<DIV class="repository-content">
+<DIV class="wiki-wrapper page" id="wiki-wrapper">
+<DIV class="gh-header">
+<DIV class="gh-header-show">
+<H1 class="gh-header-title instapaper_title">Getting Startted Atmel Studio 
+7</H1>
+<DIV class="gh-header-meta">        Rafael Corsi edited this page <time is="relative-time" 
+datetime="2016-03-09T17:56:59Z">Mar 9, 2016</time>        ·         <A class="history" 
+href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7/_history"> 
+         2 revisions         </A>       </DIV></DIV></DIV>
+<DIV class="wiki-content" id="wiki-content">
+<DIV class="has-rightbar">
+<DIV class="wiki-rightbar" id="wiki-rightbar">
+<DIV class="wiki-pages-box readability-sidebar boxed-group flush js-wiki-pages-box " 
+role="navigation">
+<H3 class="js-wiki-toggle-collapse wiki-auxiliary-content"><svg xmlns="http://www.w3.org/2000/svg" 
+class="octicon octicon-triangle-down caret-expanded" role="img" aria-hidden="true" 
+viewBox="0 0 12 16" width="12" height="16" version="1.1"><path d="M 0 5 l 6 6 l 6 -6 H 0 Z" 
+/></svg>   <svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-triangle-right caret-collapsed" 
+role="img" aria-hidden="true" viewBox="0 0 6 16" width="6" height="16" version="1.1"><path 
+d="M 0 14 l 6 -6 L 0 2 v 12 Z" /></svg>  Pages <SPAN class="counter">2</SPAN> 
+</H3>
+<DIV class="boxed-group-inner wiki-auxiliary-content wiki-auxiliary-content-no-bg">
+<UL class="wiki-pages" data-filterable-type="substring" data-filterable-for="wiki-pages-filter">
+  <LI><STRONG><A class="wiki-page-link" href="https://github.com/corsiferrao/EEN251/wiki">Home</A></STRONG> 
+      </LI>
+  <LI><STRONG><A class="wiki-page-link" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7">Getting 
+  Startted Atmel Studio 7</A></STRONG>     </LI></UL></DIV></DIV>
+<DIV class="clone-url">
+<H5>Clone this wiki locally</H5>
+<DIV class="input-group js-zeroclipboard-container"><INPUT class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target" type="text" readonly="readonly" value="https://github.com/corsiferrao/EEN251.wiki.git"> 
+        <SPAN class="input-group-button"><BUTTON class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" 
+aria-label="Copy to clipboard" type="button" data-copied-hint="Copied!"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-clippy" role="img" 
+aria-hidden="true" viewBox="0 0 14 16" width="14" height="16" 
+version="1.1"><path d="M 2 12 h 4 v 1 H 2 v -1 Z m 5 -6 H 2 v 1 h 5 v -1 Z m 2 3 V 7 L 6 10 l 3 3 V 11 h 5 V 9 H 9 Z m -4.5 -1 H 2 v 1 h 2.5 v -1 Z M 2 11 h 2.5 v -1 H 2 v 1 Z m 9 1 h 1 v 2 c -0.02 0.28 -0.11 0.52 -0.3 0.7 s -0.42 0.28 -0.7 0.3 H 1 c -0.55 0 -1 -0.45 -1 -1 V 3 c 0 -0.55 0.45 -1 1 -1 h 3 C 4 0.89 4.89 0 6 0 s 2 0.89 2 2 h 3 c 0.55 0 1 0.45 1 1 v 5 h -1 V 5 H 1 v 9 h 10 V 12 Z M 2 4 h 8 c 0 -0.55 -0.45 -1 -1 -1 h -1 c -0.55 0 -1 -0.45 -1 -1 s -0.45 -1 -1 -1 s -1 0.45 -1 1 s -0.45 1 -1 1 h -1 c -0.55 0 -1 0.45 -1 1 Z" 
+/></svg></BUTTON>         </SPAN>       </DIV><A title="Save this wiki to your computer and use it in GitHub Desktop." 
+class="btn btn-sm sidebar-button" aria-label="Save this wiki to your computer and use it in GitHub Desktop." 
+href="https://windows.github.com/"><svg xmlns="http://www.w3.org/2000/svg" 
+class="octicon octicon-desktop-download" role="img" aria-hidden="true" viewBox="0 0 16 16" 
+width="16" height="16" version="1.1"><path d="M 4 6 h 3 V 0 h 2 v 6 h 3 L 8 10 L 4 6 Z m 11 -4 H 11 v 1 h 4 v 8 H 1 V 3 h 4 v -1 H 1 c -0.55 0 -1 0.45 -1 1 v 9 c 0 0.55 0.45 1 1 1 h 5.34 c -0.25 0.61 -0.86 1.39 -2.34 2 h 8 c -1.48 -0.61 -2.09 -1.39 -2.34 -2 h 5.34 c 0.55 0 1 -0.45 1 -1 V 3 c 0 -0.55 -0.45 -1 -1 -1 Z" 
+/></svg>          Clone in Desktop         </A>     </DIV></DIV>
+<DIV class="wiki-body gollum-markdown-content instapaper_body" id="wiki-body">
+<DIV class="markdown-body">
+<H1><A class="anchor" id="user-content-pré-requisitos" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#pr%C3%A9-requisitos"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Pré requisitos</H1>
+<UL>
+  <LI>Atmel Studio 7</LI>
+  <LI>SAM4S-EK2</LI>
+  <LI>SAM ICE</LI></UL>
+<H1><A class="anchor" id="user-content-criando-o-projeto" aria-hidden="true" 
+href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#criando-o-projeto"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Criando o projeto</H1>
+<OL>
+  <LI>Inicialize o software clicando no Atmel Studio 7</LI>
+  <LI>File -&gt; New -&gt; Example Project</LI>
+  <LI>Na esquerda, selecione por KIT</LI>
+  <LI>Na lista procure por: SAM4S-EK2 -&gt; Getting Started</LI>
+  <LI>Salve o projeto dentro do seu repositório (i.e Aula3/)</LI></OL>
+<P><IMG src=""></P>
+<H1><A class="anchor" id="user-content-explorando-o-ambiente" aria-hidden="true" 
+href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#explorando-o-ambiente"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Explorando o Ambiente</H1>
+<H2><A class="anchor" id="user-content-asf-wizard" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#asf-wizard"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>ASF Wizard</H2>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <BLOCKQUOTE>
+        <BLOCKQUOTE>
+          <BLOCKQUOTE>
+            <BLOCKQUOTE>
+              <P>a32fa0a1c85910222964e220809b2841814a0733</P></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE>
+<P>É a interface em que selecionamos as bibliotecas que serão carregadas no 
+projeto. Para carregar essa interface  : ASF -&gt; ASF Wizard </P>
+<P><IMG src=""></P>
+<H2><A class="anchor" id="user-content-barra-inferior" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#barra-inferior"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Barra inferior</H2>
+<P>É onde teremos os logs das compilações</P>
+<H2><A class="anchor" id="user-content-barra-lateral-solution-explorer" 
+aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#barra-lateral-solution-explorer"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Barra lateral (solution explorer)</H2>
+<P>Os códigos fontes do projeto estará listado nessa janela.</P>
+<P><IMG src=""></P>
+<H1><A class="anchor" id="user-content-explorando-o-código-fonte" aria-hidden="true" 
+href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#explorando-o-c%C3%B3digo-fonte"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Explorando o código fonte</H1>
+<P>No solution explorer -&gt; abra o main.c</P>
+<P>Analise o conteúdo do while(1)</P>
+<DIV class="highlight highlight-source-c">
+<PRE><SPAN class="pl-c">//! [main_step_loop]</SPAN>
+    <SPAN class="pl-k">while</SPAN> (<SPAN class="pl-c1">1</SPAN>) {
+        <SPAN class="pl-c">/* Wait for LED to be active */</SPAN>
+        <SPAN class="pl-k">while</SPAN> (!g_b_led0_active);
+
+        <SPAN class="pl-c">/* Toggle LED state if active */</SPAN>
+        <SPAN class="pl-k">if</SPAN> (g_b_led0_active) {
+            <SPAN class="pl-c1">ioport_toggle_pin_level</SPAN>(LED0_GPIO);
+            <SPAN class="pl-c1">printf</SPAN>(<SPAN class="pl-s"><SPAN class="pl-pds">"</SPAN>1 <SPAN class="pl-pds">"</SPAN></SPAN>);
+        }
+
+        <SPAN class="pl-c">/* Wait for 500ms */</SPAN>
+        <SPAN class="pl-c1">mdelay</SPAN>(<SPAN class="pl-c1">500</SPAN>);
+    }
+<SPAN class="pl-c">//! [main_step_loop]</SPAN>
+}</PRE></DIV>
+<H1><A class="anchor" id="user-content-compilando" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#compilando"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Compilando</H1>
+<P>Para compilarmos o projeto, basta clicarmos em build na barra superior 
+(atalho : F7), </P>
+<P><IMG src=""></P>
+<P>Analise os resultados : </P>
+<P>Log do GCC <IMG src=""></P>
+<P>Resumo de Erros, Warningns <IMG src=""></P>
+<H1><A class="anchor" id="user-content-embarcando" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#embarcando"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Embarcando</H1>
+<OL>
+  <LI>Conecte o gravado a placa de desenvolvimento</LI>
+  <LI>Conecte o gravador ao computador</LI>
+  <LI>Alimente a placa de desenvolvimento (ligar a fonte na tomada_</LI></OL>
+<P>Configurando gravador 1. Vá em : Project -&gt; Properts -&gt; Tool : </P>
+<P><IMG src=""></P>
+<OL>
+  <LI>Selecione SAM-ICE como gravador e JTAG como interface.</LI></OL>
+<P><IMG src=""></P>
+<OL>
+  <LI>Há dois ícones na barra superior (&gt; e &gt;||), eles significance 
+  sucessivamente : Embarcar o código sem debug e Embarcar o código 
+  debugando.</LI>
+  <LI>Clique no embarcar o código sem debug (&gt;)</LI></OL>
+<P><IMG src=""></P>
+<OL>
+  <LI>Abra agora o código main.c e edite a linha 425 de 500 ms para 1000 ms, 
+  verifique o que acontece.</LI></OL>
+<DIV class="highlight highlight-source-c">
+<PRE><SPAN class="pl-c">// mdelay(500); Antigo</SPAN>
+<SPAN class="pl-en">mdelay</SPAN>(<SPAN class="pl-c1">1000</SPAN>);
+</PRE></DIV>
+<BLOCKQUOTE>
+  <P>Para isso é necessário embarcar o programa novamente</P></BLOCKQUOTE>
+<H1><A class="anchor" id="user-content-debug" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#debug"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Debug</H1>
+<P>Podemos depurar a aplicação rodando na pastilha. Vamos adicionar um break 
+point no código, na linha 425 sobre a função mdelay. Para isso, encontre a linha 
+e de um duplo click na coluna cinza ao lado do código : </P>
+<P><IMG src=""></P>
+<P>Clique agora &gt;&gt;|| (Start debugging and break) na barra superior. Se 
+preferir aperte (ALT + F5).</P>
+<P>Agora a execução do código irá parar na primeira linha de código. Utilize as 
+funções de debug para manipular a maneira com que o programa irá executar.</P>
+<P><IMG src=""></P>
+<P>Clique no &gt; (Continue) para rodar o código até o primeiro debug (se 
+preferir F5).</P>
+<P>Rode o programa nesse modo, utilizando F5 sempre que o programa travar no 
+break point.</P>
+<H2><A class="anchor" id="user-content-disassembly" aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#disassembly"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Disassembly</H2>
+<P>Ative a função do disassembly, onde podemos verificar o programa em linguagem 
+de máquina criado a partir do código C. Para isso: Debug -&gt; Windows -&gt; 
+Disassembly</P>
+<P>Analise o código criado pelo compilador</P>
+<H2><A class="anchor" id="user-content-explore-outras-formas-de-debug" 
+aria-hidden="true" href="https://github.com/corsiferrao/EEN251/wiki/Getting-Startted-Atmel-Studio-7#explore-outras-formas-de-debug"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-link" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 4 9 h 1 v 1 h -1 c -1.5 0 -3 -1.69 -3 -3.5 s 1.55 -3.5 3 -3.5 h 4 c 1.45 0 3 1.69 3 3.5 c 0 1.41 -0.91 2.72 -2 3.25 v -1.16 c 0.58 -0.45 1 -1.27 1 -2.09 c 0 -1.28 -1.02 -2.5 -2 -2.5 H 4 c -0.98 0 -2 1.22 -2 2.5 s 1 2.5 2 2.5 Z m 9 -3 h -1 v 1 h 1 c 1 0 2 1.22 2 2.5 s -1.02 2.5 -2 2.5 H 9 c -0.98 0 -2 -1.22 -2 -2.5 c 0 -0.83 0.42 -1.64 1 -2.09 v -1.16 c -1.09 0.53 -2 1.84 -2 3.25 c 0 1.81 1.55 3.5 3 3.5 h 4 c 1.45 0 3 -1.69 3 -3.5 s -1.5 -3.5 -3 -3.5 Z" 
+/></svg></A>Explore outras formas de debug</H2>
+<UL>
+  <LI>I/O</LI>
+  <LI>Live Watch</LI>
+  <LI>...</LI></UL>
+<P><A 
+href="http://www.atmel.com/webdoc/atmelstudio/atmelstudio.Debug.html">http://www.atmel.com/webdoc/atmelstudio/atmelstudio.Debug.html</A></P></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV class="modal-backdrop"></DIV></DIV></DIV></DIV></DIV>
+<DIV class="container site-footer-container">
+<DIV class="site-footer" role="contentinfo">
+<UL class="site-footer-links right">
+  <LI><A href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</A></LI>
+  <LI><A href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</A></LI>
+  <LI><A href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</A></LI>
+  <LI><A href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</A></LI>
+  <LI><A href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</A></LI>
+  <LI><A href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</A></LI>
+  <LI><A href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</A></LI></UL><A 
+class="site-footer-mark" aria-label="Homepage" href="https://github.com/"><svg 
+xmlns="http://www.w3.org/2000/svg" title="GitHub " class="octicon octicon-mark-github" 
+role="img" aria-hidden="true" viewBox="0 0 16 16" width="24" height="24" 
+version="1.1"><path d="M 8 0 C 3.58 0 0 3.58 0 8 c 0 3.54 2.29 6.53 5.47 7.59 c 0.4 0.07 0.55 -0.17 0.55 -0.38 c 0 -0.19 -0.01 -0.82 -0.01 -1.49 c -2.01 0.37 -2.53 -0.49 -2.69 -0.94 c -0.09 -0.23 -0.48 -0.94 -0.82 -1.13 c -0.28 -0.15 -0.68 -0.52 -0.01 -0.53 c 0.63 -0.01 1.08 0.58 1.23 0.82 c 0.72 1.21 1.87 0.87 2.33 0.66 c 0.07 -0.52 0.28 -0.87 0.51 -1.07 c -1.78 -0.2 -3.64 -0.89 -3.64 -3.95 c 0 -0.87 0.31 -1.59 0.82 -2.15 c -0.08 -0.2 -0.36 -1.02 0.08 -2.12 c 0 0 0.67 -0.21 2.2 0.82 c 0.64 -0.18 1.32 -0.27 2 -0.27 c 0.68 0 1.36 0.09 2 0.27 c 1.53 -1.04 2.2 -0.82 2.2 -0.82 c 0.44 1.1 0.16 1.92 0.08 2.12 c 0.51 0.56 0.82 1.27 0.82 2.15 c 0 3.07 -1.87 3.75 -3.65 3.95 c 0.29 0.25 0.54 0.73 0.54 1.48 c 0 1.07 -0.01 1.93 -0.01 2.2 c 0 0.21 0.15 0.46 0.55 0.38 C 13.71 14.53 16 11.53 16 8 C 16 3.58 12.42 0 8 0 Z" 
+/></svg> </A>     
+<UL class="site-footer-links">
+  <LI>© 2016 <SPAN 
+  title="0.11222s from github-fe121-cp1-prd.iad.github.net">GitHub</SPAN>, 
+  Inc.</LI>
+  <LI><A href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</A></LI>
+  <LI><A href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</A></LI>
+  <LI><A href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</A></LI>
+  <LI><A href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</A></LI>
+  <LI><A href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</A></LI></UL></DIV></DIV>
+<DIV class="ajax-error-message flash flash-error" id="ajax-error-message"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-alert" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 15.72 12.5 l -6.85 -11.98 C 8.69 0.21 8.36 0.02 8 0.02 s -0.69 0.19 -0.87 0.5 l -6.85 11.98 c -0.18 0.31 -0.18 0.69 0 1 C 0.47 13.81 0.8 14 1.15 14 h 13.7 c 0.36 0 0.69 -0.19 0.86 -0.5 S 15.89 12.81 15.72 12.5 Z M 9 12 H 7 V 10 h 2 V 12 Z M 9 9 H 7 V 5 h 2 V 9 Z" 
+/></svg>       <BUTTON class="flash-close js-flash-close js-ajax-error-dismiss" 
+aria-label="Dismiss error" type="button"><svg xmlns="http://www.w3.org/2000/svg" 
+class="octicon octicon-x" role="img" aria-hidden="true" viewBox="0 0 12 16" 
+width="12" height="16" version="1.1"><path d="M 7.48 8 l 3.75 3.75 l -1.48 1.48 l -3.75 -3.75 l -3.75 3.75 l -1.48 -1.48 l 3.75 -3.75 L 0.77 4.25 l 1.48 -1.48 l 3.75 3.75 l 3.75 -3.75 l 1.48 1.48 l -3.75 3.75 Z" 
+/></svg>       </BUTTON>      Something went wrong with that request. Please try 
+again.     </DIV>
+<SCRIPT src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/compat-7db58f8b7b91111107fac755dd8b178fe7db0f209ced51fc339c446ad3f8da2b.js" crossorigin="anonymous"></SCRIPT>
+       
+<SCRIPT src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/frameworks-e677f2022a5d36e8f5ad35d0fcb01f83f1cdb613eda0449f533197693bcc6bda.js" crossorigin="anonymous"></SCRIPT>
+       
+<SCRIPT src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/github-6cd1d29bddd4e9715e00006a56a7792e3358fceb186db25f63fea410e747cfaa.js" async="async" crossorigin="anonymous"></SCRIPT>
+                     
+<SCRIPT src="Getting%20Startted%20Atmel%20Studio%207%20·%20corsiferrao-EEN251%20Wiki_arquivos/wiki-e6841d9e1ce6cf06e718010c0258e947ced0036f42c5e31c57fd674a34ce587d.js" crossorigin="anonymous"></SCRIPT>
+     
+<DIV class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden"><svg 
+xmlns="http://www.w3.org/2000/svg" class="octicon octicon-alert" role="img" 
+aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" 
+version="1.1"><path d="M 15.72 12.5 l -6.85 -11.98 C 8.69 0.21 8.36 0.02 8 0.02 s -0.69 0.19 -0.87 0.5 l -6.85 11.98 c -0.18 0.31 -0.18 0.69 0 1 C 0.47 13.81 0.8 14 1.15 14 h 13.7 c 0.36 0 0.69 -0.19 0.86 -0.5 S 15.89 12.81 15.72 12.5 Z M 9 12 H 7 V 10 h 2 V 12 Z M 9 9 H 7 V 5 h 2 V 9 Z" 
+/></svg>       <SPAN class="signed-in-tab-flash">You signed in with another tab 
+or window. <A href="https://github.com/corsiferrao/EEN251/wiki/">Reload</A> to 
+refresh your session.</SPAN>       <SPAN class="signed-out-tab-flash">You signed 
+out in another tab or window. <A href="https://github.com/corsiferrao/EEN251/wiki/">Reload</A> 
+to refresh your session.</SPAN>     </DIV>
+<DIV class="facebox" id="facebox" style="display: none;">
+<DIV class="facebox-popup">
+<DIV class="facebox-content" role="dialog" aria-describedby="facebox-description" 
+aria-labelledby="facebox-header"></DIV><BUTTON class="facebox-close js-facebox-close" 
+aria-label="Close modal" type="button"><svg xmlns="http://www.w3.org/2000/svg" 
+class="octicon octicon-x" role="img" aria-hidden="true" viewBox="0 0 12 16" 
+width="12" height="16" version="1.1"><path d="M 7.48 8 l 3.75 3.75 l -1.48 1.48 l -3.75 -3.75 l -3.75 3.75 l -1.48 -1.48 l 3.75 -3.75 L 0.77 4.25 l 1.48 -1.48 l 3.75 3.75 l 3.75 -3.75 l 1.48 1.48 l -3.75 3.75 Z" 
+/></svg>     </BUTTON>   </DIV></DIV></BODY></HTML>
