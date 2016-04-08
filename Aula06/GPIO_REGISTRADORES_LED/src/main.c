@@ -59,6 +59,7 @@ int main (void)
 	sysclk_init();
 	
 	/** 
+	
 	*  Desabilitando o WathDog do uP
 	*/
 	WDT->WDT_MR = WDT_MR_WDDIS;
@@ -70,6 +71,10 @@ int main (void)
 	PMC->PMC_PCER0 |= 1 << ID_PIOC;
 	PMC->PMC_PCER0 |= 1 << ID_PIOB;
 	
+	_pio_set_output(PIOA, ((1 << PIN_LED_BLUE ) | (1 << PIN_LED_GREEN )), 0, 0);
+	_pio_set_output(PIOB,(1 << PIN_LED_RED ), 0, 0);
+
+	/*
 	 //31.6.1 PIO Enable Register
 	// 1: Enables the PIO to control the corresponding pin (disables peripheral control of the pin).	
 	PIOA->PIO_PER |= (1 << PIN_LED_BLUE ) | (1 << PIN_LED_GREEN );
@@ -90,7 +95,7 @@ int main (void)
 	// 		0 : do nothing
 	PIOA->PIO_SODR = (1 << PIN_LED_BLUE ) | (1 << PIN_LED_GREEN );
 	PIOC->PIO_SODR = (1 << PIN_LED_RED );
-
+*/
 	//Configuração do PB3 (BTN2) como entrada	
 	PIOB->PIO_PER |= (1 << BTN2); //Habilita o MUX para desabilitar o pino PB3 como saída
 	PIOB->PIO_ODR |= (1 << BTN2); // Desabilita o buffer do pino PB3
@@ -113,7 +118,6 @@ int main (void)
              * Utilize a função delay_ms para fazer o led piscar na frequência
              * escolhida por você.
              */
-			_pio_set_output(PIOA, PIN_LED_BLUE, (1<<PIN_LED_BLUE), (0<<PIN_LED_BLUE));
 			
 			if (((PIOB->PIO_PDSR >> BTN2) & 1)){
 				PIOA->PIO_SODR =  (1 << PIN_LED_BLUE ); //led azul apaga
