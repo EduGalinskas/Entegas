@@ -37,17 +37,17 @@
 #define PIN_LED_RED 20
 #define BTN2 3
 
-#define set(REG, x)	REG |= 1 << x; // definição padrão de setar bits
+#define set(REG, x)	REG |= 1 << x; // definição padrão para setar bits
 
 /**
  * Main function
- * 1. configura o clock do sistema
- * 2. desabilita wathdog
- * 3. ativa o clock para o PIOA
- * 4. ativa o controle do pino ao PIO
- * 5. desabilita a proteção contra gravações do registradores
- * 6. ativa a o pino como modo output
- * 7. coloca o HIGH no pino
+ * 1. Configura o clock do sistema
+ * 2. Desabilita watchdog
+ * 3. Ativa o clock para o PIOA
+ * 4. Ativa o controle do pino ao PIO
+ * 5. Desabilita a proteção contra gravações do registradores
+ * 6. Ativa a o pino como modo output
+ * 7. Coloca o HIGH no pino
  */
 
 int main (void)
