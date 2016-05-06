@@ -107,7 +107,7 @@ int main (void)
 	
 	//Configuração de periférico de DEBOUNCING
 	PIOB->PIO_IFSCDR = (1 << BTN2); //Seta MUX do Peripheral Clock para o Debouncing Filter
-	PIOB->PIO_IFER = (1 << BTN2); //Seta MUX do Sinal de entrada para o Debouncin
+	PIOB->PIO_IFER = (1 << BTN2); //Seta MUX do Sinal de entrada para o Debouncing
 	
 	/**
 	*	Loop infinito
