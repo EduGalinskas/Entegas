@@ -1,0 +1,5248 @@
+
+Timer-Counter.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00002114  00400000  00400000  00008000  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .relocate     00000438  20000000  00402114  00010000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000000a0  20000438  0040254c  00010438  2**2
+                  ALLOC
+  3 .stack        00003000  200004d8  004025ec  00010438  2**0
+                  ALLOC
+  4 .ARM.attributes 0000002a  00000000  00000000  00010438  2**0
+                  CONTENTS, READONLY
+  5 .comment      0000005b  00000000  00000000  00010462  2**0
+                  CONTENTS, READONLY
+  6 .debug_info   0000701f  00000000  00000000  000104bd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000010fa  00000000  00000000  000174dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00003c02  00000000  00000000  000185d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_aranges 000006a8  00000000  00000000  0001c1d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000608  00000000  00000000  0001c880  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_macro  0000321d  00000000  00000000  0001ce88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   000076ff  00000000  00000000  000200a5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    0005149d  00000000  00000000  000277a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_frame  00001ca0  00000000  00000000  00078c44  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00400000 <_sfixed>:
+  400000:	200034d8 	.word	0x200034d8
+  400004:	004010bd 	.word	0x004010bd
+  400008:	00401185 	.word	0x00401185
+  40000c:	00401185 	.word	0x00401185
+  400010:	00401185 	.word	0x00401185
+  400014:	00401185 	.word	0x00401185
+  400018:	00401185 	.word	0x00401185
+	...
+  40002c:	00401185 	.word	0x00401185
+  400030:	00401185 	.word	0x00401185
+  400034:	00000000 	.word	0x00000000
+  400038:	00401185 	.word	0x00401185
+  40003c:	00401185 	.word	0x00401185
+  400040:	00401185 	.word	0x00401185
+  400044:	00401185 	.word	0x00401185
+  400048:	00401185 	.word	0x00401185
+  40004c:	00401185 	.word	0x00401185
+  400050:	00401185 	.word	0x00401185
+  400054:	00401185 	.word	0x00401185
+  400058:	00401185 	.word	0x00401185
+  40005c:	00401185 	.word	0x00401185
+  400060:	00401185 	.word	0x00401185
+  400064:	00401185 	.word	0x00401185
+  400068:	00000000 	.word	0x00000000
+  40006c:	004007fd 	.word	0x004007fd
+  400070:	00400815 	.word	0x00400815
+  400074:	0040082d 	.word	0x0040082d
+  400078:	00401185 	.word	0x00401185
+  40007c:	00401185 	.word	0x00401185
+	...
+  400088:	00401185 	.word	0x00401185
+  40008c:	00401185 	.word	0x00401185
+  400090:	00401185 	.word	0x00401185
+  400094:	00401185 	.word	0x00401185
+  400098:	00401185 	.word	0x00401185
+  40009c:	004015f1 	.word	0x004015f1
+  4000a0:	00401185 	.word	0x00401185
+  4000a4:	00401185 	.word	0x00401185
+  4000a8:	00401185 	.word	0x00401185
+  4000ac:	00401185 	.word	0x00401185
+  4000b0:	00401185 	.word	0x00401185
+  4000b4:	00401185 	.word	0x00401185
+  4000b8:	00401185 	.word	0x00401185
+  4000bc:	00401185 	.word	0x00401185
+  4000c0:	00401185 	.word	0x00401185
+  4000c4:	00401185 	.word	0x00401185
+  4000c8:	00401185 	.word	0x00401185
+
+004000cc <__do_global_dtors_aux>:
+  4000cc:	b510      	push	{r4, lr}
+  4000ce:	4c05      	ldr	r4, [pc, #20]	; (4000e4 <__do_global_dtors_aux+0x18>)
+  4000d0:	7823      	ldrb	r3, [r4, #0]
+  4000d2:	b933      	cbnz	r3, 4000e2 <__do_global_dtors_aux+0x16>
+  4000d4:	4b04      	ldr	r3, [pc, #16]	; (4000e8 <__do_global_dtors_aux+0x1c>)
+  4000d6:	b113      	cbz	r3, 4000de <__do_global_dtors_aux+0x12>
+  4000d8:	4804      	ldr	r0, [pc, #16]	; (4000ec <__do_global_dtors_aux+0x20>)
+  4000da:	f3af 8000 	nop.w
+  4000de:	2301      	movs	r3, #1
+  4000e0:	7023      	strb	r3, [r4, #0]
+  4000e2:	bd10      	pop	{r4, pc}
+  4000e4:	20000438 	.word	0x20000438
+  4000e8:	00000000 	.word	0x00000000
+  4000ec:	00402114 	.word	0x00402114
+
+004000f0 <frame_dummy>:
+  4000f0:	4b08      	ldr	r3, [pc, #32]	; (400114 <frame_dummy+0x24>)
+  4000f2:	b510      	push	{r4, lr}
+  4000f4:	b11b      	cbz	r3, 4000fe <frame_dummy+0xe>
+  4000f6:	4808      	ldr	r0, [pc, #32]	; (400118 <frame_dummy+0x28>)
+  4000f8:	4908      	ldr	r1, [pc, #32]	; (40011c <frame_dummy+0x2c>)
+  4000fa:	f3af 8000 	nop.w
+  4000fe:	4808      	ldr	r0, [pc, #32]	; (400120 <frame_dummy+0x30>)
+  400100:	6803      	ldr	r3, [r0, #0]
+  400102:	b903      	cbnz	r3, 400106 <frame_dummy+0x16>
+  400104:	bd10      	pop	{r4, pc}
+  400106:	4b07      	ldr	r3, [pc, #28]	; (400124 <frame_dummy+0x34>)
+  400108:	2b00      	cmp	r3, #0
+  40010a:	d0fb      	beq.n	400104 <frame_dummy+0x14>
+  40010c:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  400110:	4718      	bx	r3
+  400112:	bf00      	nop
+  400114:	00000000 	.word	0x00000000
+  400118:	00402114 	.word	0x00402114
+  40011c:	2000043c 	.word	0x2000043c
+  400120:	00402114 	.word	0x00402114
+  400124:	00000000 	.word	0x00000000
+
+00400128 <osc_enable>:
+#define OSC_MAINCK_XTAL_HZ          BOARD_FREQ_MAINCK_XTAL          //!< External crystal oscillator.
+#define OSC_MAINCK_BYPASS_HZ        BOARD_FREQ_MAINCK_BYPASS        //!< External bypass oscillator.
+//@}
+
+static inline void osc_enable(uint32_t ul_id)
+{
+  400128:	b580      	push	{r7, lr}
+  40012a:	b082      	sub	sp, #8
+  40012c:	af00      	add	r7, sp, #0
+  40012e:	6078      	str	r0, [r7, #4]
+	switch (ul_id) {
+  400130:	687b      	ldr	r3, [r7, #4]
+  400132:	2b07      	cmp	r3, #7
+  400134:	d830      	bhi.n	400198 <osc_enable+0x70>
+  400136:	a201      	add	r2, pc, #4	; (adr r2, 40013c <osc_enable+0x14>)
+  400138:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  40013c:	00400199 	.word	0x00400199
+  400140:	0040015d 	.word	0x0040015d
+  400144:	00400165 	.word	0x00400165
+  400148:	0040016d 	.word	0x0040016d
+  40014c:	00400175 	.word	0x00400175
+  400150:	0040017d 	.word	0x0040017d
+  400154:	00400185 	.word	0x00400185
+  400158:	0040018f 	.word	0x0040018f
+	case OSC_SLCK_32K_RC:
+		break;
+
+	case OSC_SLCK_32K_XTAL:
+		pmc_switch_sclk_to_32kxtal(PMC_OSC_XTAL);
+  40015c:	2000      	movs	r0, #0
+  40015e:	4b10      	ldr	r3, [pc, #64]	; (4001a0 <osc_enable+0x78>)
+  400160:	4798      	blx	r3
+		break;
+  400162:	e019      	b.n	400198 <osc_enable+0x70>
+
+	case OSC_SLCK_32K_BYPASS:
+		pmc_switch_sclk_to_32kxtal(PMC_OSC_BYPASS);
+  400164:	2001      	movs	r0, #1
+  400166:	4b0e      	ldr	r3, [pc, #56]	; (4001a0 <osc_enable+0x78>)
+  400168:	4798      	blx	r3
+		break;
+  40016a:	e015      	b.n	400198 <osc_enable+0x70>
+
+
+	case OSC_MAINCK_4M_RC:
+		pmc_switch_mainck_to_fastrc(CKGR_MOR_MOSCRCF_4_MHz);
+  40016c:	2000      	movs	r0, #0
+  40016e:	4b0d      	ldr	r3, [pc, #52]	; (4001a4 <osc_enable+0x7c>)
+  400170:	4798      	blx	r3
+		break;
+  400172:	e011      	b.n	400198 <osc_enable+0x70>
+
+	case OSC_MAINCK_8M_RC:
+		pmc_switch_mainck_to_fastrc(CKGR_MOR_MOSCRCF_8_MHz);
+  400174:	2010      	movs	r0, #16
+  400176:	4b0b      	ldr	r3, [pc, #44]	; (4001a4 <osc_enable+0x7c>)
+  400178:	4798      	blx	r3
+		break;
+  40017a:	e00d      	b.n	400198 <osc_enable+0x70>
+
+	case OSC_MAINCK_12M_RC:
+		pmc_switch_mainck_to_fastrc(CKGR_MOR_MOSCRCF_12_MHz);
+  40017c:	2020      	movs	r0, #32
+  40017e:	4b09      	ldr	r3, [pc, #36]	; (4001a4 <osc_enable+0x7c>)
+  400180:	4798      	blx	r3
+		break;
+  400182:	e009      	b.n	400198 <osc_enable+0x70>
+
+
+	case OSC_MAINCK_XTAL:
+		pmc_switch_mainck_to_xtal(PMC_OSC_XTAL,
+  400184:	2000      	movs	r0, #0
+  400186:	213e      	movs	r1, #62	; 0x3e
+  400188:	4b07      	ldr	r3, [pc, #28]	; (4001a8 <osc_enable+0x80>)
+  40018a:	4798      	blx	r3
+			pmc_us_to_moscxtst(BOARD_OSC_STARTUP_US,
+				OSC_SLCK_32K_RC_HZ));
+		break;
+  40018c:	e004      	b.n	400198 <osc_enable+0x70>
+
+	case OSC_MAINCK_BYPASS:
+		pmc_switch_mainck_to_xtal(PMC_OSC_BYPASS,
+  40018e:	2001      	movs	r0, #1
+  400190:	213e      	movs	r1, #62	; 0x3e
+  400192:	4b05      	ldr	r3, [pc, #20]	; (4001a8 <osc_enable+0x80>)
+  400194:	4798      	blx	r3
+			pmc_us_to_moscxtst(BOARD_OSC_STARTUP_US,
+				OSC_SLCK_32K_RC_HZ));
+		break;
+  400196:	bf00      	nop
+	}
+}
+  400198:	3708      	adds	r7, #8
+  40019a:	46bd      	mov	sp, r7
+  40019c:	bd80      	pop	{r7, pc}
+  40019e:	bf00      	nop
+  4001a0:	004008c9 	.word	0x004008c9
+  4001a4:	00400935 	.word	0x00400935
+  4001a8:	004009a5 	.word	0x004009a5
+
+004001ac <osc_is_ready>:
+		break;
+	}
+}
+
+static inline bool osc_is_ready(uint32_t ul_id)
+{
+  4001ac:	b580      	push	{r7, lr}
+  4001ae:	b082      	sub	sp, #8
+  4001b0:	af00      	add	r7, sp, #0
+  4001b2:	6078      	str	r0, [r7, #4]
+	switch (ul_id) {
+  4001b4:	687b      	ldr	r3, [r7, #4]
+  4001b6:	2b07      	cmp	r3, #7
+  4001b8:	d826      	bhi.n	400208 <osc_is_ready+0x5c>
+  4001ba:	a201      	add	r2, pc, #4	; (adr r2, 4001c0 <osc_is_ready+0x14>)
+  4001bc:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  4001c0:	004001e1 	.word	0x004001e1
+  4001c4:	004001e5 	.word	0x004001e5
+  4001c8:	004001e5 	.word	0x004001e5
+  4001cc:	004001f7 	.word	0x004001f7
+  4001d0:	004001f7 	.word	0x004001f7
+  4001d4:	004001f7 	.word	0x004001f7
+  4001d8:	004001f7 	.word	0x004001f7
+  4001dc:	004001f7 	.word	0x004001f7
+	case OSC_SLCK_32K_RC:
+		return 1;
+  4001e0:	2301      	movs	r3, #1
+  4001e2:	e012      	b.n	40020a <osc_is_ready+0x5e>
+
+	case OSC_SLCK_32K_XTAL:
+	case OSC_SLCK_32K_BYPASS:
+		return pmc_osc_is_ready_32kxtal();
+  4001e4:	4b0b      	ldr	r3, [pc, #44]	; (400214 <osc_is_ready+0x68>)
+  4001e6:	4798      	blx	r3
+  4001e8:	4603      	mov	r3, r0
+  4001ea:	2b00      	cmp	r3, #0
+  4001ec:	bf14      	ite	ne
+  4001ee:	2301      	movne	r3, #1
+  4001f0:	2300      	moveq	r3, #0
+  4001f2:	b2db      	uxtb	r3, r3
+  4001f4:	e009      	b.n	40020a <osc_is_ready+0x5e>
+	case OSC_MAINCK_4M_RC:
+	case OSC_MAINCK_8M_RC:
+	case OSC_MAINCK_12M_RC:
+	case OSC_MAINCK_XTAL:
+	case OSC_MAINCK_BYPASS:
+		return pmc_osc_is_ready_mainck();
+  4001f6:	4b08      	ldr	r3, [pc, #32]	; (400218 <osc_is_ready+0x6c>)
+  4001f8:	4798      	blx	r3
+  4001fa:	4603      	mov	r3, r0
+  4001fc:	2b00      	cmp	r3, #0
+  4001fe:	bf14      	ite	ne
+  400200:	2301      	movne	r3, #1
+  400202:	2300      	moveq	r3, #0
+  400204:	b2db      	uxtb	r3, r3
+  400206:	e000      	b.n	40020a <osc_is_ready+0x5e>
+	}
+
+	return 0;
+  400208:	2300      	movs	r3, #0
+}
+  40020a:	4618      	mov	r0, r3
+  40020c:	3708      	adds	r7, #8
+  40020e:	46bd      	mov	sp, r7
+  400210:	bd80      	pop	{r7, pc}
+  400212:	bf00      	nop
+  400214:	00400901 	.word	0x00400901
+  400218:	00400a1d 	.word	0x00400a1d
+
+0040021c <osc_get_rate>:
+
+static inline uint32_t osc_get_rate(uint32_t ul_id)
+{
+  40021c:	b480      	push	{r7}
+  40021e:	b083      	sub	sp, #12
+  400220:	af00      	add	r7, sp, #0
+  400222:	6078      	str	r0, [r7, #4]
+	switch (ul_id) {
+  400224:	687b      	ldr	r3, [r7, #4]
+  400226:	2b07      	cmp	r3, #7
+  400228:	d825      	bhi.n	400276 <osc_get_rate+0x5a>
+  40022a:	a201      	add	r2, pc, #4	; (adr r2, 400230 <osc_get_rate+0x14>)
+  40022c:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  400230:	00400251 	.word	0x00400251
+  400234:	00400257 	.word	0x00400257
+  400238:	0040025d 	.word	0x0040025d
+  40023c:	00400263 	.word	0x00400263
+  400240:	00400267 	.word	0x00400267
+  400244:	0040026b 	.word	0x0040026b
+  400248:	0040026f 	.word	0x0040026f
+  40024c:	00400273 	.word	0x00400273
+	case OSC_SLCK_32K_RC:
+		return OSC_SLCK_32K_RC_HZ;
+  400250:	f44f 43fa 	mov.w	r3, #32000	; 0x7d00
+  400254:	e010      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_SLCK_32K_XTAL:
+		return BOARD_FREQ_SLCK_XTAL;
+  400256:	f44f 4300 	mov.w	r3, #32768	; 0x8000
+  40025a:	e00d      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_SLCK_32K_BYPASS:
+		return BOARD_FREQ_SLCK_BYPASS;
+  40025c:	f44f 4300 	mov.w	r3, #32768	; 0x8000
+  400260:	e00a      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_4M_RC:
+		return OSC_MAINCK_4M_RC_HZ;
+  400262:	4b08      	ldr	r3, [pc, #32]	; (400284 <osc_get_rate+0x68>)
+  400264:	e008      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_8M_RC:
+		return OSC_MAINCK_8M_RC_HZ;
+  400266:	4b08      	ldr	r3, [pc, #32]	; (400288 <osc_get_rate+0x6c>)
+  400268:	e006      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_12M_RC:
+		return OSC_MAINCK_12M_RC_HZ;
+  40026a:	4b08      	ldr	r3, [pc, #32]	; (40028c <osc_get_rate+0x70>)
+  40026c:	e004      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_XTAL:
+		return BOARD_FREQ_MAINCK_XTAL;
+  40026e:	4b07      	ldr	r3, [pc, #28]	; (40028c <osc_get_rate+0x70>)
+  400270:	e002      	b.n	400278 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_BYPASS:
+		return BOARD_FREQ_MAINCK_BYPASS;
+  400272:	4b06      	ldr	r3, [pc, #24]	; (40028c <osc_get_rate+0x70>)
+  400274:	e000      	b.n	400278 <osc_get_rate+0x5c>
+	}
+
+	return 0;
+  400276:	2300      	movs	r3, #0
+}
+  400278:	4618      	mov	r0, r3
+  40027a:	370c      	adds	r7, #12
+  40027c:	46bd      	mov	sp, r7
+  40027e:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400282:	4770      	bx	lr
+  400284:	003d0900 	.word	0x003d0900
+  400288:	007a1200 	.word	0x007a1200
+  40028c:	00b71b00 	.word	0x00b71b00
+
+00400290 <osc_wait_ready>:
+ * to become stable and ready to use as a clock source.
+ *
+ * \param id A number identifying the oscillator to wait for.
+ */
+static inline void osc_wait_ready(uint8_t id)
+{
+  400290:	b580      	push	{r7, lr}
+  400292:	b082      	sub	sp, #8
+  400294:	af00      	add	r7, sp, #0
+  400296:	4603      	mov	r3, r0
+  400298:	71fb      	strb	r3, [r7, #7]
+	while (!osc_is_ready(id)) {
+  40029a:	bf00      	nop
+  40029c:	79fb      	ldrb	r3, [r7, #7]
+  40029e:	4618      	mov	r0, r3
+  4002a0:	4b05      	ldr	r3, [pc, #20]	; (4002b8 <osc_wait_ready+0x28>)
+  4002a2:	4798      	blx	r3
+  4002a4:	4603      	mov	r3, r0
+  4002a6:	f083 0301 	eor.w	r3, r3, #1
+  4002aa:	b2db      	uxtb	r3, r3
+  4002ac:	2b00      	cmp	r3, #0
+  4002ae:	d1f5      	bne.n	40029c <osc_wait_ready+0xc>
+		/* Do nothing */
+	}
+}
+  4002b0:	3708      	adds	r7, #8
+  4002b2:	46bd      	mov	sp, r7
+  4002b4:	bd80      	pop	{r7, pc}
+  4002b6:	bf00      	nop
+  4002b8:	004001ad 	.word	0x004001ad
+
+004002bc <pll_config_init>:
+ * \note The SAM3S PLL hardware interprets mul as mul+1. For readability the hardware mul+1
+ * is hidden in this implementation. Use mul as mul effective value.
+ */
+static inline void pll_config_init(struct pll_config *p_cfg,
+		enum pll_source e_src, uint32_t ul_div, uint32_t ul_mul)
+{
+  4002bc:	b580      	push	{r7, lr}
+  4002be:	b086      	sub	sp, #24
+  4002c0:	af00      	add	r7, sp, #0
+  4002c2:	60f8      	str	r0, [r7, #12]
+  4002c4:	607a      	str	r2, [r7, #4]
+  4002c6:	603b      	str	r3, [r7, #0]
+  4002c8:	460b      	mov	r3, r1
+  4002ca:	72fb      	strb	r3, [r7, #11]
+	uint32_t vco_hz;
+
+	Assert(e_src < PLL_NR_SOURCES);
+
+	/* Calculate internal VCO frequency */
+	vco_hz = osc_get_rate(e_src) / ul_div;
+  4002cc:	7afb      	ldrb	r3, [r7, #11]
+  4002ce:	4618      	mov	r0, r3
+  4002d0:	4b0d      	ldr	r3, [pc, #52]	; (400308 <pll_config_init+0x4c>)
+  4002d2:	4798      	blx	r3
+  4002d4:	4602      	mov	r2, r0
+  4002d6:	687b      	ldr	r3, [r7, #4]
+  4002d8:	fbb2 f3f3 	udiv	r3, r2, r3
+  4002dc:	617b      	str	r3, [r7, #20]
+	Assert(vco_hz >= PLL_INPUT_MIN_HZ);
+	Assert(vco_hz <= PLL_INPUT_MAX_HZ);
+
+	vco_hz *= ul_mul;
+  4002de:	697b      	ldr	r3, [r7, #20]
+  4002e0:	683a      	ldr	r2, [r7, #0]
+  4002e2:	fb02 f303 	mul.w	r3, r2, r3
+  4002e6:	617b      	str	r3, [r7, #20]
+	Assert(vco_hz >= PLL_OUTPUT_MIN_HZ);
+	Assert(vco_hz <= PLL_OUTPUT_MAX_HZ);
+
+	/* PMC hardware will automatically make it mul+1 */
+	p_cfg->ctrl = CKGR_PLLAR_MULA(ul_mul - 1) | CKGR_PLLAR_DIVA(ul_div) | CKGR_PLLAR_PLLACOUNT(PLL_COUNT);
+  4002e8:	683b      	ldr	r3, [r7, #0]
+  4002ea:	3b01      	subs	r3, #1
+  4002ec:	041a      	lsls	r2, r3, #16
+  4002ee:	4b07      	ldr	r3, [pc, #28]	; (40030c <pll_config_init+0x50>)
+  4002f0:	4013      	ands	r3, r2
+  4002f2:	687a      	ldr	r2, [r7, #4]
+  4002f4:	b2d2      	uxtb	r2, r2
+  4002f6:	4313      	orrs	r3, r2
+  4002f8:	f443 527c 	orr.w	r2, r3, #16128	; 0x3f00
+  4002fc:	68fb      	ldr	r3, [r7, #12]
+  4002fe:	601a      	str	r2, [r3, #0]
+}
+  400300:	3718      	adds	r7, #24
+  400302:	46bd      	mov	sp, r7
+  400304:	bd80      	pop	{r7, pc}
+  400306:	bf00      	nop
+  400308:	0040021d 	.word	0x0040021d
+  40030c:	07ff0000 	.word	0x07ff0000
+
+00400310 <pll_enable>:
+		PMC->CKGR_PLLBR = p_cfg->ctrl;
+	}
+}
+
+static inline void pll_enable(const struct pll_config *p_cfg, uint32_t ul_pll_id)
+{
+  400310:	b580      	push	{r7, lr}
+  400312:	b082      	sub	sp, #8
+  400314:	af00      	add	r7, sp, #0
+  400316:	6078      	str	r0, [r7, #4]
+  400318:	6039      	str	r1, [r7, #0]
+	Assert(ul_pll_id < NR_PLLS);
+
+	if (ul_pll_id == PLLA_ID) {
+  40031a:	683b      	ldr	r3, [r7, #0]
+  40031c:	2b00      	cmp	r3, #0
+  40031e:	d108      	bne.n	400332 <pll_enable+0x22>
+		pmc_disable_pllack(); // Always stop PLL first!
+  400320:	4b08      	ldr	r3, [pc, #32]	; (400344 <pll_enable+0x34>)
+  400322:	4798      	blx	r3
+		PMC->CKGR_PLLAR = CKGR_PLLAR_ONE | p_cfg->ctrl;
+  400324:	4a08      	ldr	r2, [pc, #32]	; (400348 <pll_enable+0x38>)
+  400326:	687b      	ldr	r3, [r7, #4]
+  400328:	681b      	ldr	r3, [r3, #0]
+  40032a:	f043 5300 	orr.w	r3, r3, #536870912	; 0x20000000
+  40032e:	6293      	str	r3, [r2, #40]	; 0x28
+  400330:	e005      	b.n	40033e <pll_enable+0x2e>
+	} else {
+		pmc_disable_pllbck();
+  400332:	4b06      	ldr	r3, [pc, #24]	; (40034c <pll_enable+0x3c>)
+  400334:	4798      	blx	r3
+		PMC->CKGR_PLLBR = p_cfg->ctrl;
+  400336:	4a04      	ldr	r2, [pc, #16]	; (400348 <pll_enable+0x38>)
+  400338:	687b      	ldr	r3, [r7, #4]
+  40033a:	681b      	ldr	r3, [r3, #0]
+  40033c:	62d3      	str	r3, [r2, #44]	; 0x2c
+	}
+}
+  40033e:	3708      	adds	r7, #8
+  400340:	46bd      	mov	sp, r7
+  400342:	bd80      	pop	{r7, pc}
+  400344:	00400a39 	.word	0x00400a39
+  400348:	400e0400 	.word	0x400e0400
+  40034c:	00400a6d 	.word	0x00400a6d
+
+00400350 <pll_is_locked>:
+		pmc_disable_pllbck();
+	}
+}
+
+static inline uint32_t pll_is_locked(uint32_t ul_pll_id)
+{
+  400350:	b580      	push	{r7, lr}
+  400352:	b082      	sub	sp, #8
+  400354:	af00      	add	r7, sp, #0
+  400356:	6078      	str	r0, [r7, #4]
+	Assert(ul_pll_id < NR_PLLS);
+
+	if (ul_pll_id == PLLA_ID) {
+  400358:	687b      	ldr	r3, [r7, #4]
+  40035a:	2b00      	cmp	r3, #0
+  40035c:	d103      	bne.n	400366 <pll_is_locked+0x16>
+		return pmc_is_locked_pllack();
+  40035e:	4b05      	ldr	r3, [pc, #20]	; (400374 <pll_is_locked+0x24>)
+  400360:	4798      	blx	r3
+  400362:	4603      	mov	r3, r0
+  400364:	e002      	b.n	40036c <pll_is_locked+0x1c>
+	} else {
+		return pmc_is_locked_pllbck();
+  400366:	4b04      	ldr	r3, [pc, #16]	; (400378 <pll_is_locked+0x28>)
+  400368:	4798      	blx	r3
+  40036a:	4603      	mov	r3, r0
+	}
+}
+  40036c:	4618      	mov	r0, r3
+  40036e:	3708      	adds	r7, #8
+  400370:	46bd      	mov	sp, r7
+  400372:	bd80      	pop	{r7, pc}
+  400374:	00400a51 	.word	0x00400a51
+  400378:	00400a85 	.word	0x00400a85
+
+0040037c <pll_enable_source>:
+
+static inline void pll_enable_source(enum pll_source e_src)
+{
+  40037c:	b580      	push	{r7, lr}
+  40037e:	b082      	sub	sp, #8
+  400380:	af00      	add	r7, sp, #0
+  400382:	4603      	mov	r3, r0
+  400384:	71fb      	strb	r3, [r7, #7]
+	switch (e_src) {
+  400386:	79fb      	ldrb	r3, [r7, #7]
+  400388:	3b03      	subs	r3, #3
+  40038a:	2b04      	cmp	r3, #4
+  40038c:	d808      	bhi.n	4003a0 <pll_enable_source+0x24>
+	case PLL_SRC_MAINCK_4M_RC:
+	case PLL_SRC_MAINCK_8M_RC:
+	case PLL_SRC_MAINCK_12M_RC:
+	case PLL_SRC_MAINCK_XTAL:
+	case PLL_SRC_MAINCK_BYPASS:
+		osc_enable(e_src);
+  40038e:	79fb      	ldrb	r3, [r7, #7]
+  400390:	4618      	mov	r0, r3
+  400392:	4b05      	ldr	r3, [pc, #20]	; (4003a8 <pll_enable_source+0x2c>)
+  400394:	4798      	blx	r3
+		osc_wait_ready(e_src);
+  400396:	79fb      	ldrb	r3, [r7, #7]
+  400398:	4618      	mov	r0, r3
+  40039a:	4b04      	ldr	r3, [pc, #16]	; (4003ac <pll_enable_source+0x30>)
+  40039c:	4798      	blx	r3
+		break;
+  40039e:	e000      	b.n	4003a2 <pll_enable_source+0x26>
+
+	default:
+		Assert(false);
+		break;
+  4003a0:	bf00      	nop
+	}
+}
+  4003a2:	3708      	adds	r7, #8
+  4003a4:	46bd      	mov	sp, r7
+  4003a6:	bd80      	pop	{r7, pc}
+  4003a8:	00400129 	.word	0x00400129
+  4003ac:	00400291 	.word	0x00400291
+
+004003b0 <pll_wait_for_lock>:
+ *
+ * \retval STATUS_OK The PLL is now locked.
+ * \retval ERR_TIMEOUT Timed out waiting for PLL to become locked.
+ */
+static inline int pll_wait_for_lock(unsigned int pll_id)
+{
+  4003b0:	b580      	push	{r7, lr}
+  4003b2:	b082      	sub	sp, #8
+  4003b4:	af00      	add	r7, sp, #0
+  4003b6:	6078      	str	r0, [r7, #4]
+	Assert(pll_id < NR_PLLS);
+
+	while (!pll_is_locked(pll_id)) {
+  4003b8:	bf00      	nop
+  4003ba:	6878      	ldr	r0, [r7, #4]
+  4003bc:	4b04      	ldr	r3, [pc, #16]	; (4003d0 <pll_wait_for_lock+0x20>)
+  4003be:	4798      	blx	r3
+  4003c0:	4603      	mov	r3, r0
+  4003c2:	2b00      	cmp	r3, #0
+  4003c4:	d0f9      	beq.n	4003ba <pll_wait_for_lock+0xa>
+		/* Do nothing */
+	}
+
+	return 0;
+  4003c6:	2300      	movs	r3, #0
+}
+  4003c8:	4618      	mov	r0, r3
+  4003ca:	3708      	adds	r7, #8
+  4003cc:	46bd      	mov	sp, r7
+  4003ce:	bd80      	pop	{r7, pc}
+  4003d0:	00400351 	.word	0x00400351
+
+004003d4 <sysclk_get_main_hz>:
+ */
+#if (defined CONFIG_SYSCLK_DEFAULT_RETURNS_SLOW_OSC)
+extern uint32_t sysclk_initialized;
+#endif
+static inline uint32_t sysclk_get_main_hz(void)
+{
+  4003d4:	b580      	push	{r7, lr}
+  4003d6:	af00      	add	r7, sp, #0
+	} else if (CONFIG_SYSCLK_SOURCE == SYSCLK_SRC_MAINCK_BYPASS) {
+		return OSC_MAINCK_BYPASS_HZ;
+	}
+#ifdef CONFIG_PLL0_SOURCE
+	else if (CONFIG_SYSCLK_SOURCE == SYSCLK_SRC_PLLACK) {
+		return pll_get_default_rate(0);
+  4003d8:	2006      	movs	r0, #6
+  4003da:	4b04      	ldr	r3, [pc, #16]	; (4003ec <sysclk_get_main_hz+0x18>)
+  4003dc:	4798      	blx	r3
+  4003de:	4602      	mov	r2, r0
+  4003e0:	4613      	mov	r3, r2
+  4003e2:	009b      	lsls	r3, r3, #2
+  4003e4:	4413      	add	r3, r2
+  4003e6:	009b      	lsls	r3, r3, #2
+
+	else {
+		/* unhandled_case(CONFIG_SYSCLK_SOURCE); */
+		return 0;
+	}
+}
+  4003e8:	4618      	mov	r0, r3
+  4003ea:	bd80      	pop	{r7, pc}
+  4003ec:	0040021d 	.word	0x0040021d
+
+004003f0 <sysclk_get_cpu_hz>:
+ * clocks.
+ *
+ * \return Frequency of the CPU clock, in Hz.
+ */
+static inline uint32_t sysclk_get_cpu_hz(void)
+{
+  4003f0:	b580      	push	{r7, lr}
+  4003f2:	af00      	add	r7, sp, #0
+	/* CONFIG_SYSCLK_PRES is the register value for setting the expected */
+	/* prescaler, not an immediate value. */
+	return sysclk_get_main_hz() /
+  4003f4:	4b02      	ldr	r3, [pc, #8]	; (400400 <sysclk_get_cpu_hz+0x10>)
+  4003f6:	4798      	blx	r3
+  4003f8:	4603      	mov	r3, r0
+  4003fa:	085b      	lsrs	r3, r3, #1
+		((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 :
+			(1 << (CONFIG_SYSCLK_PRES >> PMC_MCKR_PRES_Pos)));
+}
+  4003fc:	4618      	mov	r0, r3
+  4003fe:	bd80      	pop	{r7, pc}
+  400400:	004003d5 	.word	0x004003d5
+
+00400404 <sysclk_init>:
+	pmc_disable_udpck();
+}
+#endif // CONFIG_USBCLK_SOURCE
+
+void sysclk_init(void)
+{
+  400404:	b590      	push	{r4, r7, lr}
+  400406:	b083      	sub	sp, #12
+  400408:	af00      	add	r7, sp, #0
+	/* Set flash wait state to max in case the below clock switching. */
+	system_init_flash(CHIP_FREQ_CPU_MAX);
+  40040a:	4811      	ldr	r0, [pc, #68]	; (400450 <sysclk_init+0x4c>)
+  40040c:	4b11      	ldr	r3, [pc, #68]	; (400454 <sysclk_init+0x50>)
+  40040e:	4798      	blx	r3
+
+#ifdef CONFIG_PLL0_SOURCE
+	else if (CONFIG_SYSCLK_SOURCE == SYSCLK_SRC_PLLACK) {
+		struct pll_config pllcfg;
+
+		pll_enable_source(CONFIG_PLL0_SOURCE);
+  400410:	2006      	movs	r0, #6
+  400412:	4b11      	ldr	r3, [pc, #68]	; (400458 <sysclk_init+0x54>)
+  400414:	4798      	blx	r3
+		pll_config_defaults(&pllcfg, 0);
+  400416:	1d3b      	adds	r3, r7, #4
+  400418:	4618      	mov	r0, r3
+  40041a:	2106      	movs	r1, #6
+  40041c:	2201      	movs	r2, #1
+  40041e:	2314      	movs	r3, #20
+  400420:	4c0e      	ldr	r4, [pc, #56]	; (40045c <sysclk_init+0x58>)
+  400422:	47a0      	blx	r4
+		pll_enable(&pllcfg, 0);
+  400424:	1d3b      	adds	r3, r7, #4
+  400426:	4618      	mov	r0, r3
+  400428:	2100      	movs	r1, #0
+  40042a:	4b0d      	ldr	r3, [pc, #52]	; (400460 <sysclk_init+0x5c>)
+  40042c:	4798      	blx	r3
+		pll_wait_for_lock(0);
+  40042e:	2000      	movs	r0, #0
+  400430:	4b0c      	ldr	r3, [pc, #48]	; (400464 <sysclk_init+0x60>)
+  400432:	4798      	blx	r3
+		pmc_switch_mck_to_pllack(CONFIG_SYSCLK_PRES);
+  400434:	2010      	movs	r0, #16
+  400436:	4b0c      	ldr	r3, [pc, #48]	; (400468 <sysclk_init+0x64>)
+  400438:	4798      	blx	r3
+		pmc_switch_mck_to_pllbck(CONFIG_SYSCLK_PRES);
+	}
+#endif
+
+	/* Update the SystemFrequency variable */
+	SystemCoreClockUpdate();
+  40043a:	4b0c      	ldr	r3, [pc, #48]	; (40046c <sysclk_init+0x68>)
+  40043c:	4798      	blx	r3
+
+	/* Set a flash wait state depending on the new cpu frequency */
+	system_init_flash(sysclk_get_cpu_hz());
+  40043e:	4b0c      	ldr	r3, [pc, #48]	; (400470 <sysclk_init+0x6c>)
+  400440:	4798      	blx	r3
+  400442:	4603      	mov	r3, r0
+  400444:	4618      	mov	r0, r3
+  400446:	4b03      	ldr	r3, [pc, #12]	; (400454 <sysclk_init+0x50>)
+  400448:	4798      	blx	r3
+
+#if (defined CONFIG_SYSCLK_DEFAULT_RETURNS_SLOW_OSC)
+	/* Signal that the internal frequencies are setup */
+	sysclk_initialized = 1;
+#endif
+}
+  40044a:	370c      	adds	r7, #12
+  40044c:	46bd      	mov	sp, r7
+  40044e:	bd90      	pop	{r4, r7, pc}
+  400450:	07270e00 	.word	0x07270e00
+  400454:	00401329 	.word	0x00401329
+  400458:	0040037d 	.word	0x0040037d
+  40045c:	004002bd 	.word	0x004002bd
+  400460:	00400311 	.word	0x00400311
+  400464:	004003b1 	.word	0x004003b1
+  400468:	00400845 	.word	0x00400845
+  40046c:	0040118d 	.word	0x0040118d
+  400470:	004003f1 	.word	0x004003f1
+
+00400474 <pio_pull_up>:
+ * \param ul_pull_up_enable Indicates if the pin(s) internal pull-up shall be
+ * configured.
+ */
+void pio_pull_up(Pio *p_pio, const uint32_t ul_mask,
+		const uint32_t ul_pull_up_enable)
+{
+  400474:	b480      	push	{r7}
+  400476:	b085      	sub	sp, #20
+  400478:	af00      	add	r7, sp, #0
+  40047a:	60f8      	str	r0, [r7, #12]
+  40047c:	60b9      	str	r1, [r7, #8]
+  40047e:	607a      	str	r2, [r7, #4]
+	/* Enable the pull-up(s) if necessary */
+	if (ul_pull_up_enable) {
+  400480:	687b      	ldr	r3, [r7, #4]
+  400482:	2b00      	cmp	r3, #0
+  400484:	d003      	beq.n	40048e <pio_pull_up+0x1a>
+		p_pio->PIO_PUER = ul_mask;
+  400486:	68fb      	ldr	r3, [r7, #12]
+  400488:	68ba      	ldr	r2, [r7, #8]
+  40048a:	665a      	str	r2, [r3, #100]	; 0x64
+  40048c:	e002      	b.n	400494 <pio_pull_up+0x20>
+	} else {
+		p_pio->PIO_PUDR = ul_mask;
+  40048e:	68fb      	ldr	r3, [r7, #12]
+  400490:	68ba      	ldr	r2, [r7, #8]
+  400492:	661a      	str	r2, [r3, #96]	; 0x60
+	}
+}
+  400494:	3714      	adds	r7, #20
+  400496:	46bd      	mov	sp, r7
+  400498:	f85d 7b04 	ldr.w	r7, [sp], #4
+  40049c:	4770      	bx	lr
+  40049e:	bf00      	nop
+
+004004a0 <pio_set_debounce_filter>:
+ * \param ul_mask Bitmask of one or more pin(s) to configure.
+ * \param ul_cut_off Cuts off frequency for debouncing filter.
+ */
+void pio_set_debounce_filter(Pio *p_pio, const uint32_t ul_mask,
+		const uint32_t ul_cut_off)
+{
+  4004a0:	b480      	push	{r7}
+  4004a2:	b085      	sub	sp, #20
+  4004a4:	af00      	add	r7, sp, #0
+  4004a6:	60f8      	str	r0, [r7, #12]
+  4004a8:	60b9      	str	r1, [r7, #8]
+  4004aa:	607a      	str	r2, [r7, #4]
+#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N || SAM4C || SAMG || SAM4CP || SAM4CM || SAMV71 || SAMV70 || SAME70 || SAMS70)
+	/* Set Debouncing, 0 bit field no effect */
+	p_pio->PIO_IFSCER = ul_mask;
+  4004ac:	68fb      	ldr	r3, [r7, #12]
+  4004ae:	68ba      	ldr	r2, [r7, #8]
+  4004b0:	f8c3 2084 	str.w	r2, [r3, #132]	; 0x84
+	/*
+	 * The debouncing filter can filter a pulse of less than 1/2 Period of a
+	 * programmable Divided Slow Clock:
+	 * Tdiv_slclk = ((DIV+1)*2).Tslow_clock
+	 */
+	p_pio->PIO_SCDR = PIO_SCDR_DIV((FREQ_SLOW_CLOCK_EXT /
+  4004b4:	687b      	ldr	r3, [r7, #4]
+  4004b6:	005b      	lsls	r3, r3, #1
+  4004b8:	f44f 4200 	mov.w	r2, #32768	; 0x8000
+  4004bc:	fbb2 f3f3 	udiv	r3, r2, r3
+  4004c0:	3b01      	subs	r3, #1
+  4004c2:	f3c3 020d 	ubfx	r2, r3, #0, #14
+  4004c6:	68fb      	ldr	r3, [r7, #12]
+  4004c8:	f8c3 208c 	str.w	r2, [r3, #140]	; 0x8c
+			(2 * (ul_cut_off))) - 1);
+}
+  4004cc:	3714      	adds	r7, #20
+  4004ce:	46bd      	mov	sp, r7
+  4004d0:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4004d4:	4770      	bx	lr
+  4004d6:	bf00      	nop
+
+004004d8 <pio_set>:
+ *
+ * \param p_pio Pointer to a PIO instance.
+ * \param ul_mask Bitmask of one or more pin(s) to configure.
+ */
+void pio_set(Pio *p_pio, const uint32_t ul_mask)
+{
+  4004d8:	b480      	push	{r7}
+  4004da:	b083      	sub	sp, #12
+  4004dc:	af00      	add	r7, sp, #0
+  4004de:	6078      	str	r0, [r7, #4]
+  4004e0:	6039      	str	r1, [r7, #0]
+	p_pio->PIO_SODR = ul_mask;
+  4004e2:	687b      	ldr	r3, [r7, #4]
+  4004e4:	683a      	ldr	r2, [r7, #0]
+  4004e6:	631a      	str	r2, [r3, #48]	; 0x30
+}
+  4004e8:	370c      	adds	r7, #12
+  4004ea:	46bd      	mov	sp, r7
+  4004ec:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4004f0:	4770      	bx	lr
+  4004f2:	bf00      	nop
+
+004004f4 <pio_clear>:
+ *
+ * \param p_pio Pointer to a PIO instance.
+ * \param ul_mask Bitmask of one or more pin(s) to configure.
+ */
+void pio_clear(Pio *p_pio, const uint32_t ul_mask)
+{
+  4004f4:	b480      	push	{r7}
+  4004f6:	b083      	sub	sp, #12
+  4004f8:	af00      	add	r7, sp, #0
+  4004fa:	6078      	str	r0, [r7, #4]
+  4004fc:	6039      	str	r1, [r7, #0]
+	p_pio->PIO_CODR = ul_mask;
+  4004fe:	687b      	ldr	r3, [r7, #4]
+  400500:	683a      	ldr	r2, [r7, #0]
+  400502:	635a      	str	r2, [r3, #52]	; 0x34
+}
+  400504:	370c      	adds	r7, #12
+  400506:	46bd      	mov	sp, r7
+  400508:	f85d 7b04 	ldr.w	r7, [sp], #4
+  40050c:	4770      	bx	lr
+  40050e:	bf00      	nop
+
+00400510 <pio_set_input>:
+ * \param ul_mask Bitmask indicating which pin(s) to configure as input(s).
+ * \param ul_attribute PIO attribute(s).
+ */
+void pio_set_input(Pio *p_pio, const uint32_t ul_mask,
+		const uint32_t ul_attribute)
+{
+  400510:	b580      	push	{r7, lr}
+  400512:	b084      	sub	sp, #16
+  400514:	af00      	add	r7, sp, #0
+  400516:	60f8      	str	r0, [r7, #12]
+  400518:	60b9      	str	r1, [r7, #8]
+  40051a:	607a      	str	r2, [r7, #4]
+	pio_disable_interrupt(p_pio, ul_mask);
+  40051c:	68f8      	ldr	r0, [r7, #12]
+  40051e:	68b9      	ldr	r1, [r7, #8]
+  400520:	4b18      	ldr	r3, [pc, #96]	; (400584 <pio_set_input+0x74>)
+  400522:	4798      	blx	r3
+	pio_pull_up(p_pio, ul_mask, ul_attribute & PIO_PULLUP);
+  400524:	687b      	ldr	r3, [r7, #4]
+  400526:	f003 0301 	and.w	r3, r3, #1
+  40052a:	68f8      	ldr	r0, [r7, #12]
+  40052c:	68b9      	ldr	r1, [r7, #8]
+  40052e:	461a      	mov	r2, r3
+  400530:	4b15      	ldr	r3, [pc, #84]	; (400588 <pio_set_input+0x78>)
+  400532:	4798      	blx	r3
+
+	/* Enable Input Filter if necessary */
+	if (ul_attribute & (PIO_DEGLITCH | PIO_DEBOUNCE)) {
+  400534:	687b      	ldr	r3, [r7, #4]
+  400536:	f003 030a 	and.w	r3, r3, #10
+  40053a:	2b00      	cmp	r3, #0
+  40053c:	d003      	beq.n	400546 <pio_set_input+0x36>
+		p_pio->PIO_IFER = ul_mask;
+  40053e:	68fb      	ldr	r3, [r7, #12]
+  400540:	68ba      	ldr	r2, [r7, #8]
+  400542:	621a      	str	r2, [r3, #32]
+  400544:	e002      	b.n	40054c <pio_set_input+0x3c>
+	} else {
+		p_pio->PIO_IFDR = ul_mask;
+  400546:	68fb      	ldr	r3, [r7, #12]
+  400548:	68ba      	ldr	r2, [r7, #8]
+  40054a:	625a      	str	r2, [r3, #36]	; 0x24
+	}
+
+#if (SAM3S || SAM3N || SAM4S || SAM4E || SAM4N || SAM4C || SAMG || SAM4CP || SAM4CM || SAMV71 || SAMV70 || SAME70 || SAMS70)
+	/* Enable de-glitch or de-bounce if necessary */
+	if (ul_attribute & PIO_DEGLITCH) {
+  40054c:	687b      	ldr	r3, [r7, #4]
+  40054e:	f003 0302 	and.w	r3, r3, #2
+  400552:	2b00      	cmp	r3, #0
+  400554:	d004      	beq.n	400560 <pio_set_input+0x50>
+		p_pio->PIO_IFSCDR = ul_mask;
+  400556:	68fb      	ldr	r3, [r7, #12]
+  400558:	68ba      	ldr	r2, [r7, #8]
+  40055a:	f8c3 2080 	str.w	r2, [r3, #128]	; 0x80
+  40055e:	e008      	b.n	400572 <pio_set_input+0x62>
+	} else {
+		if (ul_attribute & PIO_DEBOUNCE) {
+  400560:	687b      	ldr	r3, [r7, #4]
+  400562:	f003 0308 	and.w	r3, r3, #8
+  400566:	2b00      	cmp	r3, #0
+  400568:	d003      	beq.n	400572 <pio_set_input+0x62>
+			p_pio->PIO_IFSCER = ul_mask;
+  40056a:	68fb      	ldr	r3, [r7, #12]
+  40056c:	68ba      	ldr	r2, [r7, #8]
+  40056e:	f8c3 2084 	str.w	r2, [r3, #132]	; 0x84
+#else
+#error "Unsupported device"
+#endif
+
+	/* Configure pin as input */
+	p_pio->PIO_ODR = ul_mask;
+  400572:	68fb      	ldr	r3, [r7, #12]
+  400574:	68ba      	ldr	r2, [r7, #8]
+  400576:	615a      	str	r2, [r3, #20]
+	p_pio->PIO_PER = ul_mask;
+  400578:	68fb      	ldr	r3, [r7, #12]
+  40057a:	68ba      	ldr	r2, [r7, #8]
+  40057c:	601a      	str	r2, [r3, #0]
+}
+  40057e:	3710      	adds	r7, #16
+  400580:	46bd      	mov	sp, r7
+  400582:	bd80      	pop	{r7, pc}
+  400584:	0040067d 	.word	0x0040067d
+  400588:	00400475 	.word	0x00400475
+
+0040058c <pio_set_output>:
+ */
+void pio_set_output(Pio *p_pio, const uint32_t ul_mask,
+		const uint32_t ul_default_level,
+		const uint32_t ul_multidrive_enable,
+		const uint32_t ul_pull_up_enable)
+{
+  40058c:	b580      	push	{r7, lr}
+  40058e:	b084      	sub	sp, #16
+  400590:	af00      	add	r7, sp, #0
+  400592:	60f8      	str	r0, [r7, #12]
+  400594:	60b9      	str	r1, [r7, #8]
+  400596:	607a      	str	r2, [r7, #4]
+  400598:	603b      	str	r3, [r7, #0]
+	pio_disable_interrupt(p_pio, ul_mask);
+  40059a:	68f8      	ldr	r0, [r7, #12]
+  40059c:	68b9      	ldr	r1, [r7, #8]
+  40059e:	4b12      	ldr	r3, [pc, #72]	; (4005e8 <pio_set_output+0x5c>)
+  4005a0:	4798      	blx	r3
+	pio_pull_up(p_pio, ul_mask, ul_pull_up_enable);
+  4005a2:	68f8      	ldr	r0, [r7, #12]
+  4005a4:	68b9      	ldr	r1, [r7, #8]
+  4005a6:	69ba      	ldr	r2, [r7, #24]
+  4005a8:	4b10      	ldr	r3, [pc, #64]	; (4005ec <pio_set_output+0x60>)
+  4005aa:	4798      	blx	r3
+
+	/* Enable multi-drive if necessary */
+	if (ul_multidrive_enable) {
+  4005ac:	683b      	ldr	r3, [r7, #0]
+  4005ae:	2b00      	cmp	r3, #0
+  4005b0:	d003      	beq.n	4005ba <pio_set_output+0x2e>
+		p_pio->PIO_MDER = ul_mask;
+  4005b2:	68fb      	ldr	r3, [r7, #12]
+  4005b4:	68ba      	ldr	r2, [r7, #8]
+  4005b6:	651a      	str	r2, [r3, #80]	; 0x50
+  4005b8:	e002      	b.n	4005c0 <pio_set_output+0x34>
+	} else {
+		p_pio->PIO_MDDR = ul_mask;
+  4005ba:	68fb      	ldr	r3, [r7, #12]
+  4005bc:	68ba      	ldr	r2, [r7, #8]
+  4005be:	655a      	str	r2, [r3, #84]	; 0x54
+	}
+
+	/* Set default value */
+	if (ul_default_level) {
+  4005c0:	687b      	ldr	r3, [r7, #4]
+  4005c2:	2b00      	cmp	r3, #0
+  4005c4:	d003      	beq.n	4005ce <pio_set_output+0x42>
+		p_pio->PIO_SODR = ul_mask;
+  4005c6:	68fb      	ldr	r3, [r7, #12]
+  4005c8:	68ba      	ldr	r2, [r7, #8]
+  4005ca:	631a      	str	r2, [r3, #48]	; 0x30
+  4005cc:	e002      	b.n	4005d4 <pio_set_output+0x48>
+	} else {
+		p_pio->PIO_CODR = ul_mask;
+  4005ce:	68fb      	ldr	r3, [r7, #12]
+  4005d0:	68ba      	ldr	r2, [r7, #8]
+  4005d2:	635a      	str	r2, [r3, #52]	; 0x34
+	}
+
+	/* Configure pin(s) as output(s) */
+	p_pio->PIO_OER = ul_mask;
+  4005d4:	68fb      	ldr	r3, [r7, #12]
+  4005d6:	68ba      	ldr	r2, [r7, #8]
+  4005d8:	611a      	str	r2, [r3, #16]
+	p_pio->PIO_PER = ul_mask;
+  4005da:	68fb      	ldr	r3, [r7, #12]
+  4005dc:	68ba      	ldr	r2, [r7, #8]
+  4005de:	601a      	str	r2, [r3, #0]
+}
+  4005e0:	3710      	adds	r7, #16
+  4005e2:	46bd      	mov	sp, r7
+  4005e4:	bd80      	pop	{r7, pc}
+  4005e6:	bf00      	nop
+  4005e8:	0040067d 	.word	0x0040067d
+  4005ec:	00400475 	.word	0x00400475
+
+004005f0 <pio_configure_interrupt>:
+ * \param ul_mask Interrupt source bit map.
+ * \param ul_attr Interrupt source attributes.
+ */
+void pio_configure_interrupt(Pio *p_pio, const uint32_t ul_mask,
+		const uint32_t ul_attr)
+{
+  4005f0:	b480      	push	{r7}
+  4005f2:	b085      	sub	sp, #20
+  4005f4:	af00      	add	r7, sp, #0
+  4005f6:	60f8      	str	r0, [r7, #12]
+  4005f8:	60b9      	str	r1, [r7, #8]
+  4005fa:	607a      	str	r2, [r7, #4]
+	/* Configure additional interrupt mode registers. */
+	if (ul_attr & PIO_IT_AIME) {
+  4005fc:	687b      	ldr	r3, [r7, #4]
+  4005fe:	f003 0310 	and.w	r3, r3, #16
+  400602:	2b00      	cmp	r3, #0
+  400604:	d020      	beq.n	400648 <pio_configure_interrupt+0x58>
+		/* Enable additional interrupt mode. */
+		p_pio->PIO_AIMER = ul_mask;
+  400606:	68fb      	ldr	r3, [r7, #12]
+  400608:	68ba      	ldr	r2, [r7, #8]
+  40060a:	f8c3 20b0 	str.w	r2, [r3, #176]	; 0xb0
+
+		/* If bit field of the selected pin is 1, set as
+		   Rising Edge/High level detection event. */
+		if (ul_attr & PIO_IT_RE_OR_HL) {
+  40060e:	687b      	ldr	r3, [r7, #4]
+  400610:	f003 0320 	and.w	r3, r3, #32
+  400614:	2b00      	cmp	r3, #0
+  400616:	d004      	beq.n	400622 <pio_configure_interrupt+0x32>
+			/* Rising Edge or High Level */
+			p_pio->PIO_REHLSR = ul_mask;
+  400618:	68fb      	ldr	r3, [r7, #12]
+  40061a:	68ba      	ldr	r2, [r7, #8]
+  40061c:	f8c3 20d4 	str.w	r2, [r3, #212]	; 0xd4
+  400620:	e003      	b.n	40062a <pio_configure_interrupt+0x3a>
+		} else {
+			/* Falling Edge or Low Level */
+			p_pio->PIO_FELLSR = ul_mask;
+  400622:	68fb      	ldr	r3, [r7, #12]
+  400624:	68ba      	ldr	r2, [r7, #8]
+  400626:	f8c3 20d0 	str.w	r2, [r3, #208]	; 0xd0
+		}
+
+		/* If bit field of the selected pin is 1, set as
+		   edge detection source. */
+		if (ul_attr & PIO_IT_EDGE) {
+  40062a:	687b      	ldr	r3, [r7, #4]
+  40062c:	f003 0340 	and.w	r3, r3, #64	; 0x40
+  400630:	2b00      	cmp	r3, #0
+  400632:	d004      	beq.n	40063e <pio_configure_interrupt+0x4e>
+			/* Edge select */
+			p_pio->PIO_ESR = ul_mask;
+  400634:	68fb      	ldr	r3, [r7, #12]
+  400636:	68ba      	ldr	r2, [r7, #8]
+  400638:	f8c3 20c0 	str.w	r2, [r3, #192]	; 0xc0
+  40063c:	e008      	b.n	400650 <pio_configure_interrupt+0x60>
+		} else {
+			/* Level select */
+			p_pio->PIO_LSR = ul_mask;
+  40063e:	68fb      	ldr	r3, [r7, #12]
+  400640:	68ba      	ldr	r2, [r7, #8]
+  400642:	f8c3 20c4 	str.w	r2, [r3, #196]	; 0xc4
+  400646:	e003      	b.n	400650 <pio_configure_interrupt+0x60>
+		}
+	} else {
+		/* Disable additional interrupt mode. */
+		p_pio->PIO_AIMDR = ul_mask;
+  400648:	68fb      	ldr	r3, [r7, #12]
+  40064a:	68ba      	ldr	r2, [r7, #8]
+  40064c:	f8c3 20b4 	str.w	r2, [r3, #180]	; 0xb4
+	}
+}
+  400650:	3714      	adds	r7, #20
+  400652:	46bd      	mov	sp, r7
+  400654:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400658:	4770      	bx	lr
+  40065a:	bf00      	nop
+
+0040065c <pio_enable_interrupt>:
+ *
+ * \param p_pio Pointer to a PIO instance.
+ * \param ul_mask Interrupt sources bit map.
+ */
+void pio_enable_interrupt(Pio *p_pio, const uint32_t ul_mask)
+{
+  40065c:	b480      	push	{r7}
+  40065e:	b083      	sub	sp, #12
+  400660:	af00      	add	r7, sp, #0
+  400662:	6078      	str	r0, [r7, #4]
+  400664:	6039      	str	r1, [r7, #0]
+	p_pio->PIO_ISR;
+  400666:	687b      	ldr	r3, [r7, #4]
+  400668:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
+	p_pio->PIO_IER = ul_mask;
+  40066a:	687b      	ldr	r3, [r7, #4]
+  40066c:	683a      	ldr	r2, [r7, #0]
+  40066e:	641a      	str	r2, [r3, #64]	; 0x40
+}
+  400670:	370c      	adds	r7, #12
+  400672:	46bd      	mov	sp, r7
+  400674:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400678:	4770      	bx	lr
+  40067a:	bf00      	nop
+
+0040067c <pio_disable_interrupt>:
+ *
+ * \param p_pio Pointer to a PIO instance.
+ * \param ul_mask Interrupt sources bit map.
+ */
+void pio_disable_interrupt(Pio *p_pio, const uint32_t ul_mask)
+{
+  40067c:	b480      	push	{r7}
+  40067e:	b083      	sub	sp, #12
+  400680:	af00      	add	r7, sp, #0
+  400682:	6078      	str	r0, [r7, #4]
+  400684:	6039      	str	r1, [r7, #0]
+	p_pio->PIO_IDR = ul_mask;
+  400686:	687b      	ldr	r3, [r7, #4]
+  400688:	683a      	ldr	r2, [r7, #0]
+  40068a:	645a      	str	r2, [r3, #68]	; 0x44
+}
+  40068c:	370c      	adds	r7, #12
+  40068e:	46bd      	mov	sp, r7
+  400690:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400694:	4770      	bx	lr
+  400696:	bf00      	nop
+
+00400698 <pio_get_interrupt_status>:
+ * \param p_pio Pointer to a PIO instance.
+ *
+ * \return The interrupt status mask value.
+ */
+uint32_t pio_get_interrupt_status(const Pio *p_pio)
+{
+  400698:	b480      	push	{r7}
+  40069a:	b083      	sub	sp, #12
+  40069c:	af00      	add	r7, sp, #0
+  40069e:	6078      	str	r0, [r7, #4]
+	return p_pio->PIO_ISR;
+  4006a0:	687b      	ldr	r3, [r7, #4]
+  4006a2:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
+}
+  4006a4:	4618      	mov	r0, r3
+  4006a6:	370c      	adds	r7, #12
+  4006a8:	46bd      	mov	sp, r7
+  4006aa:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4006ae:	4770      	bx	lr
+
+004006b0 <pio_get_interrupt_mask>:
+ * \param p_pio Pointer to a PIO instance.
+ *
+ * \return The interrupt mask value.
+ */
+uint32_t pio_get_interrupt_mask(const Pio *p_pio)
+{
+  4006b0:	b480      	push	{r7}
+  4006b2:	b083      	sub	sp, #12
+  4006b4:	af00      	add	r7, sp, #0
+  4006b6:	6078      	str	r0, [r7, #4]
+	return p_pio->PIO_IMR;
+  4006b8:	687b      	ldr	r3, [r7, #4]
+  4006ba:	6c9b      	ldr	r3, [r3, #72]	; 0x48
+}
+  4006bc:	4618      	mov	r0, r3
+  4006be:	370c      	adds	r7, #12
+  4006c0:	46bd      	mov	sp, r7
+  4006c2:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4006c6:	4770      	bx	lr
+
+004006c8 <pio_handler_process>:
+ *
+ * \param p_pio PIO controller base address.
+ * \param ul_id PIO controller ID.
+ */
+void pio_handler_process(Pio *p_pio, uint32_t ul_id)
+{
+  4006c8:	b580      	push	{r7, lr}
+  4006ca:	b084      	sub	sp, #16
+  4006cc:	af00      	add	r7, sp, #0
+  4006ce:	6078      	str	r0, [r7, #4]
+  4006d0:	6039      	str	r1, [r7, #0]
+	uint32_t status;
+	uint32_t i;
+
+	/* Read PIO controller status */
+	status = pio_get_interrupt_status(p_pio);
+  4006d2:	6878      	ldr	r0, [r7, #4]
+  4006d4:	4b2a      	ldr	r3, [pc, #168]	; (400780 <pio_handler_process+0xb8>)
+  4006d6:	4798      	blx	r3
+  4006d8:	60f8      	str	r0, [r7, #12]
+	status &= pio_get_interrupt_mask(p_pio);
+  4006da:	6878      	ldr	r0, [r7, #4]
+  4006dc:	4b29      	ldr	r3, [pc, #164]	; (400784 <pio_handler_process+0xbc>)
+  4006de:	4798      	blx	r3
+  4006e0:	4602      	mov	r2, r0
+  4006e2:	68fb      	ldr	r3, [r7, #12]
+  4006e4:	4013      	ands	r3, r2
+  4006e6:	60fb      	str	r3, [r7, #12]
+
+	/* Check pending events */
+	if (status != 0) {
+  4006e8:	68fb      	ldr	r3, [r7, #12]
+  4006ea:	2b00      	cmp	r3, #0
+  4006ec:	d038      	beq.n	400760 <pio_handler_process+0x98>
+		/* Find triggering source */
+		i = 0;
+  4006ee:	2300      	movs	r3, #0
+  4006f0:	60bb      	str	r3, [r7, #8]
+		while (status != 0) {
+  4006f2:	e032      	b.n	40075a <pio_handler_process+0x92>
+			/* Source is configured on the same controller */
+			if (gs_interrupt_sources[i].id == ul_id) {
+  4006f4:	4a24      	ldr	r2, [pc, #144]	; (400788 <pio_handler_process+0xc0>)
+  4006f6:	68bb      	ldr	r3, [r7, #8]
+  4006f8:	011b      	lsls	r3, r3, #4
+  4006fa:	4413      	add	r3, r2
+  4006fc:	681a      	ldr	r2, [r3, #0]
+  4006fe:	683b      	ldr	r3, [r7, #0]
+  400700:	429a      	cmp	r2, r3
+  400702:	d123      	bne.n	40074c <pio_handler_process+0x84>
+				/* Source has PIOs whose statuses have changed */
+				if ((status & gs_interrupt_sources[i].mask) != 0) {
+  400704:	4a20      	ldr	r2, [pc, #128]	; (400788 <pio_handler_process+0xc0>)
+  400706:	68bb      	ldr	r3, [r7, #8]
+  400708:	011b      	lsls	r3, r3, #4
+  40070a:	4413      	add	r3, r2
+  40070c:	685a      	ldr	r2, [r3, #4]
+  40070e:	68fb      	ldr	r3, [r7, #12]
+  400710:	4013      	ands	r3, r2
+  400712:	2b00      	cmp	r3, #0
+  400714:	d01a      	beq.n	40074c <pio_handler_process+0x84>
+					gs_interrupt_sources[i].handler(gs_interrupt_sources[i].id,
+  400716:	4a1c      	ldr	r2, [pc, #112]	; (400788 <pio_handler_process+0xc0>)
+  400718:	68bb      	ldr	r3, [r7, #8]
+  40071a:	011b      	lsls	r3, r3, #4
+  40071c:	4413      	add	r3, r2
+  40071e:	3308      	adds	r3, #8
+  400720:	685b      	ldr	r3, [r3, #4]
+  400722:	4919      	ldr	r1, [pc, #100]	; (400788 <pio_handler_process+0xc0>)
+  400724:	68ba      	ldr	r2, [r7, #8]
+  400726:	0112      	lsls	r2, r2, #4
+  400728:	440a      	add	r2, r1
+  40072a:	6810      	ldr	r0, [r2, #0]
+  40072c:	4916      	ldr	r1, [pc, #88]	; (400788 <pio_handler_process+0xc0>)
+  40072e:	68ba      	ldr	r2, [r7, #8]
+  400730:	0112      	lsls	r2, r2, #4
+  400732:	440a      	add	r2, r1
+  400734:	6852      	ldr	r2, [r2, #4]
+  400736:	4611      	mov	r1, r2
+  400738:	4798      	blx	r3
+							gs_interrupt_sources[i].mask);
+					status &= ~(gs_interrupt_sources[i].mask);
+  40073a:	4a13      	ldr	r2, [pc, #76]	; (400788 <pio_handler_process+0xc0>)
+  40073c:	68bb      	ldr	r3, [r7, #8]
+  40073e:	011b      	lsls	r3, r3, #4
+  400740:	4413      	add	r3, r2
+  400742:	685b      	ldr	r3, [r3, #4]
+  400744:	43db      	mvns	r3, r3
+  400746:	68fa      	ldr	r2, [r7, #12]
+  400748:	4013      	ands	r3, r2
+  40074a:	60fb      	str	r3, [r7, #12]
+				}
+			}
+			i++;
+  40074c:	68bb      	ldr	r3, [r7, #8]
+  40074e:	3301      	adds	r3, #1
+  400750:	60bb      	str	r3, [r7, #8]
+			if (i >= MAX_INTERRUPT_SOURCES) {
+  400752:	68bb      	ldr	r3, [r7, #8]
+  400754:	2b06      	cmp	r3, #6
+  400756:	d900      	bls.n	40075a <pio_handler_process+0x92>
+				break;
+  400758:	e002      	b.n	400760 <pio_handler_process+0x98>
+
+	/* Check pending events */
+	if (status != 0) {
+		/* Find triggering source */
+		i = 0;
+		while (status != 0) {
+  40075a:	68fb      	ldr	r3, [r7, #12]
+  40075c:	2b00      	cmp	r3, #0
+  40075e:	d1c9      	bne.n	4006f4 <pio_handler_process+0x2c>
+		}
+	}
+
+	/* Check capture events */
+#if (SAM3S || SAM4S || SAM4E)
+	if (pio_capture_enable_flag) {
+  400760:	4b0a      	ldr	r3, [pc, #40]	; (40078c <pio_handler_process+0xc4>)
+  400762:	681b      	ldr	r3, [r3, #0]
+  400764:	2b00      	cmp	r3, #0
+  400766:	d007      	beq.n	400778 <pio_handler_process+0xb0>
+		if (pio_capture_handler) {
+  400768:	4b09      	ldr	r3, [pc, #36]	; (400790 <pio_handler_process+0xc8>)
+  40076a:	681b      	ldr	r3, [r3, #0]
+  40076c:	2b00      	cmp	r3, #0
+  40076e:	d003      	beq.n	400778 <pio_handler_process+0xb0>
+			pio_capture_handler(p_pio);
+  400770:	4b07      	ldr	r3, [pc, #28]	; (400790 <pio_handler_process+0xc8>)
+  400772:	681b      	ldr	r3, [r3, #0]
+  400774:	6878      	ldr	r0, [r7, #4]
+  400776:	4798      	blx	r3
+		}
+	}
+#endif
+}
+  400778:	3710      	adds	r7, #16
+  40077a:	46bd      	mov	sp, r7
+  40077c:	bd80      	pop	{r7, pc}
+  40077e:	bf00      	nop
+  400780:	00400699 	.word	0x00400699
+  400784:	004006b1 	.word	0x004006b1
+  400788:	20000454 	.word	0x20000454
+  40078c:	200004d4 	.word	0x200004d4
+  400790:	200004c8 	.word	0x200004c8
+
+00400794 <pio_handler_set>:
+ *
+ * \return 0 if successful, 1 if the maximum number of sources has been defined.
+ */
+uint32_t pio_handler_set(Pio *p_pio, uint32_t ul_id, uint32_t ul_mask,
+		uint32_t ul_attr, void (*p_handler) (uint32_t, uint32_t))
+{
+  400794:	b580      	push	{r7, lr}
+  400796:	b086      	sub	sp, #24
+  400798:	af00      	add	r7, sp, #0
+  40079a:	60f8      	str	r0, [r7, #12]
+  40079c:	60b9      	str	r1, [r7, #8]
+  40079e:	607a      	str	r2, [r7, #4]
+  4007a0:	603b      	str	r3, [r7, #0]
+	struct s_interrupt_source *pSource;
+
+	if (gs_ul_nb_sources >= MAX_INTERRUPT_SOURCES)
+  4007a2:	4b13      	ldr	r3, [pc, #76]	; (4007f0 <pio_handler_set+0x5c>)
+  4007a4:	681b      	ldr	r3, [r3, #0]
+  4007a6:	2b06      	cmp	r3, #6
+  4007a8:	d901      	bls.n	4007ae <pio_handler_set+0x1a>
+		return 1;
+  4007aa:	2301      	movs	r3, #1
+  4007ac:	e01c      	b.n	4007e8 <pio_handler_set+0x54>
+
+	/* Define new source */
+	pSource = &(gs_interrupt_sources[gs_ul_nb_sources]);
+  4007ae:	4b10      	ldr	r3, [pc, #64]	; (4007f0 <pio_handler_set+0x5c>)
+  4007b0:	681b      	ldr	r3, [r3, #0]
+  4007b2:	011b      	lsls	r3, r3, #4
+  4007b4:	4a0f      	ldr	r2, [pc, #60]	; (4007f4 <pio_handler_set+0x60>)
+  4007b6:	4413      	add	r3, r2
+  4007b8:	617b      	str	r3, [r7, #20]
+	pSource->id = ul_id;
+  4007ba:	697b      	ldr	r3, [r7, #20]
+  4007bc:	68ba      	ldr	r2, [r7, #8]
+  4007be:	601a      	str	r2, [r3, #0]
+	pSource->mask = ul_mask;
+  4007c0:	697b      	ldr	r3, [r7, #20]
+  4007c2:	687a      	ldr	r2, [r7, #4]
+  4007c4:	605a      	str	r2, [r3, #4]
+	pSource->attr = ul_attr;
+  4007c6:	697b      	ldr	r3, [r7, #20]
+  4007c8:	683a      	ldr	r2, [r7, #0]
+  4007ca:	609a      	str	r2, [r3, #8]
+	pSource->handler = p_handler;
+  4007cc:	697b      	ldr	r3, [r7, #20]
+  4007ce:	6a3a      	ldr	r2, [r7, #32]
+  4007d0:	60da      	str	r2, [r3, #12]
+	gs_ul_nb_sources++;
+  4007d2:	4b07      	ldr	r3, [pc, #28]	; (4007f0 <pio_handler_set+0x5c>)
+  4007d4:	681b      	ldr	r3, [r3, #0]
+  4007d6:	3301      	adds	r3, #1
+  4007d8:	4a05      	ldr	r2, [pc, #20]	; (4007f0 <pio_handler_set+0x5c>)
+  4007da:	6013      	str	r3, [r2, #0]
+
+	/* Configure interrupt mode */
+	pio_configure_interrupt(p_pio, ul_mask, ul_attr);
+  4007dc:	68f8      	ldr	r0, [r7, #12]
+  4007de:	6879      	ldr	r1, [r7, #4]
+  4007e0:	683a      	ldr	r2, [r7, #0]
+  4007e2:	4b05      	ldr	r3, [pc, #20]	; (4007f8 <pio_handler_set+0x64>)
+  4007e4:	4798      	blx	r3
+
+	return 0;
+  4007e6:	2300      	movs	r3, #0
+}
+  4007e8:	4618      	mov	r0, r3
+  4007ea:	3718      	adds	r7, #24
+  4007ec:	46bd      	mov	sp, r7
+  4007ee:	bd80      	pop	{r7, pc}
+  4007f0:	200004c4 	.word	0x200004c4
+  4007f4:	20000454 	.word	0x20000454
+  4007f8:	004005f1 	.word	0x004005f1
+
+004007fc <PIOA_Handler>:
+/**
+ * \brief Parallel IO Controller A interrupt handler.
+ * Redefined PIOA interrupt handler for NVIC interrupt table.
+ */
+void PIOA_Handler(void)
+{
+  4007fc:	b580      	push	{r7, lr}
+  4007fe:	af00      	add	r7, sp, #0
+	pio_handler_process(PIOA, ID_PIOA);
+  400800:	4802      	ldr	r0, [pc, #8]	; (40080c <PIOA_Handler+0x10>)
+  400802:	210b      	movs	r1, #11
+  400804:	4b02      	ldr	r3, [pc, #8]	; (400810 <PIOA_Handler+0x14>)
+  400806:	4798      	blx	r3
+}
+  400808:	bd80      	pop	{r7, pc}
+  40080a:	bf00      	nop
+  40080c:	400e0e00 	.word	0x400e0e00
+  400810:	004006c9 	.word	0x004006c9
+
+00400814 <PIOB_Handler>:
+/**
+ * \brief Parallel IO Controller B interrupt handler
+ * Redefined PIOB interrupt handler for NVIC interrupt table.
+ */
+void PIOB_Handler(void)
+{
+  400814:	b580      	push	{r7, lr}
+  400816:	af00      	add	r7, sp, #0
+    pio_handler_process(PIOB, ID_PIOB);
+  400818:	4802      	ldr	r0, [pc, #8]	; (400824 <PIOB_Handler+0x10>)
+  40081a:	210c      	movs	r1, #12
+  40081c:	4b02      	ldr	r3, [pc, #8]	; (400828 <PIOB_Handler+0x14>)
+  40081e:	4798      	blx	r3
+}
+  400820:	bd80      	pop	{r7, pc}
+  400822:	bf00      	nop
+  400824:	400e1000 	.word	0x400e1000
+  400828:	004006c9 	.word	0x004006c9
+
+0040082c <PIOC_Handler>:
+/**
+ * \brief Parallel IO Controller C interrupt handler.
+ * Redefined PIOC interrupt handler for NVIC interrupt table.
+ */
+void PIOC_Handler(void)
+{
+  40082c:	b580      	push	{r7, lr}
+  40082e:	af00      	add	r7, sp, #0
+	pio_handler_process(PIOC, ID_PIOC);
+  400830:	4802      	ldr	r0, [pc, #8]	; (40083c <PIOC_Handler+0x10>)
+  400832:	210d      	movs	r1, #13
+  400834:	4b02      	ldr	r3, [pc, #8]	; (400840 <PIOC_Handler+0x14>)
+  400836:	4798      	blx	r3
+}
+  400838:	bd80      	pop	{r7, pc}
+  40083a:	bf00      	nop
+  40083c:	400e1200 	.word	0x400e1200
+  400840:	004006c9 	.word	0x004006c9
+
+00400844 <pmc_switch_mck_to_pllack>:
+ *
+ * \retval 0 Success.
+ * \retval 1 Timeout error.
+ */
+uint32_t pmc_switch_mck_to_pllack(uint32_t ul_pres)
+{
+  400844:	b480      	push	{r7}
+  400846:	b085      	sub	sp, #20
+  400848:	af00      	add	r7, sp, #0
+  40084a:	6078      	str	r0, [r7, #4]
+	uint32_t ul_timeout;
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_PRES_Msk)) | ul_pres;
+  40084c:	491d      	ldr	r1, [pc, #116]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  40084e:	4b1d      	ldr	r3, [pc, #116]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  400850:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  400852:	f023 0270 	bic.w	r2, r3, #112	; 0x70
+  400856:	687b      	ldr	r3, [r7, #4]
+  400858:	4313      	orrs	r3, r2
+  40085a:	630b      	str	r3, [r1, #48]	; 0x30
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+  40085c:	f44f 6300 	mov.w	r3, #2048	; 0x800
+  400860:	60fb      	str	r3, [r7, #12]
+  400862:	e007      	b.n	400874 <pmc_switch_mck_to_pllack+0x30>
+			--ul_timeout) {
+		if (ul_timeout == 0) {
+  400864:	68fb      	ldr	r3, [r7, #12]
+  400866:	2b00      	cmp	r3, #0
+  400868:	d101      	bne.n	40086e <pmc_switch_mck_to_pllack+0x2a>
+			return 1;
+  40086a:	2301      	movs	r3, #1
+  40086c:	e023      	b.n	4008b6 <pmc_switch_mck_to_pllack+0x72>
+{
+	uint32_t ul_timeout;
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_PRES_Msk)) | ul_pres;
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+			--ul_timeout) {
+  40086e:	68fb      	ldr	r3, [r7, #12]
+  400870:	3b01      	subs	r3, #1
+  400872:	60fb      	str	r3, [r7, #12]
+uint32_t pmc_switch_mck_to_pllack(uint32_t ul_pres)
+{
+	uint32_t ul_timeout;
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_PRES_Msk)) | ul_pres;
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+  400874:	4b13      	ldr	r3, [pc, #76]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  400876:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400878:	f003 0308 	and.w	r3, r3, #8
+  40087c:	2b00      	cmp	r3, #0
+  40087e:	d0f1      	beq.n	400864 <pmc_switch_mck_to_pllack+0x20>
+		if (ul_timeout == 0) {
+			return 1;
+		}
+	}
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_CSS_Msk)) |
+  400880:	4a10      	ldr	r2, [pc, #64]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  400882:	4b10      	ldr	r3, [pc, #64]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  400884:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  400886:	f023 0303 	bic.w	r3, r3, #3
+  40088a:	f043 0302 	orr.w	r3, r3, #2
+  40088e:	6313      	str	r3, [r2, #48]	; 0x30
+			PMC_MCKR_CSS_PLLA_CLK;
+
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+  400890:	f44f 6300 	mov.w	r3, #2048	; 0x800
+  400894:	60fb      	str	r3, [r7, #12]
+  400896:	e007      	b.n	4008a8 <pmc_switch_mck_to_pllack+0x64>
+			--ul_timeout) {
+		if (ul_timeout == 0) {
+  400898:	68fb      	ldr	r3, [r7, #12]
+  40089a:	2b00      	cmp	r3, #0
+  40089c:	d101      	bne.n	4008a2 <pmc_switch_mck_to_pllack+0x5e>
+			return 1;
+  40089e:	2301      	movs	r3, #1
+  4008a0:	e009      	b.n	4008b6 <pmc_switch_mck_to_pllack+0x72>
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_CSS_Msk)) |
+			PMC_MCKR_CSS_PLLA_CLK;
+
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+			--ul_timeout) {
+  4008a2:	68fb      	ldr	r3, [r7, #12]
+  4008a4:	3b01      	subs	r3, #1
+  4008a6:	60fb      	str	r3, [r7, #12]
+	}
+
+	PMC->PMC_MCKR = (PMC->PMC_MCKR & (~PMC_MCKR_CSS_Msk)) |
+			PMC_MCKR_CSS_PLLA_CLK;
+
+	for (ul_timeout = PMC_TIMEOUT; !(PMC->PMC_SR & PMC_SR_MCKRDY);
+  4008a8:	4b06      	ldr	r3, [pc, #24]	; (4008c4 <pmc_switch_mck_to_pllack+0x80>)
+  4008aa:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  4008ac:	f003 0308 	and.w	r3, r3, #8
+  4008b0:	2b00      	cmp	r3, #0
+  4008b2:	d0f1      	beq.n	400898 <pmc_switch_mck_to_pllack+0x54>
+		if (ul_timeout == 0) {
+			return 1;
+		}
+	}
+
+	return 0;
+  4008b4:	2300      	movs	r3, #0
+}
+  4008b6:	4618      	mov	r0, r3
+  4008b8:	3714      	adds	r7, #20
+  4008ba:	46bd      	mov	sp, r7
+  4008bc:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4008c0:	4770      	bx	lr
+  4008c2:	bf00      	nop
+  4008c4:	400e0400 	.word	0x400e0400
+
+004008c8 <pmc_switch_sclk_to_32kxtal>:
+ *       VDDIO power supply.
+ *
+ * \param ul_bypass 0 for Xtal, 1 for bypass.
+ */
+void pmc_switch_sclk_to_32kxtal(uint32_t ul_bypass)
+{
+  4008c8:	b480      	push	{r7}
+  4008ca:	b083      	sub	sp, #12
+  4008cc:	af00      	add	r7, sp, #0
+  4008ce:	6078      	str	r0, [r7, #4]
+	/* Set Bypass mode if required */
+	if (ul_bypass == 1) {
+  4008d0:	687b      	ldr	r3, [r7, #4]
+  4008d2:	2b01      	cmp	r3, #1
+  4008d4:	d107      	bne.n	4008e6 <pmc_switch_sclk_to_32kxtal+0x1e>
+		SUPC->SUPC_MR |= SUPC_MR_KEY_PASSWD |
+  4008d6:	4a08      	ldr	r2, [pc, #32]	; (4008f8 <pmc_switch_sclk_to_32kxtal+0x30>)
+  4008d8:	4b07      	ldr	r3, [pc, #28]	; (4008f8 <pmc_switch_sclk_to_32kxtal+0x30>)
+  4008da:	689b      	ldr	r3, [r3, #8]
+  4008dc:	f043 4325 	orr.w	r3, r3, #2768240640	; 0xa5000000
+  4008e0:	f443 1380 	orr.w	r3, r3, #1048576	; 0x100000
+  4008e4:	6093      	str	r3, [r2, #8]
+			SUPC_MR_OSCBYPASS;
+	}
+
+	SUPC->SUPC_CR = SUPC_CR_KEY_PASSWD | SUPC_CR_XTALSEL;
+  4008e6:	4b04      	ldr	r3, [pc, #16]	; (4008f8 <pmc_switch_sclk_to_32kxtal+0x30>)
+  4008e8:	4a04      	ldr	r2, [pc, #16]	; (4008fc <pmc_switch_sclk_to_32kxtal+0x34>)
+  4008ea:	601a      	str	r2, [r3, #0]
+}
+  4008ec:	370c      	adds	r7, #12
+  4008ee:	46bd      	mov	sp, r7
+  4008f0:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4008f4:	4770      	bx	lr
+  4008f6:	bf00      	nop
+  4008f8:	400e1410 	.word	0x400e1410
+  4008fc:	a5000008 	.word	0xa5000008
+
+00400900 <pmc_osc_is_ready_32kxtal>:
+ *
+ * \retval 1 External 32k Xtal is ready.
+ * \retval 0 External 32k Xtal is not ready.
+ */
+uint32_t pmc_osc_is_ready_32kxtal(void)
+{
+  400900:	b480      	push	{r7}
+  400902:	af00      	add	r7, sp, #0
+	return ((SUPC->SUPC_SR & SUPC_SR_OSCSEL)
+  400904:	4b09      	ldr	r3, [pc, #36]	; (40092c <pmc_osc_is_ready_32kxtal+0x2c>)
+  400906:	695b      	ldr	r3, [r3, #20]
+  400908:	f003 0380 	and.w	r3, r3, #128	; 0x80
+			&& (PMC->PMC_SR & PMC_SR_OSCSELS));
+  40090c:	2b00      	cmp	r3, #0
+  40090e:	d007      	beq.n	400920 <pmc_osc_is_ready_32kxtal+0x20>
+  400910:	4b07      	ldr	r3, [pc, #28]	; (400930 <pmc_osc_is_ready_32kxtal+0x30>)
+  400912:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400914:	f003 0380 	and.w	r3, r3, #128	; 0x80
+  400918:	2b00      	cmp	r3, #0
+  40091a:	d001      	beq.n	400920 <pmc_osc_is_ready_32kxtal+0x20>
+  40091c:	2301      	movs	r3, #1
+  40091e:	e000      	b.n	400922 <pmc_osc_is_ready_32kxtal+0x22>
+  400920:	2300      	movs	r3, #0
+}
+  400922:	4618      	mov	r0, r3
+  400924:	46bd      	mov	sp, r7
+  400926:	f85d 7b04 	ldr.w	r7, [sp], #4
+  40092a:	4770      	bx	lr
+  40092c:	400e1410 	.word	0x400e1410
+  400930:	400e0400 	.word	0x400e0400
+
+00400934 <pmc_switch_mainck_to_fastrc>:
+ * \retval 0 Success.
+ * \retval 1 Timeout error.
+ * \retval 2 Invalid frequency.
+ */
+void pmc_switch_mainck_to_fastrc(uint32_t ul_moscrcf)
+{
+  400934:	b480      	push	{r7}
+  400936:	b083      	sub	sp, #12
+  400938:	af00      	add	r7, sp, #0
+  40093a:	6078      	str	r0, [r7, #4]
+	/* Enable Fast RC oscillator but DO NOT switch to RC now */
+	PMC->CKGR_MOR |= (CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCRCEN);
+  40093c:	4a18      	ldr	r2, [pc, #96]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  40093e:	4b18      	ldr	r3, [pc, #96]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  400940:	6a1b      	ldr	r3, [r3, #32]
+  400942:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400946:	f043 0308 	orr.w	r3, r3, #8
+  40094a:	6213      	str	r3, [r2, #32]
+
+	/* Wait the Fast RC to stabilize */
+	while (!(PMC->PMC_SR & PMC_SR_MOSCRCS));
+  40094c:	bf00      	nop
+  40094e:	4b14      	ldr	r3, [pc, #80]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  400950:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400952:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  400956:	2b00      	cmp	r3, #0
+  400958:	d0f9      	beq.n	40094e <pmc_switch_mainck_to_fastrc+0x1a>
+
+	/* Change Fast RC oscillator frequency */
+	PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCF_Msk) |
+  40095a:	4911      	ldr	r1, [pc, #68]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  40095c:	4b10      	ldr	r3, [pc, #64]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  40095e:	6a1b      	ldr	r3, [r3, #32]
+  400960:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  400964:	f023 0370 	bic.w	r3, r3, #112	; 0x70
+			CKGR_MOR_KEY_PASSWD | ul_moscrcf;
+  400968:	687a      	ldr	r2, [r7, #4]
+  40096a:	4313      	orrs	r3, r2
+  40096c:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+
+	/* Wait the Fast RC to stabilize */
+	while (!(PMC->PMC_SR & PMC_SR_MOSCRCS));
+
+	/* Change Fast RC oscillator frequency */
+	PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCF_Msk) |
+  400970:	620b      	str	r3, [r1, #32]
+			CKGR_MOR_KEY_PASSWD | ul_moscrcf;
+
+	/* Wait the Fast RC to stabilize */
+	while (!(PMC->PMC_SR & PMC_SR_MOSCRCS));
+  400972:	bf00      	nop
+  400974:	4b0a      	ldr	r3, [pc, #40]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  400976:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400978:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  40097c:	2b00      	cmp	r3, #0
+  40097e:	d0f9      	beq.n	400974 <pmc_switch_mainck_to_fastrc+0x40>
+
+	/* Switch to Fast RC */
+	PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCSEL) |
+  400980:	4a07      	ldr	r2, [pc, #28]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  400982:	4b07      	ldr	r3, [pc, #28]	; (4009a0 <pmc_switch_mainck_to_fastrc+0x6c>)
+  400984:	6a1b      	ldr	r3, [r3, #32]
+  400986:	f023 739b 	bic.w	r3, r3, #20316160	; 0x1360000
+  40098a:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+  40098e:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400992:	6213      	str	r3, [r2, #32]
+			CKGR_MOR_KEY_PASSWD;
+}
+  400994:	370c      	adds	r7, #12
+  400996:	46bd      	mov	sp, r7
+  400998:	f85d 7b04 	ldr.w	r7, [sp], #4
+  40099c:	4770      	bx	lr
+  40099e:	bf00      	nop
+  4009a0:	400e0400 	.word	0x400e0400
+
+004009a4 <pmc_switch_mainck_to_xtal>:
+ * \retval 0 Success.
+ * \retval 1 Timeout error.
+ */
+void pmc_switch_mainck_to_xtal(uint32_t ul_bypass,
+		uint32_t ul_xtal_startup_time)
+{
+  4009a4:	b480      	push	{r7}
+  4009a6:	b083      	sub	sp, #12
+  4009a8:	af00      	add	r7, sp, #0
+  4009aa:	6078      	str	r0, [r7, #4]
+  4009ac:	6039      	str	r1, [r7, #0]
+	/* Enable Main Xtal oscillator */
+	if (ul_bypass) {
+  4009ae:	687b      	ldr	r3, [r7, #4]
+  4009b0:	2b00      	cmp	r3, #0
+  4009b2:	d008      	beq.n	4009c6 <pmc_switch_mainck_to_xtal+0x22>
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+  4009b4:	4916      	ldr	r1, [pc, #88]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009b6:	4b16      	ldr	r3, [pc, #88]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009b8:	6a1b      	ldr	r3, [r3, #32]
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+  4009ba:	4a16      	ldr	r2, [pc, #88]	; (400a14 <pmc_switch_mainck_to_xtal+0x70>)
+  4009bc:	401a      	ands	r2, r3
+  4009be:	4b16      	ldr	r3, [pc, #88]	; (400a18 <pmc_switch_mainck_to_xtal+0x74>)
+  4009c0:	4313      	orrs	r3, r2
+void pmc_switch_mainck_to_xtal(uint32_t ul_bypass,
+		uint32_t ul_xtal_startup_time)
+{
+	/* Enable Main Xtal oscillator */
+	if (ul_bypass) {
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+  4009c2:	620b      	str	r3, [r1, #32]
+  4009c4:	e01e      	b.n	400a04 <pmc_switch_mainck_to_xtal+0x60>
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+				CKGR_MOR_MOSCSEL;
+	} else {
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTBY) |
+  4009c6:	4912      	ldr	r1, [pc, #72]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009c8:	4b11      	ldr	r3, [pc, #68]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009ca:	6a1b      	ldr	r3, [r3, #32]
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTEN |
+  4009cc:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  4009d0:	f023 0303 	bic.w	r3, r3, #3
+				CKGR_MOR_MOSCXTST(ul_xtal_startup_time);
+  4009d4:	683a      	ldr	r2, [r7, #0]
+  4009d6:	0212      	lsls	r2, r2, #8
+  4009d8:	b292      	uxth	r2, r2
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+				CKGR_MOR_MOSCSEL;
+	} else {
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTBY) |
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTEN |
+  4009da:	4313      	orrs	r3, r2
+  4009dc:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  4009e0:	f043 0301 	orr.w	r3, r3, #1
+	if (ul_bypass) {
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+				CKGR_MOR_MOSCSEL;
+	} else {
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTBY) |
+  4009e4:	620b      	str	r3, [r1, #32]
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTEN |
+				CKGR_MOR_MOSCXTST(ul_xtal_startup_time);
+		/* Wait the Xtal to stabilize */
+		while (!(PMC->PMC_SR & PMC_SR_MOSCXTS));
+  4009e6:	bf00      	nop
+  4009e8:	4b09      	ldr	r3, [pc, #36]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009ea:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  4009ec:	f003 0301 	and.w	r3, r3, #1
+  4009f0:	2b00      	cmp	r3, #0
+  4009f2:	d0f9      	beq.n	4009e8 <pmc_switch_mainck_to_xtal+0x44>
+
+		PMC->CKGR_MOR |= CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCSEL;
+  4009f4:	4a06      	ldr	r2, [pc, #24]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009f6:	4b06      	ldr	r3, [pc, #24]	; (400a10 <pmc_switch_mainck_to_xtal+0x6c>)
+  4009f8:	6a1b      	ldr	r3, [r3, #32]
+  4009fa:	f043 739b 	orr.w	r3, r3, #20316160	; 0x1360000
+  4009fe:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  400a02:	6213      	str	r3, [r2, #32]
+	}
+}
+  400a04:	370c      	adds	r7, #12
+  400a06:	46bd      	mov	sp, r7
+  400a08:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a0c:	4770      	bx	lr
+  400a0e:	bf00      	nop
+  400a10:	400e0400 	.word	0x400e0400
+  400a14:	fec8fffc 	.word	0xfec8fffc
+  400a18:	01370002 	.word	0x01370002
+
+00400a1c <pmc_osc_is_ready_mainck>:
+ *
+ * \retval 1 Xtal is ready.
+ * \retval 0 Xtal is not ready.
+ */
+uint32_t pmc_osc_is_ready_mainck(void)
+{
+  400a1c:	b480      	push	{r7}
+  400a1e:	af00      	add	r7, sp, #0
+	return PMC->PMC_SR & PMC_SR_MOSCSELS;
+  400a20:	4b04      	ldr	r3, [pc, #16]	; (400a34 <pmc_osc_is_ready_mainck+0x18>)
+  400a22:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400a24:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+}
+  400a28:	4618      	mov	r0, r3
+  400a2a:	46bd      	mov	sp, r7
+  400a2c:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a30:	4770      	bx	lr
+  400a32:	bf00      	nop
+  400a34:	400e0400 	.word	0x400e0400
+
+00400a38 <pmc_disable_pllack>:
+
+/**
+ * \brief Disable PLLA clock.
+ */
+void pmc_disable_pllack(void)
+{
+  400a38:	b480      	push	{r7}
+  400a3a:	af00      	add	r7, sp, #0
+#if (SAM4C || SAM4CM || SAM4CP || SAMG)
+	PMC->CKGR_PLLAR = CKGR_PLLAR_MULA(0);
+#else
+	PMC->CKGR_PLLAR = CKGR_PLLAR_ONE | CKGR_PLLAR_MULA(0);
+  400a3c:	4b03      	ldr	r3, [pc, #12]	; (400a4c <pmc_disable_pllack+0x14>)
+  400a3e:	f04f 5200 	mov.w	r2, #536870912	; 0x20000000
+  400a42:	629a      	str	r2, [r3, #40]	; 0x28
+#endif
+}
+  400a44:	46bd      	mov	sp, r7
+  400a46:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a4a:	4770      	bx	lr
+  400a4c:	400e0400 	.word	0x400e0400
+
+00400a50 <pmc_is_locked_pllack>:
+ *
+ * \retval 0 Not locked.
+ * \retval 1 Locked.
+ */
+uint32_t pmc_is_locked_pllack(void)
+{
+  400a50:	b480      	push	{r7}
+  400a52:	af00      	add	r7, sp, #0
+	return (PMC->PMC_SR & PMC_SR_LOCKA);
+  400a54:	4b04      	ldr	r3, [pc, #16]	; (400a68 <pmc_is_locked_pllack+0x18>)
+  400a56:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400a58:	f003 0302 	and.w	r3, r3, #2
+}
+  400a5c:	4618      	mov	r0, r3
+  400a5e:	46bd      	mov	sp, r7
+  400a60:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a64:	4770      	bx	lr
+  400a66:	bf00      	nop
+  400a68:	400e0400 	.word	0x400e0400
+
+00400a6c <pmc_disable_pllbck>:
+
+/**
+ * \brief Disable PLLB clock.
+ */
+void pmc_disable_pllbck(void)
+{
+  400a6c:	b480      	push	{r7}
+  400a6e:	af00      	add	r7, sp, #0
+	PMC->CKGR_PLLBR = CKGR_PLLBR_MULB(0);
+  400a70:	4b03      	ldr	r3, [pc, #12]	; (400a80 <pmc_disable_pllbck+0x14>)
+  400a72:	2200      	movs	r2, #0
+  400a74:	62da      	str	r2, [r3, #44]	; 0x2c
+}
+  400a76:	46bd      	mov	sp, r7
+  400a78:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a7c:	4770      	bx	lr
+  400a7e:	bf00      	nop
+  400a80:	400e0400 	.word	0x400e0400
+
+00400a84 <pmc_is_locked_pllbck>:
+ *
+ * \retval 0 Not locked.
+ * \retval 1 Locked.
+ */
+uint32_t pmc_is_locked_pllbck(void)
+{
+  400a84:	b480      	push	{r7}
+  400a86:	af00      	add	r7, sp, #0
+	return (PMC->PMC_SR & PMC_SR_LOCKB);
+  400a88:	4b04      	ldr	r3, [pc, #16]	; (400a9c <pmc_is_locked_pllbck+0x18>)
+  400a8a:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400a8c:	f003 0304 	and.w	r3, r3, #4
+}
+  400a90:	4618      	mov	r0, r3
+  400a92:	46bd      	mov	sp, r7
+  400a94:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400a98:	4770      	bx	lr
+  400a9a:	bf00      	nop
+  400a9c:	400e0400 	.word	0x400e0400
+
+00400aa0 <pmc_enable_periph_clk>:
+ *
+ * \retval 0 Success.
+ * \retval 1 Invalid parameter.
+ */
+uint32_t pmc_enable_periph_clk(uint32_t ul_id)
+{
+  400aa0:	b480      	push	{r7}
+  400aa2:	b083      	sub	sp, #12
+  400aa4:	af00      	add	r7, sp, #0
+  400aa6:	6078      	str	r0, [r7, #4]
+	if (ul_id > MAX_PERIPH_ID) {
+  400aa8:	687b      	ldr	r3, [r7, #4]
+  400aaa:	2b22      	cmp	r3, #34	; 0x22
+  400aac:	d901      	bls.n	400ab2 <pmc_enable_periph_clk+0x12>
+		return 1;
+  400aae:	2301      	movs	r3, #1
+  400ab0:	e02f      	b.n	400b12 <pmc_enable_periph_clk+0x72>
+	}
+
+	if (ul_id < 32) {
+  400ab2:	687b      	ldr	r3, [r7, #4]
+  400ab4:	2b1f      	cmp	r3, #31
+  400ab6:	d813      	bhi.n	400ae0 <pmc_enable_periph_clk+0x40>
+		if ((PMC->PMC_PCSR0 & (1u << ul_id)) != (1u << ul_id)) {
+  400ab8:	4b19      	ldr	r3, [pc, #100]	; (400b20 <pmc_enable_periph_clk+0x80>)
+  400aba:	699a      	ldr	r2, [r3, #24]
+  400abc:	687b      	ldr	r3, [r7, #4]
+  400abe:	2101      	movs	r1, #1
+  400ac0:	fa01 f303 	lsl.w	r3, r1, r3
+  400ac4:	401a      	ands	r2, r3
+  400ac6:	687b      	ldr	r3, [r7, #4]
+  400ac8:	2101      	movs	r1, #1
+  400aca:	fa01 f303 	lsl.w	r3, r1, r3
+  400ace:	429a      	cmp	r2, r3
+  400ad0:	d01e      	beq.n	400b10 <pmc_enable_periph_clk+0x70>
+			PMC->PMC_PCER0 = 1 << ul_id;
+  400ad2:	4a13      	ldr	r2, [pc, #76]	; (400b20 <pmc_enable_periph_clk+0x80>)
+  400ad4:	687b      	ldr	r3, [r7, #4]
+  400ad6:	2101      	movs	r1, #1
+  400ad8:	fa01 f303 	lsl.w	r3, r1, r3
+  400adc:	6113      	str	r3, [r2, #16]
+  400ade:	e017      	b.n	400b10 <pmc_enable_periph_clk+0x70>
+		}
+#if (SAM3S || SAM3XA || SAM4S || SAM4E || SAM4C || SAM4CM || SAM4CP || SAMG55 || SAMV71 || SAMV70 || SAME70 || SAMS70)
+	} else {
+		ul_id -= 32;
+  400ae0:	687b      	ldr	r3, [r7, #4]
+  400ae2:	3b20      	subs	r3, #32
+  400ae4:	607b      	str	r3, [r7, #4]
+		if ((PMC->PMC_PCSR1 & (1u << ul_id)) != (1u << ul_id)) {
+  400ae6:	4b0e      	ldr	r3, [pc, #56]	; (400b20 <pmc_enable_periph_clk+0x80>)
+  400ae8:	f8d3 2108 	ldr.w	r2, [r3, #264]	; 0x108
+  400aec:	687b      	ldr	r3, [r7, #4]
+  400aee:	2101      	movs	r1, #1
+  400af0:	fa01 f303 	lsl.w	r3, r1, r3
+  400af4:	401a      	ands	r2, r3
+  400af6:	687b      	ldr	r3, [r7, #4]
+  400af8:	2101      	movs	r1, #1
+  400afa:	fa01 f303 	lsl.w	r3, r1, r3
+  400afe:	429a      	cmp	r2, r3
+  400b00:	d006      	beq.n	400b10 <pmc_enable_periph_clk+0x70>
+			PMC->PMC_PCER1 = 1 << ul_id;
+  400b02:	4a07      	ldr	r2, [pc, #28]	; (400b20 <pmc_enable_periph_clk+0x80>)
+  400b04:	687b      	ldr	r3, [r7, #4]
+  400b06:	2101      	movs	r1, #1
+  400b08:	fa01 f303 	lsl.w	r3, r1, r3
+  400b0c:	f8c2 3100 	str.w	r3, [r2, #256]	; 0x100
+		}
+#endif
+	}
+
+	return 0;
+  400b10:	2300      	movs	r3, #0
+}
+  400b12:	4618      	mov	r0, r3
+  400b14:	370c      	adds	r7, #12
+  400b16:	46bd      	mov	sp, r7
+  400b18:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400b1c:	4770      	bx	lr
+  400b1e:	bf00      	nop
+  400b20:	400e0400 	.word	0x400e0400
+
+00400b24 <pmc_set_flash_in_wait_mode>:
+ *
+ * \param ul_flash_state PMC_WAIT_MODE_FLASH_STANDBY flash in standby mode,
+ * PMC_WAIT_MODE_FLASH_DEEP_POWERDOWN flash in deep power down mode.
+ */
+void pmc_set_flash_in_wait_mode(uint32_t ul_flash_state)
+{
+  400b24:	b480      	push	{r7}
+  400b26:	b083      	sub	sp, #12
+  400b28:	af00      	add	r7, sp, #0
+  400b2a:	6078      	str	r0, [r7, #4]
+	ul_flash_in_wait_mode = ul_flash_state;
+  400b2c:	4a03      	ldr	r2, [pc, #12]	; (400b3c <pmc_set_flash_in_wait_mode+0x18>)
+  400b2e:	687b      	ldr	r3, [r7, #4]
+  400b30:	6013      	str	r3, [r2, #0]
+}
+  400b32:	370c      	adds	r7, #12
+  400b34:	46bd      	mov	sp, r7
+  400b36:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400b3a:	4770      	bx	lr
+  400b3c:	20000004 	.word	0x20000004
+
+00400b40 <pmc_enable_waitmode>:
+ * Generally, this function will be called by pmc_sleep() in order to
+ * complete all sequence entering wait mode.
+ * See \ref pmc_sleep() for entering different sleep modes.
+ */
+void pmc_enable_waitmode(void)
+{
+  400b40:	b480      	push	{r7}
+  400b42:	b083      	sub	sp, #12
+  400b44:	af00      	add	r7, sp, #0
+	uint32_t i;
+
+	/* Flash in wait mode */
+	i = PMC->PMC_FSMR;
+  400b46:	4b21      	ldr	r3, [pc, #132]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b48:	6f1b      	ldr	r3, [r3, #112]	; 0x70
+  400b4a:	607b      	str	r3, [r7, #4]
+	i &= ~PMC_FSMR_FLPM_Msk;
+  400b4c:	687b      	ldr	r3, [r7, #4]
+  400b4e:	f423 03c0 	bic.w	r3, r3, #6291456	; 0x600000
+  400b52:	607b      	str	r3, [r7, #4]
+	i |= ul_flash_in_wait_mode;
+  400b54:	4b1e      	ldr	r3, [pc, #120]	; (400bd0 <pmc_enable_waitmode+0x90>)
+  400b56:	681b      	ldr	r3, [r3, #0]
+  400b58:	687a      	ldr	r2, [r7, #4]
+  400b5a:	4313      	orrs	r3, r2
+  400b5c:	607b      	str	r3, [r7, #4]
+	PMC->PMC_FSMR = i;
+  400b5e:	4a1b      	ldr	r2, [pc, #108]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b60:	687b      	ldr	r3, [r7, #4]
+  400b62:	6713      	str	r3, [r2, #112]	; 0x70
+
+	/* Set the WAITMODE bit = 1 */
+	PMC->CKGR_MOR |= CKGR_MOR_KEY_PASSWD | CKGR_MOR_WAITMODE;
+  400b64:	4a19      	ldr	r2, [pc, #100]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b66:	4b19      	ldr	r3, [pc, #100]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b68:	6a1b      	ldr	r3, [r3, #32]
+  400b6a:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400b6e:	f043 0304 	orr.w	r3, r3, #4
+  400b72:	6213      	str	r3, [r2, #32]
+
+	/* Waiting for Master Clock Ready MCKRDY = 1 */
+	while (!(PMC->PMC_SR & PMC_SR_MCKRDY));
+  400b74:	bf00      	nop
+  400b76:	4b15      	ldr	r3, [pc, #84]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b78:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400b7a:	f003 0308 	and.w	r3, r3, #8
+  400b7e:	2b00      	cmp	r3, #0
+  400b80:	d0f9      	beq.n	400b76 <pmc_enable_waitmode+0x36>
+
+	/* Waiting for MOSCRCEN bit cleared is strongly recommended
+	 * to ensure that the core will not execute undesired instructions
+	 */
+	for (i = 0; i < 500; i++) {
+  400b82:	2300      	movs	r3, #0
+  400b84:	607b      	str	r3, [r7, #4]
+  400b86:	e003      	b.n	400b90 <pmc_enable_waitmode+0x50>
+
+    No Operation does nothing. This instruction can be used for code alignment purposes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __NOP(void)
+{
+  __ASM volatile ("nop");
+  400b88:	bf00      	nop
+  400b8a:	687b      	ldr	r3, [r7, #4]
+  400b8c:	3301      	adds	r3, #1
+  400b8e:	607b      	str	r3, [r7, #4]
+  400b90:	687b      	ldr	r3, [r7, #4]
+  400b92:	f5b3 7ffa 	cmp.w	r3, #500	; 0x1f4
+  400b96:	d3f7      	bcc.n	400b88 <pmc_enable_waitmode+0x48>
+		__NOP();
+	}
+	while (!(PMC->CKGR_MOR & CKGR_MOR_MOSCRCEN));
+  400b98:	bf00      	nop
+  400b9a:	4b0c      	ldr	r3, [pc, #48]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400b9c:	6a1b      	ldr	r3, [r3, #32]
+  400b9e:	f003 0308 	and.w	r3, r3, #8
+  400ba2:	2b00      	cmp	r3, #0
+  400ba4:	d0f9      	beq.n	400b9a <pmc_enable_waitmode+0x5a>
+
+#if (!SAMG)
+	/* Restore Flash in idle mode */
+	i = PMC->PMC_FSMR;
+  400ba6:	4b09      	ldr	r3, [pc, #36]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400ba8:	6f1b      	ldr	r3, [r3, #112]	; 0x70
+  400baa:	607b      	str	r3, [r7, #4]
+	i &= ~PMC_FSMR_FLPM_Msk;
+  400bac:	687b      	ldr	r3, [r7, #4]
+  400bae:	f423 03c0 	bic.w	r3, r3, #6291456	; 0x600000
+  400bb2:	607b      	str	r3, [r7, #4]
+	i |= PMC_WAIT_MODE_FLASH_IDLE;
+  400bb4:	687b      	ldr	r3, [r7, #4]
+  400bb6:	f443 0380 	orr.w	r3, r3, #4194304	; 0x400000
+  400bba:	607b      	str	r3, [r7, #4]
+	PMC->PMC_FSMR = i;
+  400bbc:	4a03      	ldr	r2, [pc, #12]	; (400bcc <pmc_enable_waitmode+0x8c>)
+  400bbe:	687b      	ldr	r3, [r7, #4]
+  400bc0:	6713      	str	r3, [r2, #112]	; 0x70
+#endif
+}
+  400bc2:	370c      	adds	r7, #12
+  400bc4:	46bd      	mov	sp, r7
+  400bc6:	f85d 7b04 	ldr.w	r7, [sp], #4
+  400bca:	4770      	bx	lr
+  400bcc:	400e0400 	.word	0x400e0400
+  400bd0:	20000004 	.word	0x20000004
+
+00400bd4 <pmc_sleep>:
+static volatile bool b_is_sleep_clock_used = false;
+/** Callback invoked once when clocks are restored */
+static pmc_callback_wakeup_clocks_restored_t callback_clocks_restored = NULL;
+
+void pmc_sleep(int sleep_mode)
+{
+  400bd4:	b5b0      	push	{r4, r5, r7, lr}
+  400bd6:	b09c      	sub	sp, #112	; 0x70
+  400bd8:	af00      	add	r7, sp, #0
+  400bda:	6078      	str	r0, [r7, #4]
+	switch (sleep_mode) {
+  400bdc:	687b      	ldr	r3, [r7, #4]
+  400bde:	3b01      	subs	r3, #1
+  400be0:	2b04      	cmp	r3, #4
+  400be2:	f200 81de 	bhi.w	400fa2 <pmc_sleep+0x3ce>
+  400be6:	a201      	add	r2, pc, #4	; (adr r2, 400bec <pmc_sleep+0x18>)
+  400be8:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  400bec:	00400c01 	.word	0x00400c01
+  400bf0:	00400c01 	.word	0x00400c01
+  400bf4:	00400c1d 	.word	0x00400c1d
+  400bf8:	00400c1d 	.word	0x00400c1d
+  400bfc:	00400f81 	.word	0x00400f81
+#if (!(SAMG51 || SAMG53 || SAMG54))
+	case SAM_PM_SMODE_SLEEP_WFI:
+	case SAM_PM_SMODE_SLEEP_WFE:
+#if (SAM4S || SAM4E || SAM4N || SAM4C || SAM4CM || SAM4CP || SAMG55 || SAMV71 || SAMV70 || SAMS70 || SAME70)
+		SCB->SCR &= (uint32_t)~SCR_SLEEPDEEP;
+  400c00:	4a80      	ldr	r2, [pc, #512]	; (400e04 <pmc_sleep+0x230>)
+  400c02:	4b80      	ldr	r3, [pc, #512]	; (400e04 <pmc_sleep+0x230>)
+  400c04:	691b      	ldr	r3, [r3, #16]
+  400c06:	f023 0304 	bic.w	r3, r3, #4
+  400c0a:	6113      	str	r3, [r2, #16]
+		cpu_irq_enable();
+  400c0c:	4b7e      	ldr	r3, [pc, #504]	; (400e08 <pmc_sleep+0x234>)
+  400c0e:	2201      	movs	r2, #1
+  400c10:	701a      	strb	r2, [r3, #0]
+    This function ensures the apparent order of the explicit memory operations before
+    and after the instruction, without ensuring their completion.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __DMB(void)
+{
+  __ASM volatile ("dmb");
+  400c12:	f3bf 8f5f 	dmb	sy
+  This function enables IRQ interrupts by clearing the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+{
+  __ASM volatile ("cpsie i" : : : "memory");
+  400c16:	b662      	cpsie	i
+    Wait For Interrupt is a hint instruction that suspends execution
+    until one of a number of events occurs.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __WFI(void)
+{
+  __ASM volatile ("wfi");
+  400c18:	bf30      	wfi
+		__WFI();
+		break;
+  400c1a:	e1c2      	b.n	400fa2 <pmc_sleep+0x3ce>
+#if defined(EFC1)
+		uint32_t fmr1;
+#endif
+#if (SAM4S || SAM4E || SAM4N || SAM4C || SAM4CM || SAM4CP || SAMG55 || SAMV71 || SAMV70 || SAMS70 || SAME70)
+		(sleep_mode == SAM_PM_SMODE_WAIT_FAST) ?
+				pmc_set_flash_in_wait_mode(PMC_FSMR_FLPM_FLASH_STANDBY) :
+  400c1c:	687b      	ldr	r3, [r7, #4]
+  400c1e:	2b03      	cmp	r3, #3
+  400c20:	d103      	bne.n	400c2a <pmc_sleep+0x56>
+  400c22:	2000      	movs	r0, #0
+  400c24:	4b79      	ldr	r3, [pc, #484]	; (400e0c <pmc_sleep+0x238>)
+  400c26:	4798      	blx	r3
+  400c28:	e003      	b.n	400c32 <pmc_sleep+0x5e>
+				pmc_set_flash_in_wait_mode(PMC_FSMR_FLPM_FLASH_DEEP_POWERDOWN);
+  400c2a:	f44f 1000 	mov.w	r0, #2097152	; 0x200000
+  400c2e:	4b77      	ldr	r3, [pc, #476]	; (400e0c <pmc_sleep+0x238>)
+  400c30:	4798      	blx	r3
+  This function disables IRQ interrupts by setting the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+{
+  __ASM volatile ("cpsid i" : : : "memory");
+  400c32:	b672      	cpsid	i
+    This function ensures the apparent order of the explicit memory operations before
+    and after the instruction, without ensuring their completion.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __DMB(void)
+{
+  __ASM volatile ("dmb");
+  400c34:	f3bf 8f5f 	dmb	sy
+#endif
+		cpu_irq_disable();
+  400c38:	4b73      	ldr	r3, [pc, #460]	; (400e08 <pmc_sleep+0x234>)
+  400c3a:	2200      	movs	r2, #0
+  400c3c:	701a      	strb	r2, [r3, #0]
+		b_is_sleep_clock_used = true;
+  400c3e:	4b74      	ldr	r3, [pc, #464]	; (400e10 <pmc_sleep+0x23c>)
+  400c40:	2201      	movs	r2, #1
+  400c42:	701a      	strb	r2, [r3, #0]
+		/* Backup the sub-system 1 status and stop sub-system 1 */
+		uint32_t cpclk_backup = PMC->PMC_SCSR &
+				(PMC_SCSR_CPCK | PMC_SCSR_CPBMCK);
+		PMC->PMC_SCDR = cpclk_backup | PMC_SCDR_CPKEY_PASSWD;
+#endif
+		pmc_save_clock_settings(&mor, &pllr0, &pllr1, &mckr, &fmr,
+  400c44:	687b      	ldr	r3, [r7, #4]
+  400c46:	2b04      	cmp	r3, #4
+  400c48:	bf0c      	ite	eq
+  400c4a:	2301      	moveq	r3, #1
+  400c4c:	2300      	movne	r3, #0
+  400c4e:	b2da      	uxtb	r2, r3
+  400c50:	f107 0320 	add.w	r3, r7, #32
+  400c54:	66fb      	str	r3, [r7, #108]	; 0x6c
+  400c56:	f107 031c 	add.w	r3, r7, #28
+  400c5a:	66bb      	str	r3, [r7, #104]	; 0x68
+  400c5c:	f107 0318 	add.w	r3, r7, #24
+  400c60:	667b      	str	r3, [r7, #100]	; 0x64
+  400c62:	f107 0314 	add.w	r3, r7, #20
+  400c66:	663b      	str	r3, [r7, #96]	; 0x60
+  400c68:	f107 0310 	add.w	r3, r7, #16
+  400c6c:	65fb      	str	r3, [r7, #92]	; 0x5c
+  400c6e:	f107 030c 	add.w	r3, r7, #12
+  400c72:	65bb      	str	r3, [r7, #88]	; 0x58
+  400c74:	4613      	mov	r3, r2
+  400c76:	f887 3057 	strb.w	r3, [r7, #87]	; 0x57
+#if defined(EFC1)
+		uint32_t *p_fmr_setting1,
+#endif
+		const bool disable_xtal)
+{
+	uint32_t mor  = PMC->CKGR_MOR;
+  400c7a:	4b66      	ldr	r3, [pc, #408]	; (400e14 <pmc_sleep+0x240>)
+  400c7c:	6a1b      	ldr	r3, [r3, #32]
+  400c7e:	653b      	str	r3, [r7, #80]	; 0x50
+	uint32_t mckr = PMC->PMC_MCKR;
+  400c80:	4b64      	ldr	r3, [pc, #400]	; (400e14 <pmc_sleep+0x240>)
+  400c82:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  400c84:	64fb      	str	r3, [r7, #76]	; 0x4c
+	uint32_t fmr  = EFC0->EEFC_FMR;
+  400c86:	4b64      	ldr	r3, [pc, #400]	; (400e18 <pmc_sleep+0x244>)
+  400c88:	681b      	ldr	r3, [r3, #0]
+  400c8a:	64bb      	str	r3, [r7, #72]	; 0x48
+# if defined(EFC1)
+	uint32_t fmr1 = EFC1->EEFC_FMR;
+  400c8c:	4b63      	ldr	r3, [pc, #396]	; (400e1c <pmc_sleep+0x248>)
+  400c8e:	681b      	ldr	r3, [r3, #0]
+  400c90:	647b      	str	r3, [r7, #68]	; 0x44
+# endif
+
+	if (p_osc_setting) {
+  400c92:	6efb      	ldr	r3, [r7, #108]	; 0x6c
+  400c94:	2b00      	cmp	r3, #0
+  400c96:	d002      	beq.n	400c9e <pmc_sleep+0xca>
+		*p_osc_setting = mor;
+  400c98:	6efb      	ldr	r3, [r7, #108]	; 0x6c
+  400c9a:	6d3a      	ldr	r2, [r7, #80]	; 0x50
+  400c9c:	601a      	str	r2, [r3, #0]
+	}
+	if (p_pll0_setting) {
+  400c9e:	6ebb      	ldr	r3, [r7, #104]	; 0x68
+  400ca0:	2b00      	cmp	r3, #0
+  400ca2:	d003      	beq.n	400cac <pmc_sleep+0xd8>
+		*p_pll0_setting = PMC->CKGR_PLLAR;
+  400ca4:	4b5b      	ldr	r3, [pc, #364]	; (400e14 <pmc_sleep+0x240>)
+  400ca6:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+  400ca8:	6ebb      	ldr	r3, [r7, #104]	; 0x68
+  400caa:	601a      	str	r2, [r3, #0]
+	}
+	if (p_pll1_setting) {
+  400cac:	6e7b      	ldr	r3, [r7, #100]	; 0x64
+  400cae:	2b00      	cmp	r3, #0
+  400cb0:	d003      	beq.n	400cba <pmc_sleep+0xe6>
+#if (SAM3S || SAM4S || SAM4C || SAM4CM || SAM4CP)
+		*p_pll1_setting = PMC->CKGR_PLLBR;
+  400cb2:	4b58      	ldr	r3, [pc, #352]	; (400e14 <pmc_sleep+0x240>)
+  400cb4:	6ada      	ldr	r2, [r3, #44]	; 0x2c
+  400cb6:	6e7b      	ldr	r3, [r7, #100]	; 0x64
+  400cb8:	601a      	str	r2, [r3, #0]
+		*p_pll1_setting = PMC->CKGR_UCKR;
+#else
+		*p_pll1_setting = 0;
+#endif
+	}
+	if (p_mck_setting) {
+  400cba:	6e3b      	ldr	r3, [r7, #96]	; 0x60
+  400cbc:	2b00      	cmp	r3, #0
+  400cbe:	d002      	beq.n	400cc6 <pmc_sleep+0xf2>
+		*p_mck_setting  = mckr;
+  400cc0:	6e3b      	ldr	r3, [r7, #96]	; 0x60
+  400cc2:	6cfa      	ldr	r2, [r7, #76]	; 0x4c
+  400cc4:	601a      	str	r2, [r3, #0]
+	}
+	if (p_fmr_setting) {
+  400cc6:	6dfb      	ldr	r3, [r7, #92]	; 0x5c
+  400cc8:	2b00      	cmp	r3, #0
+  400cca:	d002      	beq.n	400cd2 <pmc_sleep+0xfe>
+		*p_fmr_setting  = fmr;
+  400ccc:	6dfb      	ldr	r3, [r7, #92]	; 0x5c
+  400cce:	6cba      	ldr	r2, [r7, #72]	; 0x48
+  400cd0:	601a      	str	r2, [r3, #0]
+	}
+#if defined(EFC1)
+	if (p_fmr_setting1) {
+  400cd2:	6dbb      	ldr	r3, [r7, #88]	; 0x58
+  400cd4:	2b00      	cmp	r3, #0
+  400cd6:	d002      	beq.n	400cde <pmc_sleep+0x10a>
+		*p_fmr_setting1 = fmr1;
+  400cd8:	6dbb      	ldr	r3, [r7, #88]	; 0x58
+  400cda:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+  400cdc:	601a      	str	r2, [r3, #0]
+	}
+#endif
+
+	/* Enable FAST RC */
+	PMC->CKGR_MOR = CKGR_MOR_KEY_PASSWD | mor | CKGR_MOR_MOSCRCEN;
+  400cde:	4a4d      	ldr	r2, [pc, #308]	; (400e14 <pmc_sleep+0x240>)
+  400ce0:	6d3b      	ldr	r3, [r7, #80]	; 0x50
+  400ce2:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400ce6:	f043 0308 	orr.w	r3, r3, #8
+  400cea:	6213      	str	r3, [r2, #32]
+	/* if MCK source is PLL, switch to mainck */
+	if ((mckr & PMC_MCKR_CSS_Msk) > PMC_MCKR_CSS_MAIN_CLK) {
+  400cec:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400cee:	f003 0303 	and.w	r3, r3, #3
+  400cf2:	2b01      	cmp	r3, #1
+  400cf4:	d90e      	bls.n	400d14 <pmc_sleep+0x140>
+		/* MCK -> MAINCK */
+		mckr = (mckr & (~PMC_MCKR_CSS_Msk)) | PMC_MCKR_CSS_MAIN_CLK;
+  400cf6:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400cf8:	f023 0303 	bic.w	r3, r3, #3
+  400cfc:	f043 0301 	orr.w	r3, r3, #1
+  400d00:	64fb      	str	r3, [r7, #76]	; 0x4c
+		PMC->PMC_MCKR = mckr;
+  400d02:	4a44      	ldr	r2, [pc, #272]	; (400e14 <pmc_sleep+0x240>)
+  400d04:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400d06:	6313      	str	r3, [r2, #48]	; 0x30
+		while(!(PMC->PMC_SR & PMC_SR_MCKRDY));
+  400d08:	4b42      	ldr	r3, [pc, #264]	; (400e14 <pmc_sleep+0x240>)
+  400d0a:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400d0c:	f003 0308 	and.w	r3, r3, #8
+  400d10:	2b00      	cmp	r3, #0
+  400d12:	d0f9      	beq.n	400d08 <pmc_sleep+0x134>
+	}
+	/* MCK prescale -> 1 */
+	if (mckr & PMC_MCKR_PRES_Msk) {
+  400d14:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400d16:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  400d1a:	2b00      	cmp	r3, #0
+  400d1c:	d00c      	beq.n	400d38 <pmc_sleep+0x164>
+		mckr = (mckr & (~PMC_MCKR_PRES_Msk));
+  400d1e:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400d20:	f023 0370 	bic.w	r3, r3, #112	; 0x70
+  400d24:	64fb      	str	r3, [r7, #76]	; 0x4c
+		PMC->PMC_MCKR = mckr;
+  400d26:	4a3b      	ldr	r2, [pc, #236]	; (400e14 <pmc_sleep+0x240>)
+  400d28:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
+  400d2a:	6313      	str	r3, [r2, #48]	; 0x30
+		while(!(PMC->PMC_SR & PMC_SR_MCKRDY));
+  400d2c:	4b39      	ldr	r3, [pc, #228]	; (400e14 <pmc_sleep+0x240>)
+  400d2e:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400d30:	f003 0308 	and.w	r3, r3, #8
+  400d34:	2b00      	cmp	r3, #0
+  400d36:	d0f9      	beq.n	400d2c <pmc_sleep+0x158>
+	}
+	/* Disable PLLs */
+	pmc_disable_pllack();
+  400d38:	4b39      	ldr	r3, [pc, #228]	; (400e20 <pmc_sleep+0x24c>)
+  400d3a:	4798      	blx	r3
+#if (SAM3S || SAM4S || SAM4C || SAM4CM || SAM4CP)
+	pmc_disable_pllbck();
+  400d3c:	4b39      	ldr	r3, [pc, #228]	; (400e24 <pmc_sleep+0x250>)
+  400d3e:	4798      	blx	r3
+	pmc_disable_upll_clock();
+#endif
+
+	/* Prepare for entering WAIT mode */
+	/* Wait fast RC ready */
+	while (!(PMC->PMC_SR & PMC_SR_MOSCRCS));
+  400d40:	4b34      	ldr	r3, [pc, #208]	; (400e14 <pmc_sleep+0x240>)
+  400d42:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400d44:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  400d48:	2b00      	cmp	r3, #0
+  400d4a:	d0f9      	beq.n	400d40 <pmc_sleep+0x16c>
+	EFC0->EEFC_FMR = (fmr & (~EEFC_FMR_FWS_Msk)) | EEFC_FMR_FWS(1);
+
+	PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCSEL) | CKGR_MOR_MOSCRCF_24_MHz |
+			CKGR_MOR_KEY_PASSWD;
+#else
+	PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCSEL) |
+  400d4c:	4a31      	ldr	r2, [pc, #196]	; (400e14 <pmc_sleep+0x240>)
+  400d4e:	4b31      	ldr	r3, [pc, #196]	; (400e14 <pmc_sleep+0x240>)
+  400d50:	6a1b      	ldr	r3, [r3, #32]
+  400d52:	f023 739b 	bic.w	r3, r3, #20316160	; 0x1360000
+  400d56:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+  400d5a:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400d5e:	6213      	str	r3, [r2, #32]
+			CKGR_MOR_KEY_PASSWD;
+#endif
+	while (!(PMC->PMC_SR & PMC_SR_MOSCSELS));
+  400d60:	4b2c      	ldr	r3, [pc, #176]	; (400e14 <pmc_sleep+0x240>)
+  400d62:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400d64:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+  400d68:	2b00      	cmp	r3, #0
+  400d6a:	d0f9      	beq.n	400d60 <pmc_sleep+0x18c>
+
+#if (!SAMG)
+	/* FWS update */
+	EFC0->EEFC_FMR = fmr & (~EEFC_FMR_FWS_Msk);
+  400d6c:	4a2a      	ldr	r2, [pc, #168]	; (400e18 <pmc_sleep+0x244>)
+  400d6e:	6cbb      	ldr	r3, [r7, #72]	; 0x48
+  400d70:	f423 6370 	bic.w	r3, r3, #3840	; 0xf00
+  400d74:	6013      	str	r3, [r2, #0]
+#if defined(EFC1)
+	EFC1->EEFC_FMR = fmr1 & (~EEFC_FMR_FWS_Msk);
+  400d76:	4a29      	ldr	r2, [pc, #164]	; (400e1c <pmc_sleep+0x248>)
+  400d78:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+  400d7a:	f423 6370 	bic.w	r3, r3, #3840	; 0xf00
+  400d7e:	6013      	str	r3, [r2, #0]
+#endif
+#endif
+
+	/* Disable XTALs */
+	if (disable_xtal) {
+  400d80:	f897 3057 	ldrb.w	r3, [r7, #87]	; 0x57
+  400d84:	2b00      	cmp	r3, #0
+  400d86:	d009      	beq.n	400d9c <pmc_sleep+0x1c8>
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+  400d88:	4a22      	ldr	r2, [pc, #136]	; (400e14 <pmc_sleep+0x240>)
+  400d8a:	4b22      	ldr	r3, [pc, #136]	; (400e14 <pmc_sleep+0x240>)
+  400d8c:	6a1b      	ldr	r3, [r3, #32]
+  400d8e:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  400d92:	f023 0301 	bic.w	r3, r3, #1
+  400d96:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400d9a:	6213      	str	r3, [r2, #32]
+				&fmr1,
+#endif
+				(sleep_mode == SAM_PM_SMODE_WAIT));
+
+		/* Enter wait mode */
+		cpu_irq_enable();
+  400d9c:	4b1a      	ldr	r3, [pc, #104]	; (400e08 <pmc_sleep+0x234>)
+  400d9e:	2201      	movs	r2, #1
+  400da0:	701a      	strb	r2, [r3, #0]
+  400da2:	f3bf 8f5f 	dmb	sy
+  This function enables IRQ interrupts by clearing the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+{
+  __ASM volatile ("cpsie i" : : : "memory");
+  400da6:	b662      	cpsie	i
+
+		pmc_enable_waitmode();
+  400da8:	4b1f      	ldr	r3, [pc, #124]	; (400e28 <pmc_sleep+0x254>)
+  400daa:	4798      	blx	r3
+  This function disables IRQ interrupts by setting the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+{
+  __ASM volatile ("cpsid i" : : : "memory");
+  400dac:	b672      	cpsid	i
+  400dae:	f3bf 8f5f 	dmb	sy
+
+		cpu_irq_disable();
+  400db2:	4b15      	ldr	r3, [pc, #84]	; (400e08 <pmc_sleep+0x234>)
+  400db4:	2200      	movs	r2, #0
+  400db6:	701a      	strb	r2, [r3, #0]
+		pmc_restore_clock_setting(mor, pllr0, pllr1, mckr, fmr
+  400db8:	6a3d      	ldr	r5, [r7, #32]
+  400dba:	69fc      	ldr	r4, [r7, #28]
+  400dbc:	69b8      	ldr	r0, [r7, #24]
+  400dbe:	6979      	ldr	r1, [r7, #20]
+  400dc0:	693a      	ldr	r2, [r7, #16]
+  400dc2:	68fb      	ldr	r3, [r7, #12]
+  400dc4:	643d      	str	r5, [r7, #64]	; 0x40
+  400dc6:	63fc      	str	r4, [r7, #60]	; 0x3c
+  400dc8:	63b8      	str	r0, [r7, #56]	; 0x38
+  400dca:	6379      	str	r1, [r7, #52]	; 0x34
+  400dcc:	633a      	str	r2, [r7, #48]	; 0x30
+  400dce:	62fb      	str	r3, [r7, #44]	; 0x2c
+		, const uint32_t fmr_setting1
+#endif
+		)
+{
+	uint32_t mckr;
+	uint32_t pll_sr = 0;
+  400dd0:	2300      	movs	r3, #0
+  400dd2:	62bb      	str	r3, [r7, #40]	; 0x28
+
+	/* Switch mainck to external xtal */
+	if (CKGR_MOR_MOSCXTBY == (osc_setting & CKGR_MOR_MOSCXTBY)) {
+  400dd4:	6c3b      	ldr	r3, [r7, #64]	; 0x40
+  400dd6:	f003 0302 	and.w	r3, r3, #2
+  400dda:	2b00      	cmp	r3, #0
+  400ddc:	d02a      	beq.n	400e34 <pmc_sleep+0x260>
+		/* Bypass mode */
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+  400dde:	490d      	ldr	r1, [pc, #52]	; (400e14 <pmc_sleep+0x240>)
+  400de0:	4b0c      	ldr	r3, [pc, #48]	; (400e14 <pmc_sleep+0x240>)
+  400de2:	6a1b      	ldr	r3, [r3, #32]
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+  400de4:	4a11      	ldr	r2, [pc, #68]	; (400e2c <pmc_sleep+0x258>)
+  400de6:	401a      	ands	r2, r3
+  400de8:	4b11      	ldr	r3, [pc, #68]	; (400e30 <pmc_sleep+0x25c>)
+  400dea:	4313      	orrs	r3, r2
+	uint32_t pll_sr = 0;
+
+	/* Switch mainck to external xtal */
+	if (CKGR_MOR_MOSCXTBY == (osc_setting & CKGR_MOR_MOSCXTBY)) {
+		/* Bypass mode */
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+  400dec:	620b      	str	r3, [r1, #32]
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+				CKGR_MOR_MOSCSEL;
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCEN &
+  400dee:	4a09      	ldr	r2, [pc, #36]	; (400e14 <pmc_sleep+0x240>)
+  400df0:	4b08      	ldr	r3, [pc, #32]	; (400e14 <pmc_sleep+0x240>)
+  400df2:	6a1b      	ldr	r3, [r3, #32]
+					~CKGR_MOR_MOSCRCF_Msk)
+				| CKGR_MOR_KEY_PASSWD;
+  400df4:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  400df8:	f023 0378 	bic.w	r3, r3, #120	; 0x78
+  400dfc:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+	if (CKGR_MOR_MOSCXTBY == (osc_setting & CKGR_MOR_MOSCXTBY)) {
+		/* Bypass mode */
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTEN) |
+				CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTBY |
+				CKGR_MOR_MOSCSEL;
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCEN &
+  400e00:	6213      	str	r3, [r2, #32]
+  400e02:	e052      	b.n	400eaa <pmc_sleep+0x2d6>
+  400e04:	e000ed00 	.word	0xe000ed00
+  400e08:	20000000 	.word	0x20000000
+  400e0c:	00400b25 	.word	0x00400b25
+  400e10:	200004cc 	.word	0x200004cc
+  400e14:	400e0400 	.word	0x400e0400
+  400e18:	400e0a00 	.word	0x400e0a00
+  400e1c:	400e0c00 	.word	0x400e0c00
+  400e20:	00400a39 	.word	0x00400a39
+  400e24:	00400a6d 	.word	0x00400a6d
+  400e28:	00400b41 	.word	0x00400b41
+  400e2c:	fec8fffc 	.word	0xfec8fffc
+  400e30:	01370002 	.word	0x01370002
+					~CKGR_MOR_MOSCRCF_Msk)
+				| CKGR_MOR_KEY_PASSWD;
+	} else if (CKGR_MOR_MOSCXTEN == (osc_setting & CKGR_MOR_MOSCXTEN)) {
+  400e34:	6c3b      	ldr	r3, [r7, #64]	; 0x40
+  400e36:	f003 0301 	and.w	r3, r3, #1
+  400e3a:	2b00      	cmp	r3, #0
+  400e3c:	d035      	beq.n	400eaa <pmc_sleep+0x2d6>
+		/* Enable External XTAL */
+		if (!(PMC->CKGR_MOR & CKGR_MOR_MOSCXTEN)) {
+  400e3e:	4b5a      	ldr	r3, [pc, #360]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e40:	6a1b      	ldr	r3, [r3, #32]
+  400e42:	f003 0301 	and.w	r3, r3, #1
+  400e46:	2b00      	cmp	r3, #0
+  400e48:	d111      	bne.n	400e6e <pmc_sleep+0x29a>
+			PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTBY) |
+  400e4a:	4a57      	ldr	r2, [pc, #348]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e4c:	4b56      	ldr	r3, [pc, #344]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e4e:	6a1b      	ldr	r3, [r3, #32]
+					CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTEN;
+  400e50:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  400e54:	f023 0303 	bic.w	r3, r3, #3
+  400e58:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+  400e5c:	f043 0301 	orr.w	r3, r3, #1
+					~CKGR_MOR_MOSCRCF_Msk)
+				| CKGR_MOR_KEY_PASSWD;
+	} else if (CKGR_MOR_MOSCXTEN == (osc_setting & CKGR_MOR_MOSCXTEN)) {
+		/* Enable External XTAL */
+		if (!(PMC->CKGR_MOR & CKGR_MOR_MOSCXTEN)) {
+			PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCXTBY) |
+  400e60:	6213      	str	r3, [r2, #32]
+					CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCXTEN;
+			/* Wait the Xtal to stabilize */
+			while (!(PMC->PMC_SR & PMC_SR_MOSCXTS));
+  400e62:	4b51      	ldr	r3, [pc, #324]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e64:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400e66:	f003 0301 	and.w	r3, r3, #1
+  400e6a:	2b00      	cmp	r3, #0
+  400e6c:	d0f9      	beq.n	400e62 <pmc_sleep+0x28e>
+		}
+		/* Select External XTAL */
+		if (!(PMC->CKGR_MOR & CKGR_MOR_MOSCSEL)) {
+  400e6e:	4b4e      	ldr	r3, [pc, #312]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e70:	6a1b      	ldr	r3, [r3, #32]
+  400e72:	f003 7380 	and.w	r3, r3, #16777216	; 0x1000000
+  400e76:	2b00      	cmp	r3, #0
+  400e78:	d10d      	bne.n	400e96 <pmc_sleep+0x2c2>
+			PMC->CKGR_MOR |= CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCSEL;
+  400e7a:	4a4b      	ldr	r2, [pc, #300]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e7c:	4b4a      	ldr	r3, [pc, #296]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e7e:	6a1b      	ldr	r3, [r3, #32]
+  400e80:	f043 739b 	orr.w	r3, r3, #20316160	; 0x1360000
+  400e84:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  400e88:	6213      	str	r3, [r2, #32]
+			while (!(PMC->PMC_SR & PMC_SR_MOSCSELS));
+  400e8a:	4b47      	ldr	r3, [pc, #284]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e8c:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400e8e:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+  400e92:	2b00      	cmp	r3, #0
+  400e94:	d0f9      	beq.n	400e8a <pmc_sleep+0x2b6>
+		}
+		/* Disable Fast RC */
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCEN &
+  400e96:	4a44      	ldr	r2, [pc, #272]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e98:	4b43      	ldr	r3, [pc, #268]	; (400fa8 <pmc_sleep+0x3d4>)
+  400e9a:	6a1b      	ldr	r3, [r3, #32]
+						~CKGR_MOR_MOSCRCF_Msk)
+					| CKGR_MOR_KEY_PASSWD;
+  400e9c:	f423 135c 	bic.w	r3, r3, #3604480	; 0x370000
+  400ea0:	f023 0378 	bic.w	r3, r3, #120	; 0x78
+  400ea4:	f443 135c 	orr.w	r3, r3, #3604480	; 0x370000
+		if (!(PMC->CKGR_MOR & CKGR_MOR_MOSCSEL)) {
+			PMC->CKGR_MOR |= CKGR_MOR_KEY_PASSWD | CKGR_MOR_MOSCSEL;
+			while (!(PMC->PMC_SR & PMC_SR_MOSCSELS));
+		}
+		/* Disable Fast RC */
+		PMC->CKGR_MOR = (PMC->CKGR_MOR & ~CKGR_MOR_MOSCRCEN &
+  400ea8:	6213      	str	r3, [r2, #32]
+						~CKGR_MOR_MOSCRCF_Msk)
+					| CKGR_MOR_KEY_PASSWD;
+	}
+
+	if (pll0_setting & CKGR_PLLAR_MULA_Msk) {
+  400eaa:	6bfa      	ldr	r2, [r7, #60]	; 0x3c
+  400eac:	4b3f      	ldr	r3, [pc, #252]	; (400fac <pmc_sleep+0x3d8>)
+  400eae:	4013      	ands	r3, r2
+  400eb0:	2b00      	cmp	r3, #0
+  400eb2:	d008      	beq.n	400ec6 <pmc_sleep+0x2f2>
+#if (SAM4C || SAM4CM || SAMG || SAM4CP)
+		PMC->CKGR_PLLAR = pll0_setting;
+#else
+		PMC->CKGR_PLLAR = CKGR_PLLAR_ONE | pll0_setting;
+  400eb4:	4a3c      	ldr	r2, [pc, #240]	; (400fa8 <pmc_sleep+0x3d4>)
+  400eb6:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
+  400eb8:	f043 5300 	orr.w	r3, r3, #536870912	; 0x20000000
+  400ebc:	6293      	str	r3, [r2, #40]	; 0x28
+#endif
+		pll_sr |= PMC_SR_LOCKA;
+  400ebe:	6abb      	ldr	r3, [r7, #40]	; 0x28
+  400ec0:	f043 0302 	orr.w	r3, r3, #2
+  400ec4:	62bb      	str	r3, [r7, #40]	; 0x28
+	}
+#if (SAM3S || SAM4S || SAM4C || SAM4CM || SAM4CP)
+	if (pll1_setting & CKGR_PLLBR_MULB_Msk) {
+  400ec6:	6bba      	ldr	r2, [r7, #56]	; 0x38
+  400ec8:	4b38      	ldr	r3, [pc, #224]	; (400fac <pmc_sleep+0x3d8>)
+  400eca:	4013      	ands	r3, r2
+  400ecc:	2b00      	cmp	r3, #0
+  400ece:	d006      	beq.n	400ede <pmc_sleep+0x30a>
+		PMC->CKGR_PLLBR = pll1_setting;
+  400ed0:	4a35      	ldr	r2, [pc, #212]	; (400fa8 <pmc_sleep+0x3d4>)
+  400ed2:	6bbb      	ldr	r3, [r7, #56]	; 0x38
+  400ed4:	62d3      	str	r3, [r2, #44]	; 0x2c
+		pll_sr |= PMC_SR_LOCKB;
+  400ed6:	6abb      	ldr	r3, [r7, #40]	; 0x28
+  400ed8:	f043 0304 	orr.w	r3, r3, #4
+  400edc:	62bb      	str	r3, [r7, #40]	; 0x28
+	}
+#else
+	UNUSED(pll1_setting);
+#endif
+	/* Wait MCK source ready */
+	switch(mck_setting & PMC_MCKR_CSS_Msk) {
+  400ede:	6b7b      	ldr	r3, [r7, #52]	; 0x34
+  400ee0:	f003 0303 	and.w	r3, r3, #3
+  400ee4:	2b02      	cmp	r3, #2
+  400ee6:	d002      	beq.n	400eee <pmc_sleep+0x31a>
+  400ee8:	2b03      	cmp	r3, #3
+  400eea:	d007      	beq.n	400efc <pmc_sleep+0x328>
+  400eec:	e00c      	b.n	400f08 <pmc_sleep+0x334>
+	case PMC_MCKR_CSS_PLLA_CLK:
+		while (!(PMC->PMC_SR & PMC_SR_LOCKA));
+  400eee:	4b2e      	ldr	r3, [pc, #184]	; (400fa8 <pmc_sleep+0x3d4>)
+  400ef0:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400ef2:	f003 0302 	and.w	r3, r3, #2
+  400ef6:	2b00      	cmp	r3, #0
+  400ef8:	d0f9      	beq.n	400eee <pmc_sleep+0x31a>
+  400efa:	e005      	b.n	400f08 <pmc_sleep+0x334>
+		break;
+#if (SAM3S || SAM4S || SAM4C || SAM4CM || SAM4CP)
+	case PMC_MCKR_CSS_PLLB_CLK:
+		while (!(PMC->PMC_SR & PMC_SR_LOCKB));
+  400efc:	4b2a      	ldr	r3, [pc, #168]	; (400fa8 <pmc_sleep+0x3d4>)
+  400efe:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400f00:	f003 0304 	and.w	r3, r3, #4
+  400f04:	2b00      	cmp	r3, #0
+  400f06:	d0f9      	beq.n	400efc <pmc_sleep+0x328>
+		break;
+#endif
+	}
+
+	/* Switch to faster clock */
+	mckr = PMC->PMC_MCKR;
+  400f08:	4b27      	ldr	r3, [pc, #156]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f0a:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  400f0c:	627b      	str	r3, [r7, #36]	; 0x24
+
+	/* Set PRES */
+	PMC->PMC_MCKR = (mckr & ~PMC_MCKR_PRES_Msk)
+  400f0e:	4926      	ldr	r1, [pc, #152]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f10:	6a7b      	ldr	r3, [r7, #36]	; 0x24
+  400f12:	f023 0270 	bic.w	r2, r3, #112	; 0x70
+		| (mck_setting & PMC_MCKR_PRES_Msk);
+  400f16:	6b7b      	ldr	r3, [r7, #52]	; 0x34
+  400f18:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  400f1c:	4313      	orrs	r3, r2
+
+	/* Switch to faster clock */
+	mckr = PMC->PMC_MCKR;
+
+	/* Set PRES */
+	PMC->PMC_MCKR = (mckr & ~PMC_MCKR_PRES_Msk)
+  400f1e:	630b      	str	r3, [r1, #48]	; 0x30
+		| (mck_setting & PMC_MCKR_PRES_Msk);
+	while (!(PMC->PMC_SR & PMC_SR_MCKRDY));
+  400f20:	4b21      	ldr	r3, [pc, #132]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f22:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400f24:	f003 0308 	and.w	r3, r3, #8
+  400f28:	2b00      	cmp	r3, #0
+  400f2a:	d0f9      	beq.n	400f20 <pmc_sleep+0x34c>
+
+	/* Restore flash wait states */
+	EFC0->EEFC_FMR = fmr_setting;
+  400f2c:	4a20      	ldr	r2, [pc, #128]	; (400fb0 <pmc_sleep+0x3dc>)
+  400f2e:	6b3b      	ldr	r3, [r7, #48]	; 0x30
+  400f30:	6013      	str	r3, [r2, #0]
+#if defined(EFC1)
+	EFC1->EEFC_FMR = fmr_setting1;
+  400f32:	4a20      	ldr	r2, [pc, #128]	; (400fb4 <pmc_sleep+0x3e0>)
+  400f34:	6afb      	ldr	r3, [r7, #44]	; 0x2c
+  400f36:	6013      	str	r3, [r2, #0]
+#endif
+
+	/* Set CSS and others */
+	PMC->PMC_MCKR = mck_setting;
+  400f38:	4a1b      	ldr	r2, [pc, #108]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f3a:	6b7b      	ldr	r3, [r7, #52]	; 0x34
+  400f3c:	6313      	str	r3, [r2, #48]	; 0x30
+	while (!(PMC->PMC_SR & PMC_SR_MCKRDY));
+  400f3e:	4b1a      	ldr	r3, [pc, #104]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f40:	6e9b      	ldr	r3, [r3, #104]	; 0x68
+  400f42:	f003 0308 	and.w	r3, r3, #8
+  400f46:	2b00      	cmp	r3, #0
+  400f48:	d0f9      	beq.n	400f3e <pmc_sleep+0x36a>
+
+	/* Waiting all restored PLLs ready */
+	while (!(PMC->PMC_SR & pll_sr));
+  400f4a:	4b17      	ldr	r3, [pc, #92]	; (400fa8 <pmc_sleep+0x3d4>)
+  400f4c:	6e9a      	ldr	r2, [r3, #104]	; 0x68
+  400f4e:	6abb      	ldr	r3, [r7, #40]	; 0x28
+  400f50:	4013      	ands	r3, r2
+  400f52:	2b00      	cmp	r3, #0
+  400f54:	d0f9      	beq.n	400f4a <pmc_sleep+0x376>
+
+#if (SAM4C || SAM4CM || SAM4CP)
+		/* Restore the sub-system 1 */
+		PMC->PMC_SCER = cpclk_backup | PMC_SCER_CPKEY_PASSWD;
+#endif
+		b_is_sleep_clock_used = false;
+  400f56:	4b18      	ldr	r3, [pc, #96]	; (400fb8 <pmc_sleep+0x3e4>)
+  400f58:	2200      	movs	r2, #0
+  400f5a:	701a      	strb	r2, [r3, #0]
+		if (callback_clocks_restored) {
+  400f5c:	4b17      	ldr	r3, [pc, #92]	; (400fbc <pmc_sleep+0x3e8>)
+  400f5e:	681b      	ldr	r3, [r3, #0]
+  400f60:	2b00      	cmp	r3, #0
+  400f62:	d005      	beq.n	400f70 <pmc_sleep+0x39c>
+			callback_clocks_restored();
+  400f64:	4b15      	ldr	r3, [pc, #84]	; (400fbc <pmc_sleep+0x3e8>)
+  400f66:	681b      	ldr	r3, [r3, #0]
+  400f68:	4798      	blx	r3
+			callback_clocks_restored = NULL;
+  400f6a:	4b14      	ldr	r3, [pc, #80]	; (400fbc <pmc_sleep+0x3e8>)
+  400f6c:	2200      	movs	r2, #0
+  400f6e:	601a      	str	r2, [r3, #0]
+		}
+		cpu_irq_enable();
+  400f70:	4b13      	ldr	r3, [pc, #76]	; (400fc0 <pmc_sleep+0x3ec>)
+  400f72:	2201      	movs	r2, #1
+  400f74:	701a      	strb	r2, [r3, #0]
+  400f76:	f3bf 8f5f 	dmb	sy
+  This function enables IRQ interrupts by clearing the I-bit in the CPSR.
+  Can only be executed in Privileged modes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+{
+  __ASM volatile ("cpsie i" : : : "memory");
+  400f7a:	b662      	cpsie	i
+
+		break;
+  400f7c:	bf00      	nop
+  400f7e:	e010      	b.n	400fa2 <pmc_sleep+0x3ce>
+	}
+#if (!(SAMG51 || SAMG53 || SAMG54))
+	case SAM_PM_SMODE_BACKUP:
+		SCB->SCR |= SCR_SLEEPDEEP;
+  400f80:	4a10      	ldr	r2, [pc, #64]	; (400fc4 <pmc_sleep+0x3f0>)
+  400f82:	4b10      	ldr	r3, [pc, #64]	; (400fc4 <pmc_sleep+0x3f0>)
+  400f84:	691b      	ldr	r3, [r3, #16]
+  400f86:	f043 0304 	orr.w	r3, r3, #4
+  400f8a:	6113      	str	r3, [r2, #16]
+#if (SAM4S || SAM4E || SAM4N || SAM4C || SAM4CM || SAM4CP || SAMG55 || SAMV71 || SAMV70 || SAMS70 || SAME70)
+		SUPC->SUPC_CR = SUPC_CR_KEY_PASSWD | SUPC_CR_VROFF_STOP_VREG;
+  400f8c:	4b0e      	ldr	r3, [pc, #56]	; (400fc8 <pmc_sleep+0x3f4>)
+  400f8e:	4a0f      	ldr	r2, [pc, #60]	; (400fcc <pmc_sleep+0x3f8>)
+  400f90:	601a      	str	r2, [r3, #0]
+		cpu_irq_enable();
+  400f92:	4b0b      	ldr	r3, [pc, #44]	; (400fc0 <pmc_sleep+0x3ec>)
+  400f94:	2201      	movs	r2, #1
+  400f96:	701a      	strb	r2, [r3, #0]
+  400f98:	f3bf 8f5f 	dmb	sy
+  400f9c:	b662      	cpsie	i
+    Wait For Interrupt is a hint instruction that suspends execution
+    until one of a number of events occurs.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __WFI(void)
+{
+  __ASM volatile ("wfi");
+  400f9e:	bf30      	wfi
+		__WFI() ;
+#else
+		cpu_irq_enable();
+		__WFE() ;
+#endif
+		break;
+  400fa0:	bf00      	nop
+#endif
+	}
+}
+  400fa2:	3770      	adds	r7, #112	; 0x70
+  400fa4:	46bd      	mov	sp, r7
+  400fa6:	bdb0      	pop	{r4, r5, r7, pc}
+  400fa8:	400e0400 	.word	0x400e0400
+  400fac:	07ff0000 	.word	0x07ff0000
+  400fb0:	400e0a00 	.word	0x400e0a00
+  400fb4:	400e0c00 	.word	0x400e0c00
+  400fb8:	200004cc 	.word	0x200004cc
+  400fbc:	200004d0 	.word	0x200004d0
+  400fc0:	20000000 	.word	0x20000000
+  400fc4:	e000ed00 	.word	0xe000ed00
+  400fc8:	400e1410 	.word	0x400e1410
+  400fcc:	a5000004 	.word	0xa5000004
+
+00400fd0 <tc_init>:
+ */
+void tc_init(
+		Tc *p_tc,
+		uint32_t ul_channel,
+		uint32_t ul_mode)
+{
+  400fd0:	b480      	push	{r7}
+  400fd2:	b087      	sub	sp, #28
+  400fd4:	af00      	add	r7, sp, #0
+  400fd6:	60f8      	str	r0, [r7, #12]
+  400fd8:	60b9      	str	r1, [r7, #8]
+  400fda:	607a      	str	r2, [r7, #4]
+
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+	tc_channel = p_tc->TC_CHANNEL + ul_channel;
+  400fdc:	68bb      	ldr	r3, [r7, #8]
+  400fde:	019b      	lsls	r3, r3, #6
+  400fe0:	68fa      	ldr	r2, [r7, #12]
+  400fe2:	4413      	add	r3, r2
+  400fe4:	617b      	str	r3, [r7, #20]
+
+	/*  Disable TC clock. */
+	tc_channel->TC_CCR = TC_CCR_CLKDIS;
+  400fe6:	697b      	ldr	r3, [r7, #20]
+  400fe8:	2202      	movs	r2, #2
+  400fea:	601a      	str	r2, [r3, #0]
+
+	/*  Disable interrupts. */
+	tc_channel->TC_IDR = 0xFFFFFFFF;
+  400fec:	697b      	ldr	r3, [r7, #20]
+  400fee:	f04f 32ff 	mov.w	r2, #4294967295
+  400ff2:	629a      	str	r2, [r3, #40]	; 0x28
+
+	/*  Clear status register. */
+	tc_channel->TC_SR;
+  400ff4:	697b      	ldr	r3, [r7, #20]
+  400ff6:	6a1b      	ldr	r3, [r3, #32]
+
+	/*  Set mode. */
+	tc_channel->TC_CMR = ul_mode;
+  400ff8:	697b      	ldr	r3, [r7, #20]
+  400ffa:	687a      	ldr	r2, [r7, #4]
+  400ffc:	605a      	str	r2, [r3, #4]
+}
+  400ffe:	371c      	adds	r7, #28
+  401000:	46bd      	mov	sp, r7
+  401002:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401006:	4770      	bx	lr
+
+00401008 <tc_start>:
+ * \param[in] ul_channel Channel to configure
+ */
+void tc_start(
+		Tc *p_tc,
+		uint32_t ul_channel)
+{
+  401008:	b480      	push	{r7}
+  40100a:	b083      	sub	sp, #12
+  40100c:	af00      	add	r7, sp, #0
+  40100e:	6078      	str	r0, [r7, #4]
+  401010:	6039      	str	r1, [r7, #0]
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+
+	p_tc->TC_CHANNEL[ul_channel].TC_CCR = TC_CCR_CLKEN | TC_CCR_SWTRG;
+  401012:	687a      	ldr	r2, [r7, #4]
+  401014:	683b      	ldr	r3, [r7, #0]
+  401016:	019b      	lsls	r3, r3, #6
+  401018:	4413      	add	r3, r2
+  40101a:	2205      	movs	r2, #5
+  40101c:	601a      	str	r2, [r3, #0]
+}
+  40101e:	370c      	adds	r7, #12
+  401020:	46bd      	mov	sp, r7
+  401022:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401026:	4770      	bx	lr
+
+00401028 <tc_read_rc>:
+ * \return The Register C (RC) value.
+ */
+uint32_t tc_read_rc(
+		Tc *p_tc,
+		uint32_t ul_channel)
+{
+  401028:	b480      	push	{r7}
+  40102a:	b083      	sub	sp, #12
+  40102c:	af00      	add	r7, sp, #0
+  40102e:	6078      	str	r0, [r7, #4]
+  401030:	6039      	str	r1, [r7, #0]
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+
+	return p_tc->TC_CHANNEL[ul_channel].TC_RC;
+  401032:	687a      	ldr	r2, [r7, #4]
+  401034:	683b      	ldr	r3, [r7, #0]
+  401036:	019b      	lsls	r3, r3, #6
+  401038:	4413      	add	r3, r2
+  40103a:	3318      	adds	r3, #24
+  40103c:	685b      	ldr	r3, [r3, #4]
+}
+  40103e:	4618      	mov	r0, r3
+  401040:	370c      	adds	r7, #12
+  401042:	46bd      	mov	sp, r7
+  401044:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401048:	4770      	bx	lr
+  40104a:	bf00      	nop
+
+0040104c <tc_write_rc>:
+ */
+void tc_write_rc(
+		Tc *p_tc,
+		uint32_t ul_channel,
+		uint32_t ul_value)
+{
+  40104c:	b480      	push	{r7}
+  40104e:	b085      	sub	sp, #20
+  401050:	af00      	add	r7, sp, #0
+  401052:	60f8      	str	r0, [r7, #12]
+  401054:	60b9      	str	r1, [r7, #8]
+  401056:	607a      	str	r2, [r7, #4]
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+
+	p_tc->TC_CHANNEL[ul_channel].TC_RC = ul_value;
+  401058:	68fa      	ldr	r2, [r7, #12]
+  40105a:	68bb      	ldr	r3, [r7, #8]
+  40105c:	019b      	lsls	r3, r3, #6
+  40105e:	4413      	add	r3, r2
+  401060:	3318      	adds	r3, #24
+  401062:	687a      	ldr	r2, [r7, #4]
+  401064:	605a      	str	r2, [r3, #4]
+}
+  401066:	3714      	adds	r7, #20
+  401068:	46bd      	mov	sp, r7
+  40106a:	f85d 7b04 	ldr.w	r7, [sp], #4
+  40106e:	4770      	bx	lr
+
+00401070 <tc_enable_interrupt>:
+ */
+void tc_enable_interrupt(
+		Tc *p_tc,
+		uint32_t ul_channel,
+		uint32_t ul_sources)
+{
+  401070:	b480      	push	{r7}
+  401072:	b087      	sub	sp, #28
+  401074:	af00      	add	r7, sp, #0
+  401076:	60f8      	str	r0, [r7, #12]
+  401078:	60b9      	str	r1, [r7, #8]
+  40107a:	607a      	str	r2, [r7, #4]
+
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+	tc_channel = p_tc->TC_CHANNEL + ul_channel;
+  40107c:	68bb      	ldr	r3, [r7, #8]
+  40107e:	019b      	lsls	r3, r3, #6
+  401080:	68fa      	ldr	r2, [r7, #12]
+  401082:	4413      	add	r3, r2
+  401084:	617b      	str	r3, [r7, #20]
+	tc_channel->TC_IER = ul_sources;
+  401086:	697b      	ldr	r3, [r7, #20]
+  401088:	687a      	ldr	r2, [r7, #4]
+  40108a:	625a      	str	r2, [r3, #36]	; 0x24
+}
+  40108c:	371c      	adds	r7, #28
+  40108e:	46bd      	mov	sp, r7
+  401090:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401094:	4770      	bx	lr
+  401096:	bf00      	nop
+
+00401098 <tc_get_status>:
+ * \return The current TC status.
+ */
+uint32_t tc_get_status(
+		Tc *p_tc,
+		uint32_t ul_channel)
+{
+  401098:	b480      	push	{r7}
+  40109a:	b085      	sub	sp, #20
+  40109c:	af00      	add	r7, sp, #0
+  40109e:	6078      	str	r0, [r7, #4]
+  4010a0:	6039      	str	r1, [r7, #0]
+	/* Validate inputs. */
+	Assert(p_tc);
+	Assert(ul_channel <
+			(sizeof(p_tc->TC_CHANNEL) / sizeof(p_tc->TC_CHANNEL[0])));
+			
+	tc_channel = p_tc->TC_CHANNEL + ul_channel;
+  4010a2:	683b      	ldr	r3, [r7, #0]
+  4010a4:	019b      	lsls	r3, r3, #6
+  4010a6:	687a      	ldr	r2, [r7, #4]
+  4010a8:	4413      	add	r3, r2
+  4010aa:	60fb      	str	r3, [r7, #12]
+	return tc_channel->TC_SR;
+  4010ac:	68fb      	ldr	r3, [r7, #12]
+  4010ae:	6a1b      	ldr	r3, [r3, #32]
+}
+  4010b0:	4618      	mov	r0, r3
+  4010b2:	3714      	adds	r7, #20
+  4010b4:	46bd      	mov	sp, r7
+  4010b6:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4010ba:	4770      	bx	lr
+
+004010bc <Reset_Handler>:
+/**
+ * \brief This is the code that gets called on processor reset.
+ * To initialize the device, and call the main() routine.
+ */
+void Reset_Handler(void)
+{
+  4010bc:	b580      	push	{r7, lr}
+  4010be:	b084      	sub	sp, #16
+  4010c0:	af00      	add	r7, sp, #0
+	uint32_t *pSrc, *pDest;
+
+	/* Initialize the relocate segment */
+	pSrc = &_etext;
+  4010c2:	4b27      	ldr	r3, [pc, #156]	; (401160 <Reset_Handler+0xa4>)
+  4010c4:	60fb      	str	r3, [r7, #12]
+	pDest = &_srelocate;
+  4010c6:	4b27      	ldr	r3, [pc, #156]	; (401164 <Reset_Handler+0xa8>)
+  4010c8:	60bb      	str	r3, [r7, #8]
+
+	if (pSrc > pDest) {
+  4010ca:	68fa      	ldr	r2, [r7, #12]
+  4010cc:	68bb      	ldr	r3, [r7, #8]
+  4010ce:	429a      	cmp	r2, r3
+  4010d0:	d90d      	bls.n	4010ee <Reset_Handler+0x32>
+		for (; pDest < &_erelocate;) {
+  4010d2:	e007      	b.n	4010e4 <Reset_Handler+0x28>
+			*pDest++ = *pSrc++;
+  4010d4:	68bb      	ldr	r3, [r7, #8]
+  4010d6:	1d1a      	adds	r2, r3, #4
+  4010d8:	60ba      	str	r2, [r7, #8]
+  4010da:	68fa      	ldr	r2, [r7, #12]
+  4010dc:	1d11      	adds	r1, r2, #4
+  4010de:	60f9      	str	r1, [r7, #12]
+  4010e0:	6812      	ldr	r2, [r2, #0]
+  4010e2:	601a      	str	r2, [r3, #0]
+	/* Initialize the relocate segment */
+	pSrc = &_etext;
+	pDest = &_srelocate;
+
+	if (pSrc > pDest) {
+		for (; pDest < &_erelocate;) {
+  4010e4:	68bb      	ldr	r3, [r7, #8]
+  4010e6:	4a20      	ldr	r2, [pc, #128]	; (401168 <Reset_Handler+0xac>)
+  4010e8:	4293      	cmp	r3, r2
+  4010ea:	d3f3      	bcc.n	4010d4 <Reset_Handler+0x18>
+  4010ec:	e020      	b.n	401130 <Reset_Handler+0x74>
+			*pDest++ = *pSrc++;
+		}
+	} else if (pSrc < pDest) {
+  4010ee:	68fa      	ldr	r2, [r7, #12]
+  4010f0:	68bb      	ldr	r3, [r7, #8]
+  4010f2:	429a      	cmp	r2, r3
+  4010f4:	d21c      	bcs.n	401130 <Reset_Handler+0x74>
+		uint32_t nb_bytes = (uint32_t)&_erelocate - (uint32_t)&_srelocate;
+  4010f6:	4a1c      	ldr	r2, [pc, #112]	; (401168 <Reset_Handler+0xac>)
+  4010f8:	4b1a      	ldr	r3, [pc, #104]	; (401164 <Reset_Handler+0xa8>)
+  4010fa:	1ad3      	subs	r3, r2, r3
+  4010fc:	607b      	str	r3, [r7, #4]
+		pSrc = (uint32_t*)((uint32_t)pSrc + nb_bytes) - 1;
+  4010fe:	68fa      	ldr	r2, [r7, #12]
+  401100:	687b      	ldr	r3, [r7, #4]
+  401102:	4413      	add	r3, r2
+  401104:	3b04      	subs	r3, #4
+  401106:	60fb      	str	r3, [r7, #12]
+		pDest = (uint32_t*)((uint32_t)pDest + nb_bytes) - 1;
+  401108:	68ba      	ldr	r2, [r7, #8]
+  40110a:	687b      	ldr	r3, [r7, #4]
+  40110c:	4413      	add	r3, r2
+  40110e:	3b04      	subs	r3, #4
+  401110:	60bb      	str	r3, [r7, #8]
+		for (;nb_bytes;nb_bytes -= 4) {
+  401112:	e00a      	b.n	40112a <Reset_Handler+0x6e>
+			*pDest-- = *pSrc--;
+  401114:	68bb      	ldr	r3, [r7, #8]
+  401116:	1f1a      	subs	r2, r3, #4
+  401118:	60ba      	str	r2, [r7, #8]
+  40111a:	68fa      	ldr	r2, [r7, #12]
+  40111c:	1f11      	subs	r1, r2, #4
+  40111e:	60f9      	str	r1, [r7, #12]
+  401120:	6812      	ldr	r2, [r2, #0]
+  401122:	601a      	str	r2, [r3, #0]
+		}
+	} else if (pSrc < pDest) {
+		uint32_t nb_bytes = (uint32_t)&_erelocate - (uint32_t)&_srelocate;
+		pSrc = (uint32_t*)((uint32_t)pSrc + nb_bytes) - 1;
+		pDest = (uint32_t*)((uint32_t)pDest + nb_bytes) - 1;
+		for (;nb_bytes;nb_bytes -= 4) {
+  401124:	687b      	ldr	r3, [r7, #4]
+  401126:	3b04      	subs	r3, #4
+  401128:	607b      	str	r3, [r7, #4]
+  40112a:	687b      	ldr	r3, [r7, #4]
+  40112c:	2b00      	cmp	r3, #0
+  40112e:	d1f1      	bne.n	401114 <Reset_Handler+0x58>
+
+    No Operation does nothing. This instruction can be used for code alignment purposes.
+ */
+__attribute__( ( always_inline ) ) __STATIC_INLINE void __NOP(void)
+{
+  __ASM volatile ("nop");
+  401130:	bf00      	nop
+		}
+	}
+	__NOP();
+
+	/* Clear the zero segment */
+	for (pDest = &_szero; pDest < &_ezero;) {
+  401132:	4b0e      	ldr	r3, [pc, #56]	; (40116c <Reset_Handler+0xb0>)
+  401134:	60bb      	str	r3, [r7, #8]
+  401136:	e004      	b.n	401142 <Reset_Handler+0x86>
+		*pDest++ = 0;
+  401138:	68bb      	ldr	r3, [r7, #8]
+  40113a:	1d1a      	adds	r2, r3, #4
+  40113c:	60ba      	str	r2, [r7, #8]
+  40113e:	2200      	movs	r2, #0
+  401140:	601a      	str	r2, [r3, #0]
+		}
+	}
+	__NOP();
+
+	/* Clear the zero segment */
+	for (pDest = &_szero; pDest < &_ezero;) {
+  401142:	68bb      	ldr	r3, [r7, #8]
+  401144:	4a0a      	ldr	r2, [pc, #40]	; (401170 <Reset_Handler+0xb4>)
+  401146:	4293      	cmp	r3, r2
+  401148:	d3f6      	bcc.n	401138 <Reset_Handler+0x7c>
+		*pDest++ = 0;
+	}
+
+	/* Set the vector table base address */
+	pSrc = (uint32_t *) & _sfixed;
+  40114a:	4b0a      	ldr	r3, [pc, #40]	; (401174 <Reset_Handler+0xb8>)
+  40114c:	60fb      	str	r3, [r7, #12]
+	SCB->VTOR = ((uint32_t) pSrc);
+  40114e:	4a0a      	ldr	r2, [pc, #40]	; (401178 <Reset_Handler+0xbc>)
+  401150:	68fb      	ldr	r3, [r7, #12]
+  401152:	6093      	str	r3, [r2, #8]
+
+	/* Initialize the C library */
+	__libc_init_array();
+  401154:	4b09      	ldr	r3, [pc, #36]	; (40117c <Reset_Handler+0xc0>)
+  401156:	4798      	blx	r3
+
+	/* Branch to main function */
+	main();
+  401158:	4b09      	ldr	r3, [pc, #36]	; (401180 <Reset_Handler+0xc4>)
+  40115a:	4798      	blx	r3
+
+	/* Infinite loop */
+	while (1);
+  40115c:	e7fe      	b.n	40115c <Reset_Handler+0xa0>
+  40115e:	bf00      	nop
+  401160:	00402114 	.word	0x00402114
+  401164:	20000000 	.word	0x20000000
+  401168:	20000438 	.word	0x20000438
+  40116c:	20000438 	.word	0x20000438
+  401170:	200004d8 	.word	0x200004d8
+  401174:	00400000 	.word	0x00400000
+  401178:	e000ed00 	.word	0xe000ed00
+  40117c:	00401fa9 	.word	0x00401fa9
+  401180:	00401799 	.word	0x00401799
+
+00401184 <Dummy_Handler>:
+
+/**
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+  401184:	b480      	push	{r7}
+  401186:	af00      	add	r7, sp, #0
+	while (1) {
+	}
+  401188:	e7fe      	b.n	401188 <Dummy_Handler+0x4>
+  40118a:	bf00      	nop
+
+0040118c <SystemCoreClockUpdate>:
+
+/**
+ * \brief Get Core Clock Frequency.
+ */
+void SystemCoreClockUpdate( void )
+{
+  40118c:	b480      	push	{r7}
+  40118e:	af00      	add	r7, sp, #0
+	/* Determine clock frequency according to clock register values */
+	switch ( PMC->PMC_MCKR & (uint32_t) PMC_MCKR_CSS_Msk ) {
+  401190:	4b5d      	ldr	r3, [pc, #372]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  401192:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  401194:	f003 0303 	and.w	r3, r3, #3
+  401198:	2b03      	cmp	r3, #3
+  40119a:	f200 8096 	bhi.w	4012ca <SystemCoreClockUpdate+0x13e>
+  40119e:	a201      	add	r2, pc, #4	; (adr r2, 4011a4 <SystemCoreClockUpdate+0x18>)
+  4011a0:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  4011a4:	004011b5 	.word	0x004011b5
+  4011a8:	004011d5 	.word	0x004011d5
+  4011ac:	0040121f 	.word	0x0040121f
+  4011b0:	0040121f 	.word	0x0040121f
+	case PMC_MCKR_CSS_SLOW_CLK: /* Slow clock */
+			if ( SUPC->SUPC_SR & SUPC_SR_OSCSEL ) {
+  4011b4:	4b55      	ldr	r3, [pc, #340]	; (40130c <SystemCoreClockUpdate+0x180>)
+  4011b6:	695b      	ldr	r3, [r3, #20]
+  4011b8:	f003 0380 	and.w	r3, r3, #128	; 0x80
+  4011bc:	2b00      	cmp	r3, #0
+  4011be:	d004      	beq.n	4011ca <SystemCoreClockUpdate+0x3e>
+				SystemCoreClock = CHIP_FREQ_XTAL_32K;
+  4011c0:	4b53      	ldr	r3, [pc, #332]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4011c2:	f44f 4200 	mov.w	r2, #32768	; 0x8000
+  4011c6:	601a      	str	r2, [r3, #0]
+			} else {
+				SystemCoreClock = CHIP_FREQ_SLCK_RC;
+			}
+		break;
+  4011c8:	e080      	b.n	4012cc <SystemCoreClockUpdate+0x140>
+	switch ( PMC->PMC_MCKR & (uint32_t) PMC_MCKR_CSS_Msk ) {
+	case PMC_MCKR_CSS_SLOW_CLK: /* Slow clock */
+			if ( SUPC->SUPC_SR & SUPC_SR_OSCSEL ) {
+				SystemCoreClock = CHIP_FREQ_XTAL_32K;
+			} else {
+				SystemCoreClock = CHIP_FREQ_SLCK_RC;
+  4011ca:	4b51      	ldr	r3, [pc, #324]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4011cc:	f44f 42fa 	mov.w	r2, #32000	; 0x7d00
+  4011d0:	601a      	str	r2, [r3, #0]
+			}
+		break;
+  4011d2:	e07b      	b.n	4012cc <SystemCoreClockUpdate+0x140>
+		
+	case PMC_MCKR_CSS_MAIN_CLK: /* Main clock */
+		if ( PMC->CKGR_MOR & CKGR_MOR_MOSCSEL ) {
+  4011d4:	4b4c      	ldr	r3, [pc, #304]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4011d6:	6a1b      	ldr	r3, [r3, #32]
+  4011d8:	f003 7380 	and.w	r3, r3, #16777216	; 0x1000000
+  4011dc:	2b00      	cmp	r3, #0
+  4011de:	d003      	beq.n	4011e8 <SystemCoreClockUpdate+0x5c>
+			SystemCoreClock = CHIP_FREQ_XTAL;
+  4011e0:	4b4b      	ldr	r3, [pc, #300]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4011e2:	4a4c      	ldr	r2, [pc, #304]	; (401314 <SystemCoreClockUpdate+0x188>)
+  4011e4:	601a      	str	r2, [r3, #0]
+  4011e6:	e019      	b.n	40121c <SystemCoreClockUpdate+0x90>
+		} else {
+			SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+  4011e8:	4b49      	ldr	r3, [pc, #292]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4011ea:	4a4b      	ldr	r2, [pc, #300]	; (401318 <SystemCoreClockUpdate+0x18c>)
+  4011ec:	601a      	str	r2, [r3, #0]
+			
+			switch ( PMC->CKGR_MOR & CKGR_MOR_MOSCRCF_Msk ) {
+  4011ee:	4b46      	ldr	r3, [pc, #280]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4011f0:	6a1b      	ldr	r3, [r3, #32]
+  4011f2:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  4011f6:	2b10      	cmp	r3, #16
+  4011f8:	d008      	beq.n	40120c <SystemCoreClockUpdate+0x80>
+  4011fa:	2b20      	cmp	r3, #32
+  4011fc:	d00a      	beq.n	401214 <SystemCoreClockUpdate+0x88>
+  4011fe:	2b00      	cmp	r3, #0
+  401200:	d000      	beq.n	401204 <SystemCoreClockUpdate+0x78>
+			case CKGR_MOR_MOSCRCF_12_MHz:
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_12MHZ;
+			break;
+			
+			default:
+			break;
+  401202:	e00b      	b.n	40121c <SystemCoreClockUpdate+0x90>
+		} else {
+			SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+			
+			switch ( PMC->CKGR_MOR & CKGR_MOR_MOSCRCF_Msk ) {
+			case CKGR_MOR_MOSCRCF_4_MHz:
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+  401204:	4b42      	ldr	r3, [pc, #264]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401206:	4a44      	ldr	r2, [pc, #272]	; (401318 <SystemCoreClockUpdate+0x18c>)
+  401208:	601a      	str	r2, [r3, #0]
+			break;
+  40120a:	e007      	b.n	40121c <SystemCoreClockUpdate+0x90>
+			
+			case CKGR_MOR_MOSCRCF_8_MHz:
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_8MHZ;
+  40120c:	4b40      	ldr	r3, [pc, #256]	; (401310 <SystemCoreClockUpdate+0x184>)
+  40120e:	4a43      	ldr	r2, [pc, #268]	; (40131c <SystemCoreClockUpdate+0x190>)
+  401210:	601a      	str	r2, [r3, #0]
+			break;
+  401212:	e003      	b.n	40121c <SystemCoreClockUpdate+0x90>
+			
+			case CKGR_MOR_MOSCRCF_12_MHz:
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_12MHZ;
+  401214:	4b3e      	ldr	r3, [pc, #248]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401216:	4a3f      	ldr	r2, [pc, #252]	; (401314 <SystemCoreClockUpdate+0x188>)
+  401218:	601a      	str	r2, [r3, #0]
+			break;
+  40121a:	bf00      	nop
+			
+			default:
+			break;
+			}
+		}
+		break;
+  40121c:	e056      	b.n	4012cc <SystemCoreClockUpdate+0x140>
+		
+	case PMC_MCKR_CSS_PLLA_CLK:	/* PLLA clock */
+	case PMC_MCKR_CSS_PLLB_CLK:	/* PLLB clock */
+			if ( PMC->CKGR_MOR & CKGR_MOR_MOSCSEL ) {
+  40121e:	4b3a      	ldr	r3, [pc, #232]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  401220:	6a1b      	ldr	r3, [r3, #32]
+  401222:	f003 7380 	and.w	r3, r3, #16777216	; 0x1000000
+  401226:	2b00      	cmp	r3, #0
+  401228:	d003      	beq.n	401232 <SystemCoreClockUpdate+0xa6>
+				SystemCoreClock = CHIP_FREQ_XTAL;
+  40122a:	4b39      	ldr	r3, [pc, #228]	; (401310 <SystemCoreClockUpdate+0x184>)
+  40122c:	4a39      	ldr	r2, [pc, #228]	; (401314 <SystemCoreClockUpdate+0x188>)
+  40122e:	601a      	str	r2, [r3, #0]
+  401230:	e019      	b.n	401266 <SystemCoreClockUpdate+0xda>
+			} else {
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+  401232:	4b37      	ldr	r3, [pc, #220]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401234:	4a38      	ldr	r2, [pc, #224]	; (401318 <SystemCoreClockUpdate+0x18c>)
+  401236:	601a      	str	r2, [r3, #0]
+				
+				switch ( PMC->CKGR_MOR & CKGR_MOR_MOSCRCF_Msk ) {
+  401238:	4b33      	ldr	r3, [pc, #204]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  40123a:	6a1b      	ldr	r3, [r3, #32]
+  40123c:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  401240:	2b10      	cmp	r3, #16
+  401242:	d008      	beq.n	401256 <SystemCoreClockUpdate+0xca>
+  401244:	2b20      	cmp	r3, #32
+  401246:	d00a      	beq.n	40125e <SystemCoreClockUpdate+0xd2>
+  401248:	2b00      	cmp	r3, #0
+  40124a:	d000      	beq.n	40124e <SystemCoreClockUpdate+0xc2>
+				case CKGR_MOR_MOSCRCF_12_MHz:
+					SystemCoreClock = CHIP_FREQ_MAINCK_RC_12MHZ;
+					break;
+				
+				default:
+					break;
+  40124c:	e00b      	b.n	401266 <SystemCoreClockUpdate+0xda>
+			} else {
+				SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+				
+				switch ( PMC->CKGR_MOR & CKGR_MOR_MOSCRCF_Msk ) {
+				case CKGR_MOR_MOSCRCF_4_MHz:
+					SystemCoreClock = CHIP_FREQ_MAINCK_RC_4MHZ;
+  40124e:	4b30      	ldr	r3, [pc, #192]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401250:	4a31      	ldr	r2, [pc, #196]	; (401318 <SystemCoreClockUpdate+0x18c>)
+  401252:	601a      	str	r2, [r3, #0]
+					break;
+  401254:	e007      	b.n	401266 <SystemCoreClockUpdate+0xda>
+				
+				case CKGR_MOR_MOSCRCF_8_MHz:
+					SystemCoreClock = CHIP_FREQ_MAINCK_RC_8MHZ;
+  401256:	4b2e      	ldr	r3, [pc, #184]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401258:	4a30      	ldr	r2, [pc, #192]	; (40131c <SystemCoreClockUpdate+0x190>)
+  40125a:	601a      	str	r2, [r3, #0]
+					break;
+  40125c:	e003      	b.n	401266 <SystemCoreClockUpdate+0xda>
+				
+				case CKGR_MOR_MOSCRCF_12_MHz:
+					SystemCoreClock = CHIP_FREQ_MAINCK_RC_12MHZ;
+  40125e:	4b2c      	ldr	r3, [pc, #176]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401260:	4a2c      	ldr	r2, [pc, #176]	; (401314 <SystemCoreClockUpdate+0x188>)
+  401262:	601a      	str	r2, [r3, #0]
+					break;
+  401264:	bf00      	nop
+				default:
+					break;
+				}
+			}
+			
+			if ( (uint32_t)(PMC->PMC_MCKR & (uint32_t) PMC_MCKR_CSS_Msk) ==
+  401266:	4b28      	ldr	r3, [pc, #160]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  401268:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  40126a:	f003 0303 	and.w	r3, r3, #3
+  40126e:	2b02      	cmp	r3, #2
+  401270:	d115      	bne.n	40129e <SystemCoreClockUpdate+0x112>
+					PMC_MCKR_CSS_PLLA_CLK ) {
+				SystemCoreClock *= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_MULA_Msk)
+  401272:	4b25      	ldr	r3, [pc, #148]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  401274:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+  401276:	4b2a      	ldr	r3, [pc, #168]	; (401320 <SystemCoreClockUpdate+0x194>)
+  401278:	4013      	ands	r3, r2
+						>> CKGR_PLLAR_MULA_Pos) + 1U);
+  40127a:	0c1b      	lsrs	r3, r3, #16
+  40127c:	3301      	adds	r3, #1
+				}
+			}
+			
+			if ( (uint32_t)(PMC->PMC_MCKR & (uint32_t) PMC_MCKR_CSS_Msk) ==
+					PMC_MCKR_CSS_PLLA_CLK ) {
+				SystemCoreClock *= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_MULA_Msk)
+  40127e:	4a24      	ldr	r2, [pc, #144]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401280:	6812      	ldr	r2, [r2, #0]
+  401282:	fb02 f303 	mul.w	r3, r2, r3
+  401286:	4a22      	ldr	r2, [pc, #136]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401288:	6013      	str	r3, [r2, #0]
+						>> CKGR_PLLAR_MULA_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_DIVA_Msk)
+  40128a:	4b1f      	ldr	r3, [pc, #124]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  40128c:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+						>> CKGR_PLLAR_DIVA_Pos));
+  40128e:	b2db      	uxtb	r3, r3
+			
+			if ( (uint32_t)(PMC->PMC_MCKR & (uint32_t) PMC_MCKR_CSS_Msk) ==
+					PMC_MCKR_CSS_PLLA_CLK ) {
+				SystemCoreClock *= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_MULA_Msk)
+						>> CKGR_PLLAR_MULA_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_DIVA_Msk)
+  401290:	4a1f      	ldr	r2, [pc, #124]	; (401310 <SystemCoreClockUpdate+0x184>)
+  401292:	6812      	ldr	r2, [r2, #0]
+  401294:	fbb2 f3f3 	udiv	r3, r2, r3
+  401298:	4a1d      	ldr	r2, [pc, #116]	; (401310 <SystemCoreClockUpdate+0x184>)
+  40129a:	6013      	str	r3, [r2, #0]
+				SystemCoreClock *= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_MULB_Msk)
+						>> CKGR_PLLBR_MULB_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_DIVB_Msk)
+						>> CKGR_PLLBR_DIVB_Pos));
+			}
+		break;
+  40129c:	e016      	b.n	4012cc <SystemCoreClockUpdate+0x140>
+				SystemCoreClock *= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_MULA_Msk)
+						>> CKGR_PLLAR_MULA_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_DIVA_Msk)
+						>> CKGR_PLLAR_DIVA_Pos));
+			} else {
+				SystemCoreClock *= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_MULB_Msk)
+  40129e:	4b1a      	ldr	r3, [pc, #104]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4012a0:	6ada      	ldr	r2, [r3, #44]	; 0x2c
+  4012a2:	4b1f      	ldr	r3, [pc, #124]	; (401320 <SystemCoreClockUpdate+0x194>)
+  4012a4:	4013      	ands	r3, r2
+						>> CKGR_PLLBR_MULB_Pos) + 1U);
+  4012a6:	0c1b      	lsrs	r3, r3, #16
+  4012a8:	3301      	adds	r3, #1
+				SystemCoreClock *= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_MULA_Msk)
+						>> CKGR_PLLAR_MULA_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_DIVA_Msk)
+						>> CKGR_PLLAR_DIVA_Pos));
+			} else {
+				SystemCoreClock *= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_MULB_Msk)
+  4012aa:	4a19      	ldr	r2, [pc, #100]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012ac:	6812      	ldr	r2, [r2, #0]
+  4012ae:	fb02 f303 	mul.w	r3, r2, r3
+  4012b2:	4a17      	ldr	r2, [pc, #92]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012b4:	6013      	str	r3, [r2, #0]
+						>> CKGR_PLLBR_MULB_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_DIVB_Msk)
+  4012b6:	4b14      	ldr	r3, [pc, #80]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4012b8:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+						>> CKGR_PLLBR_DIVB_Pos));
+  4012ba:	b2db      	uxtb	r3, r3
+				SystemCoreClock /= ((((PMC->CKGR_PLLAR) & CKGR_PLLAR_DIVA_Msk)
+						>> CKGR_PLLAR_DIVA_Pos));
+			} else {
+				SystemCoreClock *= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_MULB_Msk)
+						>> CKGR_PLLBR_MULB_Pos) + 1U);
+				SystemCoreClock /= ((((PMC->CKGR_PLLBR) & CKGR_PLLBR_DIVB_Msk)
+  4012bc:	4a14      	ldr	r2, [pc, #80]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012be:	6812      	ldr	r2, [r2, #0]
+  4012c0:	fbb2 f3f3 	udiv	r3, r2, r3
+  4012c4:	4a12      	ldr	r2, [pc, #72]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012c6:	6013      	str	r3, [r2, #0]
+						>> CKGR_PLLBR_DIVB_Pos));
+			}
+		break;
+  4012c8:	e000      	b.n	4012cc <SystemCoreClockUpdate+0x140>
+		
+	default:
+		break;
+  4012ca:	bf00      	nop
+	}
+
+	if ( (PMC->PMC_MCKR & PMC_MCKR_PRES_Msk) == PMC_MCKR_PRES_CLK_3 ) {
+  4012cc:	4b0e      	ldr	r3, [pc, #56]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4012ce:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  4012d0:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  4012d4:	2b70      	cmp	r3, #112	; 0x70
+  4012d6:	d108      	bne.n	4012ea <SystemCoreClockUpdate+0x15e>
+		SystemCoreClock /= 3U;
+  4012d8:	4b0d      	ldr	r3, [pc, #52]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012da:	681b      	ldr	r3, [r3, #0]
+  4012dc:	4a11      	ldr	r2, [pc, #68]	; (401324 <SystemCoreClockUpdate+0x198>)
+  4012de:	fba2 2303 	umull	r2, r3, r2, r3
+  4012e2:	085b      	lsrs	r3, r3, #1
+  4012e4:	4a0a      	ldr	r2, [pc, #40]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012e6:	6013      	str	r3, [r2, #0]
+  4012e8:	e009      	b.n	4012fe <SystemCoreClockUpdate+0x172>
+	} else {
+		SystemCoreClock >>=
+			((PMC->PMC_MCKR & PMC_MCKR_PRES_Msk) >> PMC_MCKR_PRES_Pos);
+  4012ea:	4b07      	ldr	r3, [pc, #28]	; (401308 <SystemCoreClockUpdate+0x17c>)
+  4012ec:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+  4012ee:	f003 0370 	and.w	r3, r3, #112	; 0x70
+  4012f2:	091a      	lsrs	r2, r3, #4
+	}
+
+	if ( (PMC->PMC_MCKR & PMC_MCKR_PRES_Msk) == PMC_MCKR_PRES_CLK_3 ) {
+		SystemCoreClock /= 3U;
+	} else {
+		SystemCoreClock >>=
+  4012f4:	4b06      	ldr	r3, [pc, #24]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012f6:	681b      	ldr	r3, [r3, #0]
+  4012f8:	40d3      	lsrs	r3, r2
+  4012fa:	4a05      	ldr	r2, [pc, #20]	; (401310 <SystemCoreClockUpdate+0x184>)
+  4012fc:	6013      	str	r3, [r2, #0]
+			((PMC->PMC_MCKR & PMC_MCKR_PRES_Msk) >> PMC_MCKR_PRES_Pos);
+	}
+}
+  4012fe:	46bd      	mov	sp, r7
+  401300:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401304:	4770      	bx	lr
+  401306:	bf00      	nop
+  401308:	400e0400 	.word	0x400e0400
+  40130c:	400e1410 	.word	0x400e1410
+  401310:	20000008 	.word	0x20000008
+  401314:	00b71b00 	.word	0x00b71b00
+  401318:	003d0900 	.word	0x003d0900
+  40131c:	007a1200 	.word	0x007a1200
+  401320:	07ff0000 	.word	0x07ff0000
+  401324:	aaaaaaab 	.word	0xaaaaaaab
+
+00401328 <system_init_flash>:
+ * \brief Initialize flash wait state according to operating frequency.
+ *
+ * \param ul_clk System clock frequency.
+ */
+void system_init_flash( uint32_t ul_clk )
+{
+  401328:	b480      	push	{r7}
+  40132a:	b083      	sub	sp, #12
+  40132c:	af00      	add	r7, sp, #0
+  40132e:	6078      	str	r0, [r7, #4]
+				}
+			}
+		}
+	}
+#else
+	if ( ul_clk < CHIP_FREQ_FWS_0 ) {
+  401330:	687b      	ldr	r3, [r7, #4]
+  401332:	4a22      	ldr	r2, [pc, #136]	; (4013bc <system_init_flash+0x94>)
+  401334:	4293      	cmp	r3, r2
+  401336:	d808      	bhi.n	40134a <system_init_flash+0x22>
+		EFC0->EEFC_FMR = EEFC_FMR_FWS(0)|EEFC_FMR_CLOE;
+  401338:	4b21      	ldr	r3, [pc, #132]	; (4013c0 <system_init_flash+0x98>)
+  40133a:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
+  40133e:	601a      	str	r2, [r3, #0]
+		EFC1->EEFC_FMR = EEFC_FMR_FWS(0)|EEFC_FMR_CLOE;
+  401340:	4b20      	ldr	r3, [pc, #128]	; (4013c4 <system_init_flash+0x9c>)
+  401342:	f04f 6280 	mov.w	r2, #67108864	; 0x4000000
+  401346:	601a      	str	r2, [r3, #0]
+  401348:	e033      	b.n	4013b2 <system_init_flash+0x8a>
+	} else {
+		if ( ul_clk < CHIP_FREQ_FWS_1 ) {
+  40134a:	687b      	ldr	r3, [r7, #4]
+  40134c:	4a1e      	ldr	r2, [pc, #120]	; (4013c8 <system_init_flash+0xa0>)
+  40134e:	4293      	cmp	r3, r2
+  401350:	d806      	bhi.n	401360 <system_init_flash+0x38>
+			EFC0->EEFC_FMR = EEFC_FMR_FWS(1)|EEFC_FMR_CLOE;
+  401352:	4b1b      	ldr	r3, [pc, #108]	; (4013c0 <system_init_flash+0x98>)
+  401354:	4a1d      	ldr	r2, [pc, #116]	; (4013cc <system_init_flash+0xa4>)
+  401356:	601a      	str	r2, [r3, #0]
+			EFC1->EEFC_FMR = EEFC_FMR_FWS(1)|EEFC_FMR_CLOE;
+  401358:	4b1a      	ldr	r3, [pc, #104]	; (4013c4 <system_init_flash+0x9c>)
+  40135a:	4a1c      	ldr	r2, [pc, #112]	; (4013cc <system_init_flash+0xa4>)
+  40135c:	601a      	str	r2, [r3, #0]
+  40135e:	e028      	b.n	4013b2 <system_init_flash+0x8a>
+		} else {
+			if ( ul_clk < CHIP_FREQ_FWS_2 ) {
+  401360:	687b      	ldr	r3, [r7, #4]
+  401362:	4a1b      	ldr	r2, [pc, #108]	; (4013d0 <system_init_flash+0xa8>)
+  401364:	4293      	cmp	r3, r2
+  401366:	d806      	bhi.n	401376 <system_init_flash+0x4e>
+				EFC0->EEFC_FMR = EEFC_FMR_FWS(2)|EEFC_FMR_CLOE;
+  401368:	4b15      	ldr	r3, [pc, #84]	; (4013c0 <system_init_flash+0x98>)
+  40136a:	4a1a      	ldr	r2, [pc, #104]	; (4013d4 <system_init_flash+0xac>)
+  40136c:	601a      	str	r2, [r3, #0]
+				EFC1->EEFC_FMR = EEFC_FMR_FWS(2)|EEFC_FMR_CLOE;
+  40136e:	4b15      	ldr	r3, [pc, #84]	; (4013c4 <system_init_flash+0x9c>)
+  401370:	4a18      	ldr	r2, [pc, #96]	; (4013d4 <system_init_flash+0xac>)
+  401372:	601a      	str	r2, [r3, #0]
+  401374:	e01d      	b.n	4013b2 <system_init_flash+0x8a>
+			} else {
+				if ( ul_clk < CHIP_FREQ_FWS_3 ) {
+  401376:	687b      	ldr	r3, [r7, #4]
+  401378:	4a17      	ldr	r2, [pc, #92]	; (4013d8 <system_init_flash+0xb0>)
+  40137a:	4293      	cmp	r3, r2
+  40137c:	d806      	bhi.n	40138c <system_init_flash+0x64>
+					EFC0->EEFC_FMR = EEFC_FMR_FWS(3)|EEFC_FMR_CLOE;
+  40137e:	4b10      	ldr	r3, [pc, #64]	; (4013c0 <system_init_flash+0x98>)
+  401380:	4a16      	ldr	r2, [pc, #88]	; (4013dc <system_init_flash+0xb4>)
+  401382:	601a      	str	r2, [r3, #0]
+					EFC1->EEFC_FMR = EEFC_FMR_FWS(3)|EEFC_FMR_CLOE;
+  401384:	4b0f      	ldr	r3, [pc, #60]	; (4013c4 <system_init_flash+0x9c>)
+  401386:	4a15      	ldr	r2, [pc, #84]	; (4013dc <system_init_flash+0xb4>)
+  401388:	601a      	str	r2, [r3, #0]
+  40138a:	e012      	b.n	4013b2 <system_init_flash+0x8a>
+				} else {
+					if ( ul_clk < CHIP_FREQ_FWS_4 ) {
+  40138c:	687b      	ldr	r3, [r7, #4]
+  40138e:	4a14      	ldr	r2, [pc, #80]	; (4013e0 <system_init_flash+0xb8>)
+  401390:	4293      	cmp	r3, r2
+  401392:	d808      	bhi.n	4013a6 <system_init_flash+0x7e>
+						EFC0->EEFC_FMR = EEFC_FMR_FWS(4)|EEFC_FMR_CLOE;
+  401394:	4b0a      	ldr	r3, [pc, #40]	; (4013c0 <system_init_flash+0x98>)
+  401396:	f04f 2204 	mov.w	r2, #67109888	; 0x4000400
+  40139a:	601a      	str	r2, [r3, #0]
+						EFC1->EEFC_FMR = EEFC_FMR_FWS(4)|EEFC_FMR_CLOE;
+  40139c:	4b09      	ldr	r3, [pc, #36]	; (4013c4 <system_init_flash+0x9c>)
+  40139e:	f04f 2204 	mov.w	r2, #67109888	; 0x4000400
+  4013a2:	601a      	str	r2, [r3, #0]
+  4013a4:	e005      	b.n	4013b2 <system_init_flash+0x8a>
+					} else {
+						EFC0->EEFC_FMR = EEFC_FMR_FWS(5)|EEFC_FMR_CLOE;
+  4013a6:	4b06      	ldr	r3, [pc, #24]	; (4013c0 <system_init_flash+0x98>)
+  4013a8:	4a0e      	ldr	r2, [pc, #56]	; (4013e4 <system_init_flash+0xbc>)
+  4013aa:	601a      	str	r2, [r3, #0]
+						EFC1->EEFC_FMR = EEFC_FMR_FWS(5)|EEFC_FMR_CLOE;
+  4013ac:	4b05      	ldr	r3, [pc, #20]	; (4013c4 <system_init_flash+0x9c>)
+  4013ae:	4a0d      	ldr	r2, [pc, #52]	; (4013e4 <system_init_flash+0xbc>)
+  4013b0:	601a      	str	r2, [r3, #0]
+				}
+			}
+		}
+	}
+#endif
+}
+  4013b2:	370c      	adds	r7, #12
+  4013b4:	46bd      	mov	sp, r7
+  4013b6:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4013ba:	4770      	bx	lr
+  4013bc:	01312cff 	.word	0x01312cff
+  4013c0:	400e0a00 	.word	0x400e0a00
+  4013c4:	400e0c00 	.word	0x400e0c00
+  4013c8:	026259ff 	.word	0x026259ff
+  4013cc:	04000100 	.word	0x04000100
+  4013d0:	039386ff 	.word	0x039386ff
+  4013d4:	04000200 	.word	0x04000200
+  4013d8:	04c4b3ff 	.word	0x04c4b3ff
+  4013dc:	04000300 	.word	0x04000300
+  4013e0:	05f5e0ff 	.word	0x05f5e0ff
+  4013e4:	04000500 	.word	0x04000500
+
+004013e8 <NVIC_EnableIRQ>:
+    The function enables a device-specific interrupt in the NVIC interrupt controller.
+
+    \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ */
+__STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
+{
+  4013e8:	b480      	push	{r7}
+  4013ea:	b083      	sub	sp, #12
+  4013ec:	af00      	add	r7, sp, #0
+  4013ee:	4603      	mov	r3, r0
+  4013f0:	71fb      	strb	r3, [r7, #7]
+/*  NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));  enable interrupt */
+  NVIC->ISER[(uint32_t)((int32_t)IRQn) >> 5] = (uint32_t)(1 << ((uint32_t)((int32_t)IRQn) & (uint32_t)0x1F)); /* enable interrupt */
+  4013f2:	4908      	ldr	r1, [pc, #32]	; (401414 <NVIC_EnableIRQ+0x2c>)
+  4013f4:	f997 3007 	ldrsb.w	r3, [r7, #7]
+  4013f8:	095b      	lsrs	r3, r3, #5
+  4013fa:	79fa      	ldrb	r2, [r7, #7]
+  4013fc:	f002 021f 	and.w	r2, r2, #31
+  401400:	2001      	movs	r0, #1
+  401402:	fa00 f202 	lsl.w	r2, r0, r2
+  401406:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
+}
+  40140a:	370c      	adds	r7, #12
+  40140c:	46bd      	mov	sp, r7
+  40140e:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401412:	4770      	bx	lr
+  401414:	e000e100 	.word	0xe000e100
+
+00401418 <NVIC_SetPriority>:
+
+    \param [in]      IRQn  Interrupt number.
+    \param [in]  priority  Priority to set.
+ */
+__STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+{
+  401418:	b480      	push	{r7}
+  40141a:	b083      	sub	sp, #12
+  40141c:	af00      	add	r7, sp, #0
+  40141e:	4603      	mov	r3, r0
+  401420:	6039      	str	r1, [r7, #0]
+  401422:	71fb      	strb	r3, [r7, #7]
+  if(IRQn < 0) {
+  401424:	f997 3007 	ldrsb.w	r3, [r7, #7]
+  401428:	2b00      	cmp	r3, #0
+  40142a:	da0b      	bge.n	401444 <NVIC_SetPriority+0x2c>
+    SCB->SHP[((uint32_t)(IRQn) & 0xF)-4] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff); } /* set Priority for Cortex-M  System Interrupts */
+  40142c:	490d      	ldr	r1, [pc, #52]	; (401464 <NVIC_SetPriority+0x4c>)
+  40142e:	79fb      	ldrb	r3, [r7, #7]
+  401430:	f003 030f 	and.w	r3, r3, #15
+  401434:	3b04      	subs	r3, #4
+  401436:	683a      	ldr	r2, [r7, #0]
+  401438:	b2d2      	uxtb	r2, r2
+  40143a:	0112      	lsls	r2, r2, #4
+  40143c:	b2d2      	uxtb	r2, r2
+  40143e:	440b      	add	r3, r1
+  401440:	761a      	strb	r2, [r3, #24]
+  401442:	e009      	b.n	401458 <NVIC_SetPriority+0x40>
+  else {
+    NVIC->IP[(uint32_t)(IRQn)] = ((priority << (8 - __NVIC_PRIO_BITS)) & 0xff);    }        /* set Priority for device specific Interrupts  */
+  401444:	4908      	ldr	r1, [pc, #32]	; (401468 <NVIC_SetPriority+0x50>)
+  401446:	f997 3007 	ldrsb.w	r3, [r7, #7]
+  40144a:	683a      	ldr	r2, [r7, #0]
+  40144c:	b2d2      	uxtb	r2, r2
+  40144e:	0112      	lsls	r2, r2, #4
+  401450:	b2d2      	uxtb	r2, r2
+  401452:	440b      	add	r3, r1
+  401454:	f883 2300 	strb.w	r2, [r3, #768]	; 0x300
+}
+  401458:	370c      	adds	r7, #12
+  40145a:	46bd      	mov	sp, r7
+  40145c:	f85d 7b04 	ldr.w	r7, [sp], #4
+  401460:	4770      	bx	lr
+  401462:	bf00      	nop
+  401464:	e000ed00 	.word	0xe000ed00
+  401468:	e000e100 	.word	0xe000e100
+
+0040146c <osc_get_rate>:
+
+	return 0;
+}
+
+static inline uint32_t osc_get_rate(uint32_t ul_id)
+{
+  40146c:	b480      	push	{r7}
+  40146e:	b083      	sub	sp, #12
+  401470:	af00      	add	r7, sp, #0
+  401472:	6078      	str	r0, [r7, #4]
+	switch (ul_id) {
+  401474:	687b      	ldr	r3, [r7, #4]
+  401476:	2b07      	cmp	r3, #7
+  401478:	d825      	bhi.n	4014c6 <osc_get_rate+0x5a>
+  40147a:	a201      	add	r2, pc, #4	; (adr r2, 401480 <osc_get_rate+0x14>)
+  40147c:	f852 f023 	ldr.w	pc, [r2, r3, lsl #2]
+  401480:	004014a1 	.word	0x004014a1
+  401484:	004014a7 	.word	0x004014a7
+  401488:	004014ad 	.word	0x004014ad
+  40148c:	004014b3 	.word	0x004014b3
+  401490:	004014b7 	.word	0x004014b7
+  401494:	004014bb 	.word	0x004014bb
+  401498:	004014bf 	.word	0x004014bf
+  40149c:	004014c3 	.word	0x004014c3
+	case OSC_SLCK_32K_RC:
+		return OSC_SLCK_32K_RC_HZ;
+  4014a0:	f44f 43fa 	mov.w	r3, #32000	; 0x7d00
+  4014a4:	e010      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_SLCK_32K_XTAL:
+		return BOARD_FREQ_SLCK_XTAL;
+  4014a6:	f44f 4300 	mov.w	r3, #32768	; 0x8000
+  4014aa:	e00d      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_SLCK_32K_BYPASS:
+		return BOARD_FREQ_SLCK_BYPASS;
+  4014ac:	f44f 4300 	mov.w	r3, #32768	; 0x8000
+  4014b0:	e00a      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_4M_RC:
+		return OSC_MAINCK_4M_RC_HZ;
+  4014b2:	4b08      	ldr	r3, [pc, #32]	; (4014d4 <osc_get_rate+0x68>)
+  4014b4:	e008      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_8M_RC:
+		return OSC_MAINCK_8M_RC_HZ;
+  4014b6:	4b08      	ldr	r3, [pc, #32]	; (4014d8 <osc_get_rate+0x6c>)
+  4014b8:	e006      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_12M_RC:
+		return OSC_MAINCK_12M_RC_HZ;
+  4014ba:	4b08      	ldr	r3, [pc, #32]	; (4014dc <osc_get_rate+0x70>)
+  4014bc:	e004      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_XTAL:
+		return BOARD_FREQ_MAINCK_XTAL;
+  4014be:	4b07      	ldr	r3, [pc, #28]	; (4014dc <osc_get_rate+0x70>)
+  4014c0:	e002      	b.n	4014c8 <osc_get_rate+0x5c>
+
+	case OSC_MAINCK_BYPASS:
+		return BOARD_FREQ_MAINCK_BYPASS;
+  4014c2:	4b06      	ldr	r3, [pc, #24]	; (4014dc <osc_get_rate+0x70>)
+  4014c4:	e000      	b.n	4014c8 <osc_get_rate+0x5c>
+	}
+
+	return 0;
+  4014c6:	2300      	movs	r3, #0
+}
+  4014c8:	4618      	mov	r0, r3
+  4014ca:	370c      	adds	r7, #12
+  4014cc:	46bd      	mov	sp, r7
+  4014ce:	f85d 7b04 	ldr.w	r7, [sp], #4
+  4014d2:	4770      	bx	lr
+  4014d4:	003d0900 	.word	0x003d0900
+  4014d8:	007a1200 	.word	0x007a1200
+  4014dc:	00b71b00 	.word	0x00b71b00
+
+004014e0 <sysclk_get_main_hz>:
+ */
+#if (defined CONFIG_SYSCLK_DEFAULT_RETURNS_SLOW_OSC)
+extern uint32_t sysclk_initialized;
+#endif
+static inline uint32_t sysclk_get_main_hz(void)
+{
+  4014e0:	b580      	push	{r7, lr}
+  4014e2:	af00      	add	r7, sp, #0
+	} else if (CONFIG_SYSCLK_SOURCE == SYSCLK_SRC_MAINCK_BYPASS) {
+		return OSC_MAINCK_BYPASS_HZ;
+	}
+#ifdef CONFIG_PLL0_SOURCE
+	else if (CONFIG_SYSCLK_SOURCE == SYSCLK_SRC_PLLACK) {
+		return pll_get_default_rate(0);
+  4014e4:	2006      	movs	r0, #6
+  4014e6:	4b04      	ldr	r3, [pc, #16]	; (4014f8 <sysclk_get_main_hz+0x18>)
+  4014e8:	4798      	blx	r3
+  4014ea:	4602      	mov	r2, r0
+  4014ec:	4613      	mov	r3, r2
+  4014ee:	009b      	lsls	r3, r3, #2
+  4014f0:	4413      	add	r3, r2
+  4014f2:	009b      	lsls	r3, r3, #2
+
+	else {
+		/* unhandled_case(CONFIG_SYSCLK_SOURCE); */
+		return 0;
+	}
+}
+  4014f4:	4618      	mov	r0, r3
+  4014f6:	bd80      	pop	{r7, pc}
+  4014f8:	0040146d 	.word	0x0040146d
+
+004014fc <sysclk_get_cpu_hz>:
+ * clocks.
+ *
+ * \return Frequency of the CPU clock, in Hz.
+ */
+static inline uint32_t sysclk_get_cpu_hz(void)
+{
+  4014fc:	b580      	push	{r7, lr}
+  4014fe:	af00      	add	r7, sp, #0
+	/* CONFIG_SYSCLK_PRES is the register value for setting the expected */
+	/* prescaler, not an immediate value. */
+	return sysclk_get_main_hz() /
+  401500:	4b02      	ldr	r3, [pc, #8]	; (40150c <sysclk_get_cpu_hz+0x10>)
+  401502:	4798      	blx	r3
+  401504:	4603      	mov	r3, r0
+  401506:	085b      	lsrs	r3, r3, #1
+		((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 :
+			(1 << (CONFIG_SYSCLK_PRES >> PMC_MCKR_PRES_Pos)));
+}
+  401508:	4618      	mov	r0, r3
+  40150a:	bd80      	pop	{r7, pc}
+  40150c:	004014e1 	.word	0x004014e1
+
+00401510 <Button1_Handler>:
+
+/**
+ *  Handle Interrupcao botao 1
+ */
+static void Button1_Handler(uint32_t id, uint32_t mask)
+{
+  401510:	b590      	push	{r4, r7, lr}
+  401512:	b083      	sub	sp, #12
+  401514:	af00      	add	r7, sp, #0
+  401516:	6078      	str	r0, [r7, #4]
+  401518:	6039      	str	r1, [r7, #0]
+	tc_write_rc(TC0, 0, tc_read_rc(TC0, 0)*1.1);
+  40151a:	4813      	ldr	r0, [pc, #76]	; (401568 <Button1_Handler+0x58>)
+  40151c:	2100      	movs	r1, #0
+  40151e:	4b13      	ldr	r3, [pc, #76]	; (40156c <Button1_Handler+0x5c>)
+  401520:	4798      	blx	r3
+  401522:	4602      	mov	r2, r0
+  401524:	4b12      	ldr	r3, [pc, #72]	; (401570 <Button1_Handler+0x60>)
+  401526:	4610      	mov	r0, r2
+  401528:	4798      	blx	r3
+  40152a:	4602      	mov	r2, r0
+  40152c:	460b      	mov	r3, r1
+  40152e:	4c11      	ldr	r4, [pc, #68]	; (401574 <Button1_Handler+0x64>)
+  401530:	4610      	mov	r0, r2
+  401532:	4619      	mov	r1, r3
+  401534:	a30a      	add	r3, pc, #40	; (adr r3, 401560 <Button1_Handler+0x50>)
+  401536:	e9d3 2300 	ldrd	r2, r3, [r3]
+  40153a:	47a0      	blx	r4
+  40153c:	4602      	mov	r2, r0
+  40153e:	460b      	mov	r3, r1
+  401540:	4610      	mov	r0, r2
+  401542:	4619      	mov	r1, r3
+  401544:	4b0c      	ldr	r3, [pc, #48]	; (401578 <Button1_Handler+0x68>)
+  401546:	4798      	blx	r3
+  401548:	4603      	mov	r3, r0
+  40154a:	4807      	ldr	r0, [pc, #28]	; (401568 <Button1_Handler+0x58>)
+  40154c:	2100      	movs	r1, #0
+  40154e:	461a      	mov	r2, r3
+  401550:	4b0a      	ldr	r3, [pc, #40]	; (40157c <Button1_Handler+0x6c>)
+  401552:	4798      	blx	r3
+}
+  401554:	370c      	adds	r7, #12
+  401556:	46bd      	mov	sp, r7
+  401558:	bd90      	pop	{r4, r7, pc}
+  40155a:	bf00      	nop
+  40155c:	f3af 8000 	nop.w
+  401560:	9999999a 	.word	0x9999999a
+  401564:	3ff19999 	.word	0x3ff19999
+  401568:	40010000 	.word	0x40010000
+  40156c:	00401029 	.word	0x00401029
+  401570:	00401a59 	.word	0x00401a59
+  401574:	00401b45 	.word	0x00401b45
+  401578:	00401f69 	.word	0x00401f69
+  40157c:	0040104d 	.word	0x0040104d
+
+00401580 <Button2_Handler>:
+
+/**
+ *  Handle Interrupcao botao 2.
+ */
+static void Button2_Handler(uint32_t id, uint32_t mask)
+{
+  401580:	b590      	push	{r4, r7, lr}
+  401582:	b083      	sub	sp, #12
+  401584:	af00      	add	r7, sp, #0
+  401586:	6078      	str	r0, [r7, #4]
+  401588:	6039      	str	r1, [r7, #0]
+	tc_write_rc(TC0, 0, tc_read_rc(TC0, 0)*0.9 );
+  40158a:	4813      	ldr	r0, [pc, #76]	; (4015d8 <Button2_Handler+0x58>)
+  40158c:	2100      	movs	r1, #0
+  40158e:	4b13      	ldr	r3, [pc, #76]	; (4015dc <Button2_Handler+0x5c>)
+  401590:	4798      	blx	r3
+  401592:	4602      	mov	r2, r0
+  401594:	4b12      	ldr	r3, [pc, #72]	; (4015e0 <Button2_Handler+0x60>)
+  401596:	4610      	mov	r0, r2
+  401598:	4798      	blx	r3
+  40159a:	4602      	mov	r2, r0
+  40159c:	460b      	mov	r3, r1
+  40159e:	4c11      	ldr	r4, [pc, #68]	; (4015e4 <Button2_Handler+0x64>)
+  4015a0:	4610      	mov	r0, r2
+  4015a2:	4619      	mov	r1, r3
+  4015a4:	a30a      	add	r3, pc, #40	; (adr r3, 4015d0 <Button2_Handler+0x50>)
+  4015a6:	e9d3 2300 	ldrd	r2, r3, [r3]
+  4015aa:	47a0      	blx	r4
+  4015ac:	4602      	mov	r2, r0
+  4015ae:	460b      	mov	r3, r1
+  4015b0:	4610      	mov	r0, r2
+  4015b2:	4619      	mov	r1, r3
+  4015b4:	4b0c      	ldr	r3, [pc, #48]	; (4015e8 <Button2_Handler+0x68>)
+  4015b6:	4798      	blx	r3
+  4015b8:	4603      	mov	r3, r0
+  4015ba:	4807      	ldr	r0, [pc, #28]	; (4015d8 <Button2_Handler+0x58>)
+  4015bc:	2100      	movs	r1, #0
+  4015be:	461a      	mov	r2, r3
+  4015c0:	4b0a      	ldr	r3, [pc, #40]	; (4015ec <Button2_Handler+0x6c>)
+  4015c2:	4798      	blx	r3
+}
+  4015c4:	370c      	adds	r7, #12
+  4015c6:	46bd      	mov	sp, r7
+  4015c8:	bd90      	pop	{r4, r7, pc}
+  4015ca:	bf00      	nop
+  4015cc:	f3af 8000 	nop.w
+  4015d0:	cccccccd 	.word	0xcccccccd
+  4015d4:	3feccccc 	.word	0x3feccccc
+  4015d8:	40010000 	.word	0x40010000
+  4015dc:	00401029 	.word	0x00401029
+  4015e0:	00401a59 	.word	0x00401a59
+  4015e4:	00401b45 	.word	0x00401b45
+  4015e8:	00401f69 	.word	0x00401f69
+  4015ec:	0040104d 	.word	0x0040104d
+
+004015f0 <TC0_Handler>:
+
+/**
+ *  Interrupt handler for TC0 interrupt. 
+ */
+void TC0_Handler(void)
+{
+  4015f0:	b580      	push	{r7, lr}
+  4015f2:	b082      	sub	sp, #8
+  4015f4:	af00      	add	r7, sp, #0
+	volatile uint32_t ul_dummy;
+
+    /****************************************************************
+	* Devemos indicar ao TC que a interrupção foi satisfeita.
+    ******************************************************************/
+	ul_dummy = tc_get_status(TC0, 0);
+  4015f6:	480d      	ldr	r0, [pc, #52]	; (40162c <TC0_Handler+0x3c>)
+  4015f8:	2100      	movs	r1, #0
+  4015fa:	4b0d      	ldr	r3, [pc, #52]	; (401630 <TC0_Handler+0x40>)
+  4015fc:	4798      	blx	r3
+  4015fe:	4603      	mov	r3, r0
+  401600:	607b      	str	r3, [r7, #4]
+
+	/* Avoid compiler warning */
+	UNUSED(ul_dummy);
+  401602:	687b      	ldr	r3, [r7, #4]
+
+	/** Muda o estado do LED */
+	if(PIN_LED_BLUE_PIO->PIO_ODSR & PIN_LED_BLUE_MASK){
+  401604:	4b0b      	ldr	r3, [pc, #44]	; (401634 <TC0_Handler+0x44>)
+  401606:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+  401608:	f403 2300 	and.w	r3, r3, #524288	; 0x80000
+  40160c:	2b00      	cmp	r3, #0
+  40160e:	d005      	beq.n	40161c <TC0_Handler+0x2c>
+		pio_clear(PIN_LED_BLUE_PIO, PIN_LED_BLUE_MASK);
+  401610:	4808      	ldr	r0, [pc, #32]	; (401634 <TC0_Handler+0x44>)
+  401612:	f44f 2100 	mov.w	r1, #524288	; 0x80000
+  401616:	4b08      	ldr	r3, [pc, #32]	; (401638 <TC0_Handler+0x48>)
+  401618:	4798      	blx	r3
+  40161a:	e004      	b.n	401626 <TC0_Handler+0x36>
+	} else{
+		pio_set(PIN_LED_BLUE_PIO, PIN_LED_BLUE_MASK);
+  40161c:	4805      	ldr	r0, [pc, #20]	; (401634 <TC0_Handler+0x44>)
+  40161e:	f44f 2100 	mov.w	r1, #524288	; 0x80000
+  401622:	4b06      	ldr	r3, [pc, #24]	; (40163c <TC0_Handler+0x4c>)
+  401624:	4798      	blx	r3
+	}
+}
+  401626:	3708      	adds	r7, #8
+  401628:	46bd      	mov	sp, r7
+  40162a:	bd80      	pop	{r7, pc}
+  40162c:	40010000 	.word	0x40010000
+  401630:	00401099 	.word	0x00401099
+  401634:	400e0e00 	.word	0x400e0e00
+  401638:	004004f5 	.word	0x004004f5
+  40163c:	004004d9 	.word	0x004004d9
+
+00401640 <configure_buttons>:
+ *
+ *  Configure the PIO as inputs and generate corresponding interrupt when
+ *  pressed or released.
+ */
+static void configure_buttons(void)
+{
+  401640:	b590      	push	{r4, r7, lr}
+  401642:	b083      	sub	sp, #12
+  401644:	af02      	add	r7, sp, #8
+	//Habilitação dos Clocks dos periféricos
+	pmc_enable_periph_clk(PIN_PUSHBUTTON_1_ID);
+  401646:	200c      	movs	r0, #12
+  401648:	4b22      	ldr	r3, [pc, #136]	; (4016d4 <configure_buttons+0x94>)
+  40164a:	4798      	blx	r3
+	pmc_enable_periph_clk(PIN_PUSHBUTTON_2_ID);
+  40164c:	200d      	movs	r0, #13
+  40164e:	4b21      	ldr	r3, [pc, #132]	; (4016d4 <configure_buttons+0x94>)
+  401650:	4798      	blx	r3
+	
+	//Seleção dos pinos com entrada
+	pio_set_input(PIN_PUSHBUTTON_1_ID, PIN_PUSHBUTTON_1_MASK, PIO_PULLUP | PIO_DEBOUNCE | PIO_IT_RISE_EDGE);
+  401652:	200c      	movs	r0, #12
+  401654:	2108      	movs	r1, #8
+  401656:	2279      	movs	r2, #121	; 0x79
+  401658:	4b1f      	ldr	r3, [pc, #124]	; (4016d8 <configure_buttons+0x98>)
+  40165a:	4798      	blx	r3
+	pio_set_debounce_filter(PIN_PUSHBUTTON_1_PIO, PIN_PUSHBUTTON_1_MASK, 100); //Configura divisor do clock para debounce
+  40165c:	481f      	ldr	r0, [pc, #124]	; (4016dc <configure_buttons+0x9c>)
+  40165e:	2108      	movs	r1, #8
+  401660:	2264      	movs	r2, #100	; 0x64
+  401662:	4b1f      	ldr	r3, [pc, #124]	; (4016e0 <configure_buttons+0xa0>)
+  401664:	4798      	blx	r3
+	pio_handler_set(PIN_PUSHBUTTON_1_PIO, 
+  401666:	4b1f      	ldr	r3, [pc, #124]	; (4016e4 <configure_buttons+0xa4>)
+  401668:	9300      	str	r3, [sp, #0]
+  40166a:	481c      	ldr	r0, [pc, #112]	; (4016dc <configure_buttons+0x9c>)
+  40166c:	210c      	movs	r1, #12
+  40166e:	2208      	movs	r2, #8
+  401670:	2350      	movs	r3, #80	; 0x50
+  401672:	4c1d      	ldr	r4, [pc, #116]	; (4016e8 <configure_buttons+0xa8>)
+  401674:	47a0      	blx	r4
+					PIN_PUSHBUTTON_1_ID,
+					PIN_PUSHBUTTON_1_MASK,  
+					PIO_IT_FALL_EDGE ,
+					Button1_Handler); //Configura interrupção para acontecer em borda de descida.		
+	pio_enable_interrupt(PIN_PUSHBUTTON_1_PIO, PIN_PUSHBUTTON_1_MASK); //Ativa interrupção no periférico B porta do botão	
+  401676:	4819      	ldr	r0, [pc, #100]	; (4016dc <configure_buttons+0x9c>)
+  401678:	2108      	movs	r1, #8
+  40167a:	4b1c      	ldr	r3, [pc, #112]	; (4016ec <configure_buttons+0xac>)
+  40167c:	4798      	blx	r3
+	NVIC_SetPriority(PIN_PUSHBUTTON_1_ID, 1); //Configura a prioridade da interrupção no PORTB
+  40167e:	200c      	movs	r0, #12
+  401680:	2101      	movs	r1, #1
+  401682:	4b1b      	ldr	r3, [pc, #108]	; (4016f0 <configure_buttons+0xb0>)
+  401684:	4798      	blx	r3
+	NVIC_EnableIRQ(PIN_PUSHBUTTON_1_ID); //Ativa interrupção no port B
+  401686:	200c      	movs	r0, #12
+  401688:	4b1a      	ldr	r3, [pc, #104]	; (4016f4 <configure_buttons+0xb4>)
+  40168a:	4798      	blx	r3
+	
+	
+	pio_set_input(PIN_PUSHBUTTON_2_ID, PIN_PUSHBUTTON_2_MASK, PIO_PULLUP | PIO_DEBOUNCE | PIO_IT_FALL_EDGE);
+  40168c:	200d      	movs	r0, #13
+  40168e:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  401692:	2259      	movs	r2, #89	; 0x59
+  401694:	4b10      	ldr	r3, [pc, #64]	; (4016d8 <configure_buttons+0x98>)
+  401696:	4798      	blx	r3
+	pio_set_debounce_filter(PIN_PUSHBUTTON_2_PIO, PIN_PUSHBUTTON_2_MASK, 100); //Configura divisor do clock para debounce
+  401698:	4817      	ldr	r0, [pc, #92]	; (4016f8 <configure_buttons+0xb8>)
+  40169a:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  40169e:	2264      	movs	r2, #100	; 0x64
+  4016a0:	4b0f      	ldr	r3, [pc, #60]	; (4016e0 <configure_buttons+0xa0>)
+  4016a2:	4798      	blx	r3
+	pio_handler_set(PIN_PUSHBUTTON_2_PIO, 
+  4016a4:	4b15      	ldr	r3, [pc, #84]	; (4016fc <configure_buttons+0xbc>)
+  4016a6:	9300      	str	r3, [sp, #0]
+  4016a8:	4813      	ldr	r0, [pc, #76]	; (4016f8 <configure_buttons+0xb8>)
+  4016aa:	210d      	movs	r1, #13
+  4016ac:	f44f 5280 	mov.w	r2, #4096	; 0x1000
+  4016b0:	2350      	movs	r3, #80	; 0x50
+  4016b2:	4c0d      	ldr	r4, [pc, #52]	; (4016e8 <configure_buttons+0xa8>)
+  4016b4:	47a0      	blx	r4
+					PIN_PUSHBUTTON_2_ID,
+					PIN_PUSHBUTTON_2_MASK,  
+					PIO_IT_FALL_EDGE ,
+					Button2_Handler); //Configura interrupção para acontecer em borda de descida.		
+	pio_enable_interrupt(PIN_PUSHBUTTON_2_PIO, PIN_PUSHBUTTON_2_MASK); //Ativa interrupção no periférico B porta do botão	
+  4016b6:	4810      	ldr	r0, [pc, #64]	; (4016f8 <configure_buttons+0xb8>)
+  4016b8:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  4016bc:	4b0b      	ldr	r3, [pc, #44]	; (4016ec <configure_buttons+0xac>)
+  4016be:	4798      	blx	r3
+	NVIC_SetPriority(PIN_PUSHBUTTON_2_ID, 1); //Configura a prioridade da interrupção no PORTB
+  4016c0:	200d      	movs	r0, #13
+  4016c2:	2101      	movs	r1, #1
+  4016c4:	4b0a      	ldr	r3, [pc, #40]	; (4016f0 <configure_buttons+0xb0>)
+  4016c6:	4798      	blx	r3
+	NVIC_EnableIRQ(PIN_PUSHBUTTON_2_ID); //Ativa interrupção no port C		
+  4016c8:	200d      	movs	r0, #13
+  4016ca:	4b0a      	ldr	r3, [pc, #40]	; (4016f4 <configure_buttons+0xb4>)
+  4016cc:	4798      	blx	r3
+}
+  4016ce:	3704      	adds	r7, #4
+  4016d0:	46bd      	mov	sp, r7
+  4016d2:	bd90      	pop	{r4, r7, pc}
+  4016d4:	00400aa1 	.word	0x00400aa1
+  4016d8:	00400511 	.word	0x00400511
+  4016dc:	400e1000 	.word	0x400e1000
+  4016e0:	004004a1 	.word	0x004004a1
+  4016e4:	00401511 	.word	0x00401511
+  4016e8:	00400795 	.word	0x00400795
+  4016ec:	0040065d 	.word	0x0040065d
+  4016f0:	00401419 	.word	0x00401419
+  4016f4:	004013e9 	.word	0x004013e9
+  4016f8:	400e1200 	.word	0x400e1200
+  4016fc:	00401581 	.word	0x00401581
+
+00401700 <configure_leds>:
+/**
+ *  \brief Configure the LEDs
+ *
+ */
+static void configure_leds(void)
+{
+  401700:	b590      	push	{r4, r7, lr}
+  401702:	b083      	sub	sp, #12
+  401704:	af02      	add	r7, sp, #8
+	pmc_enable_periph_clk(PIN_LED_BLUE_ID);	
+  401706:	200b      	movs	r0, #11
+  401708:	4b06      	ldr	r3, [pc, #24]	; (401724 <configure_leds+0x24>)
+  40170a:	4798      	blx	r3
+	pio_set_output(PIN_LED_BLUE_PIO, PIN_LED_BLUE_MASK, 1, 0, 0);
+  40170c:	2300      	movs	r3, #0
+  40170e:	9300      	str	r3, [sp, #0]
+  401710:	4805      	ldr	r0, [pc, #20]	; (401728 <configure_leds+0x28>)
+  401712:	f44f 2100 	mov.w	r1, #524288	; 0x80000
+  401716:	2201      	movs	r2, #1
+  401718:	2300      	movs	r3, #0
+  40171a:	4c04      	ldr	r4, [pc, #16]	; (40172c <configure_leds+0x2c>)
+  40171c:	47a0      	blx	r4
+}
+  40171e:	3704      	adds	r7, #4
+  401720:	46bd      	mov	sp, r7
+  401722:	bd90      	pop	{r4, r7, pc}
+  401724:	00400aa1 	.word	0x00400aa1
+  401728:	400e0e00 	.word	0x400e0e00
+  40172c:	0040058d 	.word	0x0040058d
+
+00401730 <configure_tc>:
+/**
+ *  Configure Timer Counter 0 to generate an interrupt every 250ms.
+ */
+// [main_tc_configure]
+static void configure_tc(void)
+{
+  401730:	b580      	push	{r7, lr}
+  401732:	b082      	sub	sp, #8
+  401734:	af00      	add	r7, sp, #0
+	/*
+	* Aqui atualizamos o clock da cpu que foi configurado em sysclk init
+	*
+	* O valor atual est'a em : 120_000_000 Hz (120Mhz)
+	*/
+	uint32_t ul_sysclk = sysclk_get_cpu_hz();
+  401736:	4b10      	ldr	r3, [pc, #64]	; (401778 <configure_tc+0x48>)
+  401738:	4798      	blx	r3
+  40173a:	6078      	str	r0, [r7, #4]
+    * Parametros : 
+    *  1 - ID do periferico
+    * 
+	*
+	*****************************************************************/
+	pmc_enable_periph_clk(ID_TC0);
+  40173c:	2017      	movs	r0, #23
+  40173e:	4b0f      	ldr	r3, [pc, #60]	; (40177c <configure_tc+0x4c>)
+  401740:	4798      	blx	r3
+	*	    TC_CMR_TCCLKS_TIMER_CLOCK3 : Clock selected: internal MCK/32 clock signal 
+	*	    TC_CMR_TCCLKS_TIMER_CLOCK4 : Clock selected: internal MCK/128 clock signal
+	*	    TC_CMR_TCCLKS_TIMER_CLOCK5 : Clock selected: internal SLCK clock signal 
+	*
+	*****************************************************************/
+	tc_init(TC0, 0, TC_CMR_CPCTRG | TC_CMR_TCCLKS_TIMER_CLOCK5);
+  401742:	480f      	ldr	r0, [pc, #60]	; (401780 <configure_tc+0x50>)
+  401744:	2100      	movs	r1, #0
+  401746:	f244 0204 	movw	r2, #16388	; 0x4004
+  40174a:	4b0e      	ldr	r3, [pc, #56]	; (401784 <configure_tc+0x54>)
+  40174c:	4798      	blx	r3
+    * Parametros :
+    *   1 - TC a ser configurado (TC0,TC1, ...)
+    *   2 - Canal a ser configurado (0,1,2)
+    *   3 - Valor para trigger do contador (RC)
+    *****************************************************************/
+    tc_write_rc(TC0, 0, 65535);
+  40174e:	480c      	ldr	r0, [pc, #48]	; (401780 <configure_tc+0x50>)
+  401750:	2100      	movs	r1, #0
+  401752:	f64f 72ff 	movw	r2, #65535	; 0xffff
+  401756:	4b0c      	ldr	r3, [pc, #48]	; (401788 <configure_tc+0x58>)
+  401758:	4798      	blx	r3
+	*	        TC_IER_CPCS  : 	RC Compare 
+	*	        TC_IER_LDRAS : 	RA Loading 
+	*	        TC_IER_LDRBS : 	RB Loading 
+	*	        TC_IER_ETRGS : 	External Trigger 
+	*****************************************************************/
+	tc_enable_interrupt(TC0, 0, TC_IER_CPCS);
+  40175a:	4809      	ldr	r0, [pc, #36]	; (401780 <configure_tc+0x50>)
+  40175c:	2100      	movs	r1, #0
+  40175e:	2210      	movs	r2, #16
+  401760:	4b0a      	ldr	r3, [pc, #40]	; (40178c <configure_tc+0x5c>)
+  401762:	4798      	blx	r3
+    * Devemos configurar o NVIC para receber interrupções do TC 
+    *
+    * Parametros :
+    *   1 - ID do periférico
+	*****************************************************************/
+	NVIC_EnableIRQ(ID_TC0);
+  401764:	2017      	movs	r0, #23
+  401766:	4b0a      	ldr	r3, [pc, #40]	; (401790 <configure_tc+0x60>)
+  401768:	4798      	blx	r3
+    *
+    * Parametros :
+    *   1 - TC
+    *   2 - Canal
+	*****************************************************************/
+    tc_start(TC0, 0);
+  40176a:	4805      	ldr	r0, [pc, #20]	; (401780 <configure_tc+0x50>)
+  40176c:	2100      	movs	r1, #0
+  40176e:	4b09      	ldr	r3, [pc, #36]	; (401794 <configure_tc+0x64>)
+  401770:	4798      	blx	r3
+}
+  401772:	3708      	adds	r7, #8
+  401774:	46bd      	mov	sp, r7
+  401776:	bd80      	pop	{r7, pc}
+  401778:	004014fd 	.word	0x004014fd
+  40177c:	00400aa1 	.word	0x00400aa1
+  401780:	40010000 	.word	0x40010000
+  401784:	00400fd1 	.word	0x00400fd1
+  401788:	0040104d 	.word	0x0040104d
+  40178c:	00401071 	.word	0x00401071
+  401790:	004013e9 	.word	0x004013e9
+  401794:	00401009 	.word	0x00401009
+
+00401798 <main>:
+
+/************************************************************************/
+/* Main Code	                                                        */
+/************************************************************************/
+int main(void)
+{
+  401798:	b580      	push	{r7, lr}
+  40179a:	af00      	add	r7, sp, #0
+	/* Initialize the SAM system */
+	sysclk_init();
+  40179c:	4b07      	ldr	r3, [pc, #28]	; (4017bc <main+0x24>)
+  40179e:	4798      	blx	r3
+
+	/* Disable the watchdog */
+	WDT->WDT_MR = WDT_MR_WDDIS;
+  4017a0:	4b07      	ldr	r3, [pc, #28]	; (4017c0 <main+0x28>)
+  4017a2:	f44f 4200 	mov.w	r2, #32768	; 0x8000
+  4017a6:	605a      	str	r2, [r3, #4]
+
+	/** Configura o timer */
+	configure_tc();
+  4017a8:	4b06      	ldr	r3, [pc, #24]	; (4017c4 <main+0x2c>)
+  4017aa:	4798      	blx	r3
+
+    /* Configura Leds */
+    configure_leds();
+  4017ac:	4b06      	ldr	r3, [pc, #24]	; (4017c8 <main+0x30>)
+  4017ae:	4798      	blx	r3
+	
+	/* Configura os botões */
+	configure_buttons();
+  4017b0:	4b06      	ldr	r3, [pc, #24]	; (4017cc <main+0x34>)
+  4017b2:	4798      	blx	r3
+	   
+	while (1) {
+		pmc_sleep(SAM_PM_SMODE_SLEEP_WFI);
+  4017b4:	2002      	movs	r0, #2
+  4017b6:	4b06      	ldr	r3, [pc, #24]	; (4017d0 <main+0x38>)
+  4017b8:	4798      	blx	r3
+	}
+  4017ba:	e7fb      	b.n	4017b4 <main+0x1c>
+  4017bc:	00400405 	.word	0x00400405
+  4017c0:	400e1450 	.word	0x400e1450
+  4017c4:	00401731 	.word	0x00401731
+  4017c8:	00401701 	.word	0x00401701
+  4017cc:	00401641 	.word	0x00401641
+  4017d0:	00400bd5 	.word	0x00400bd5
+
+004017d4 <__aeabi_drsub>:
+  4017d4:	f081 4100 	eor.w	r1, r1, #2147483648	; 0x80000000
+  4017d8:	e002      	b.n	4017e0 <__adddf3>
+  4017da:	bf00      	nop
+
+004017dc <__aeabi_dsub>:
+  4017dc:	f083 4300 	eor.w	r3, r3, #2147483648	; 0x80000000
+
+004017e0 <__adddf3>:
+  4017e0:	b530      	push	{r4, r5, lr}
+  4017e2:	ea4f 0441 	mov.w	r4, r1, lsl #1
+  4017e6:	ea4f 0543 	mov.w	r5, r3, lsl #1
+  4017ea:	ea94 0f05 	teq	r4, r5
+  4017ee:	bf08      	it	eq
+  4017f0:	ea90 0f02 	teqeq	r0, r2
+  4017f4:	bf1f      	itttt	ne
+  4017f6:	ea54 0c00 	orrsne.w	ip, r4, r0
+  4017fa:	ea55 0c02 	orrsne.w	ip, r5, r2
+  4017fe:	ea7f 5c64 	mvnsne.w	ip, r4, asr #21
+  401802:	ea7f 5c65 	mvnsne.w	ip, r5, asr #21
+  401806:	f000 80e2 	beq.w	4019ce <__adddf3+0x1ee>
+  40180a:	ea4f 5454 	mov.w	r4, r4, lsr #21
+  40180e:	ebd4 5555 	rsbs	r5, r4, r5, lsr #21
+  401812:	bfb8      	it	lt
+  401814:	426d      	neglt	r5, r5
+  401816:	dd0c      	ble.n	401832 <__adddf3+0x52>
+  401818:	442c      	add	r4, r5
+  40181a:	ea80 0202 	eor.w	r2, r0, r2
+  40181e:	ea81 0303 	eor.w	r3, r1, r3
+  401822:	ea82 0000 	eor.w	r0, r2, r0
+  401826:	ea83 0101 	eor.w	r1, r3, r1
+  40182a:	ea80 0202 	eor.w	r2, r0, r2
+  40182e:	ea81 0303 	eor.w	r3, r1, r3
+  401832:	2d36      	cmp	r5, #54	; 0x36
+  401834:	bf88      	it	hi
+  401836:	bd30      	pophi	{r4, r5, pc}
+  401838:	f011 4f00 	tst.w	r1, #2147483648	; 0x80000000
+  40183c:	ea4f 3101 	mov.w	r1, r1, lsl #12
+  401840:	f44f 1c80 	mov.w	ip, #1048576	; 0x100000
+  401844:	ea4c 3111 	orr.w	r1, ip, r1, lsr #12
+  401848:	d002      	beq.n	401850 <__adddf3+0x70>
+  40184a:	4240      	negs	r0, r0
+  40184c:	eb61 0141 	sbc.w	r1, r1, r1, lsl #1
+  401850:	f013 4f00 	tst.w	r3, #2147483648	; 0x80000000
+  401854:	ea4f 3303 	mov.w	r3, r3, lsl #12
+  401858:	ea4c 3313 	orr.w	r3, ip, r3, lsr #12
+  40185c:	d002      	beq.n	401864 <__adddf3+0x84>
+  40185e:	4252      	negs	r2, r2
+  401860:	eb63 0343 	sbc.w	r3, r3, r3, lsl #1
+  401864:	ea94 0f05 	teq	r4, r5
+  401868:	f000 80a7 	beq.w	4019ba <__adddf3+0x1da>
+  40186c:	f1a4 0401 	sub.w	r4, r4, #1
+  401870:	f1d5 0e20 	rsbs	lr, r5, #32
+  401874:	db0d      	blt.n	401892 <__adddf3+0xb2>
+  401876:	fa02 fc0e 	lsl.w	ip, r2, lr
+  40187a:	fa22 f205 	lsr.w	r2, r2, r5
+  40187e:	1880      	adds	r0, r0, r2
+  401880:	f141 0100 	adc.w	r1, r1, #0
+  401884:	fa03 f20e 	lsl.w	r2, r3, lr
+  401888:	1880      	adds	r0, r0, r2
+  40188a:	fa43 f305 	asr.w	r3, r3, r5
+  40188e:	4159      	adcs	r1, r3
+  401890:	e00e      	b.n	4018b0 <__adddf3+0xd0>
+  401892:	f1a5 0520 	sub.w	r5, r5, #32
+  401896:	f10e 0e20 	add.w	lr, lr, #32
+  40189a:	2a01      	cmp	r2, #1
+  40189c:	fa03 fc0e 	lsl.w	ip, r3, lr
+  4018a0:	bf28      	it	cs
+  4018a2:	f04c 0c02 	orrcs.w	ip, ip, #2
+  4018a6:	fa43 f305 	asr.w	r3, r3, r5
+  4018aa:	18c0      	adds	r0, r0, r3
+  4018ac:	eb51 71e3 	adcs.w	r1, r1, r3, asr #31
+  4018b0:	f001 4500 	and.w	r5, r1, #2147483648	; 0x80000000
+  4018b4:	d507      	bpl.n	4018c6 <__adddf3+0xe6>
+  4018b6:	f04f 0e00 	mov.w	lr, #0
+  4018ba:	f1dc 0c00 	rsbs	ip, ip, #0
+  4018be:	eb7e 0000 	sbcs.w	r0, lr, r0
+  4018c2:	eb6e 0101 	sbc.w	r1, lr, r1
+  4018c6:	f5b1 1f80 	cmp.w	r1, #1048576	; 0x100000
+  4018ca:	d31b      	bcc.n	401904 <__adddf3+0x124>
+  4018cc:	f5b1 1f00 	cmp.w	r1, #2097152	; 0x200000
+  4018d0:	d30c      	bcc.n	4018ec <__adddf3+0x10c>
+  4018d2:	0849      	lsrs	r1, r1, #1
+  4018d4:	ea5f 0030 	movs.w	r0, r0, rrx
+  4018d8:	ea4f 0c3c 	mov.w	ip, ip, rrx
+  4018dc:	f104 0401 	add.w	r4, r4, #1
+  4018e0:	ea4f 5244 	mov.w	r2, r4, lsl #21
+  4018e4:	f512 0f80 	cmn.w	r2, #4194304	; 0x400000
+  4018e8:	f080 809a 	bcs.w	401a20 <__adddf3+0x240>
+  4018ec:	f1bc 4f00 	cmp.w	ip, #2147483648	; 0x80000000
+  4018f0:	bf08      	it	eq
+  4018f2:	ea5f 0c50 	movseq.w	ip, r0, lsr #1
+  4018f6:	f150 0000 	adcs.w	r0, r0, #0
+  4018fa:	eb41 5104 	adc.w	r1, r1, r4, lsl #20
+  4018fe:	ea41 0105 	orr.w	r1, r1, r5
+  401902:	bd30      	pop	{r4, r5, pc}
+  401904:	ea5f 0c4c 	movs.w	ip, ip, lsl #1
+  401908:	4140      	adcs	r0, r0
+  40190a:	eb41 0101 	adc.w	r1, r1, r1
+  40190e:	f411 1f80 	tst.w	r1, #1048576	; 0x100000
+  401912:	f1a4 0401 	sub.w	r4, r4, #1
+  401916:	d1e9      	bne.n	4018ec <__adddf3+0x10c>
+  401918:	f091 0f00 	teq	r1, #0
+  40191c:	bf04      	itt	eq
+  40191e:	4601      	moveq	r1, r0
+  401920:	2000      	moveq	r0, #0
+  401922:	fab1 f381 	clz	r3, r1
+  401926:	bf08      	it	eq
+  401928:	3320      	addeq	r3, #32
+  40192a:	f1a3 030b 	sub.w	r3, r3, #11
+  40192e:	f1b3 0220 	subs.w	r2, r3, #32
+  401932:	da0c      	bge.n	40194e <__adddf3+0x16e>
+  401934:	320c      	adds	r2, #12
+  401936:	dd08      	ble.n	40194a <__adddf3+0x16a>
+  401938:	f102 0c14 	add.w	ip, r2, #20
+  40193c:	f1c2 020c 	rsb	r2, r2, #12
+  401940:	fa01 f00c 	lsl.w	r0, r1, ip
+  401944:	fa21 f102 	lsr.w	r1, r1, r2
+  401948:	e00c      	b.n	401964 <__adddf3+0x184>
+  40194a:	f102 0214 	add.w	r2, r2, #20
+  40194e:	bfd8      	it	le
+  401950:	f1c2 0c20 	rsble	ip, r2, #32
+  401954:	fa01 f102 	lsl.w	r1, r1, r2
+  401958:	fa20 fc0c 	lsr.w	ip, r0, ip
+  40195c:	bfdc      	itt	le
+  40195e:	ea41 010c 	orrle.w	r1, r1, ip
+  401962:	4090      	lslle	r0, r2
+  401964:	1ae4      	subs	r4, r4, r3
+  401966:	bfa2      	ittt	ge
+  401968:	eb01 5104 	addge.w	r1, r1, r4, lsl #20
+  40196c:	4329      	orrge	r1, r5
+  40196e:	bd30      	popge	{r4, r5, pc}
+  401970:	ea6f 0404 	mvn.w	r4, r4
+  401974:	3c1f      	subs	r4, #31
+  401976:	da1c      	bge.n	4019b2 <__adddf3+0x1d2>
+  401978:	340c      	adds	r4, #12
+  40197a:	dc0e      	bgt.n	40199a <__adddf3+0x1ba>
+  40197c:	f104 0414 	add.w	r4, r4, #20
+  401980:	f1c4 0220 	rsb	r2, r4, #32
+  401984:	fa20 f004 	lsr.w	r0, r0, r4
+  401988:	fa01 f302 	lsl.w	r3, r1, r2
+  40198c:	ea40 0003 	orr.w	r0, r0, r3
+  401990:	fa21 f304 	lsr.w	r3, r1, r4
+  401994:	ea45 0103 	orr.w	r1, r5, r3
+  401998:	bd30      	pop	{r4, r5, pc}
+  40199a:	f1c4 040c 	rsb	r4, r4, #12
+  40199e:	f1c4 0220 	rsb	r2, r4, #32
+  4019a2:	fa20 f002 	lsr.w	r0, r0, r2
+  4019a6:	fa01 f304 	lsl.w	r3, r1, r4
+  4019aa:	ea40 0003 	orr.w	r0, r0, r3
+  4019ae:	4629      	mov	r1, r5
+  4019b0:	bd30      	pop	{r4, r5, pc}
+  4019b2:	fa21 f004 	lsr.w	r0, r1, r4
+  4019b6:	4629      	mov	r1, r5
+  4019b8:	bd30      	pop	{r4, r5, pc}
+  4019ba:	f094 0f00 	teq	r4, #0
+  4019be:	f483 1380 	eor.w	r3, r3, #1048576	; 0x100000
+  4019c2:	bf06      	itte	eq
+  4019c4:	f481 1180 	eoreq.w	r1, r1, #1048576	; 0x100000
+  4019c8:	3401      	addeq	r4, #1
+  4019ca:	3d01      	subne	r5, #1
+  4019cc:	e74e      	b.n	40186c <__adddf3+0x8c>
+  4019ce:	ea7f 5c64 	mvns.w	ip, r4, asr #21
+  4019d2:	bf18      	it	ne
+  4019d4:	ea7f 5c65 	mvnsne.w	ip, r5, asr #21
+  4019d8:	d029      	beq.n	401a2e <__adddf3+0x24e>
+  4019da:	ea94 0f05 	teq	r4, r5
+  4019de:	bf08      	it	eq
+  4019e0:	ea90 0f02 	teqeq	r0, r2
+  4019e4:	d005      	beq.n	4019f2 <__adddf3+0x212>
+  4019e6:	ea54 0c00 	orrs.w	ip, r4, r0
+  4019ea:	bf04      	itt	eq
+  4019ec:	4619      	moveq	r1, r3
+  4019ee:	4610      	moveq	r0, r2
+  4019f0:	bd30      	pop	{r4, r5, pc}
+  4019f2:	ea91 0f03 	teq	r1, r3
+  4019f6:	bf1e      	ittt	ne
+  4019f8:	2100      	movne	r1, #0
+  4019fa:	2000      	movne	r0, #0
+  4019fc:	bd30      	popne	{r4, r5, pc}
+  4019fe:	ea5f 5c54 	movs.w	ip, r4, lsr #21
+  401a02:	d105      	bne.n	401a10 <__adddf3+0x230>
+  401a04:	0040      	lsls	r0, r0, #1
+  401a06:	4149      	adcs	r1, r1
+  401a08:	bf28      	it	cs
+  401a0a:	f041 4100 	orrcs.w	r1, r1, #2147483648	; 0x80000000
+  401a0e:	bd30      	pop	{r4, r5, pc}
+  401a10:	f514 0480 	adds.w	r4, r4, #4194304	; 0x400000
+  401a14:	bf3c      	itt	cc
+  401a16:	f501 1180 	addcc.w	r1, r1, #1048576	; 0x100000
+  401a1a:	bd30      	popcc	{r4, r5, pc}
+  401a1c:	f001 4500 	and.w	r5, r1, #2147483648	; 0x80000000
+  401a20:	f045 41fe 	orr.w	r1, r5, #2130706432	; 0x7f000000
+  401a24:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  401a28:	f04f 0000 	mov.w	r0, #0
+  401a2c:	bd30      	pop	{r4, r5, pc}
+  401a2e:	ea7f 5c64 	mvns.w	ip, r4, asr #21
+  401a32:	bf1a      	itte	ne
+  401a34:	4619      	movne	r1, r3
+  401a36:	4610      	movne	r0, r2
+  401a38:	ea7f 5c65 	mvnseq.w	ip, r5, asr #21
+  401a3c:	bf1c      	itt	ne
+  401a3e:	460b      	movne	r3, r1
+  401a40:	4602      	movne	r2, r0
+  401a42:	ea50 3401 	orrs.w	r4, r0, r1, lsl #12
+  401a46:	bf06      	itte	eq
+  401a48:	ea52 3503 	orrseq.w	r5, r2, r3, lsl #12
+  401a4c:	ea91 0f03 	teqeq	r1, r3
+  401a50:	f441 2100 	orrne.w	r1, r1, #524288	; 0x80000
+  401a54:	bd30      	pop	{r4, r5, pc}
+  401a56:	bf00      	nop
+
+00401a58 <__aeabi_ui2d>:
+  401a58:	f090 0f00 	teq	r0, #0
+  401a5c:	bf04      	itt	eq
+  401a5e:	2100      	moveq	r1, #0
+  401a60:	4770      	bxeq	lr
+  401a62:	b530      	push	{r4, r5, lr}
+  401a64:	f44f 6480 	mov.w	r4, #1024	; 0x400
+  401a68:	f104 0432 	add.w	r4, r4, #50	; 0x32
+  401a6c:	f04f 0500 	mov.w	r5, #0
+  401a70:	f04f 0100 	mov.w	r1, #0
+  401a74:	e750      	b.n	401918 <__adddf3+0x138>
+  401a76:	bf00      	nop
+
+00401a78 <__aeabi_i2d>:
+  401a78:	f090 0f00 	teq	r0, #0
+  401a7c:	bf04      	itt	eq
+  401a7e:	2100      	moveq	r1, #0
+  401a80:	4770      	bxeq	lr
+  401a82:	b530      	push	{r4, r5, lr}
+  401a84:	f44f 6480 	mov.w	r4, #1024	; 0x400
+  401a88:	f104 0432 	add.w	r4, r4, #50	; 0x32
+  401a8c:	f010 4500 	ands.w	r5, r0, #2147483648	; 0x80000000
+  401a90:	bf48      	it	mi
+  401a92:	4240      	negmi	r0, r0
+  401a94:	f04f 0100 	mov.w	r1, #0
+  401a98:	e73e      	b.n	401918 <__adddf3+0x138>
+  401a9a:	bf00      	nop
+
+00401a9c <__aeabi_f2d>:
+  401a9c:	0042      	lsls	r2, r0, #1
+  401a9e:	ea4f 01e2 	mov.w	r1, r2, asr #3
+  401aa2:	ea4f 0131 	mov.w	r1, r1, rrx
+  401aa6:	ea4f 7002 	mov.w	r0, r2, lsl #28
+  401aaa:	bf1f      	itttt	ne
+  401aac:	f012 437f 	andsne.w	r3, r2, #4278190080	; 0xff000000
+  401ab0:	f093 4f7f 	teqne	r3, #4278190080	; 0xff000000
+  401ab4:	f081 5160 	eorne.w	r1, r1, #939524096	; 0x38000000
+  401ab8:	4770      	bxne	lr
+  401aba:	f092 0f00 	teq	r2, #0
+  401abe:	bf14      	ite	ne
+  401ac0:	f093 4f7f 	teqne	r3, #4278190080	; 0xff000000
+  401ac4:	4770      	bxeq	lr
+  401ac6:	b530      	push	{r4, r5, lr}
+  401ac8:	f44f 7460 	mov.w	r4, #896	; 0x380
+  401acc:	f001 4500 	and.w	r5, r1, #2147483648	; 0x80000000
+  401ad0:	f021 4100 	bic.w	r1, r1, #2147483648	; 0x80000000
+  401ad4:	e720      	b.n	401918 <__adddf3+0x138>
+  401ad6:	bf00      	nop
+
+00401ad8 <__aeabi_ul2d>:
+  401ad8:	ea50 0201 	orrs.w	r2, r0, r1
+  401adc:	bf08      	it	eq
+  401ade:	4770      	bxeq	lr
+  401ae0:	b530      	push	{r4, r5, lr}
+  401ae2:	f04f 0500 	mov.w	r5, #0
+  401ae6:	e00a      	b.n	401afe <__aeabi_l2d+0x16>
+
+00401ae8 <__aeabi_l2d>:
+  401ae8:	ea50 0201 	orrs.w	r2, r0, r1
+  401aec:	bf08      	it	eq
+  401aee:	4770      	bxeq	lr
+  401af0:	b530      	push	{r4, r5, lr}
+  401af2:	f011 4500 	ands.w	r5, r1, #2147483648	; 0x80000000
+  401af6:	d502      	bpl.n	401afe <__aeabi_l2d+0x16>
+  401af8:	4240      	negs	r0, r0
+  401afa:	eb61 0141 	sbc.w	r1, r1, r1, lsl #1
+  401afe:	f44f 6480 	mov.w	r4, #1024	; 0x400
+  401b02:	f104 0432 	add.w	r4, r4, #50	; 0x32
+  401b06:	ea5f 5c91 	movs.w	ip, r1, lsr #22
+  401b0a:	f43f aedc 	beq.w	4018c6 <__adddf3+0xe6>
+  401b0e:	f04f 0203 	mov.w	r2, #3
+  401b12:	ea5f 0cdc 	movs.w	ip, ip, lsr #3
+  401b16:	bf18      	it	ne
+  401b18:	3203      	addne	r2, #3
+  401b1a:	ea5f 0cdc 	movs.w	ip, ip, lsr #3
+  401b1e:	bf18      	it	ne
+  401b20:	3203      	addne	r2, #3
+  401b22:	eb02 02dc 	add.w	r2, r2, ip, lsr #3
+  401b26:	f1c2 0320 	rsb	r3, r2, #32
+  401b2a:	fa00 fc03 	lsl.w	ip, r0, r3
+  401b2e:	fa20 f002 	lsr.w	r0, r0, r2
+  401b32:	fa01 fe03 	lsl.w	lr, r1, r3
+  401b36:	ea40 000e 	orr.w	r0, r0, lr
+  401b3a:	fa21 f102 	lsr.w	r1, r1, r2
+  401b3e:	4414      	add	r4, r2
+  401b40:	e6c1      	b.n	4018c6 <__adddf3+0xe6>
+  401b42:	bf00      	nop
+
+00401b44 <__aeabi_dmul>:
+  401b44:	b570      	push	{r4, r5, r6, lr}
+  401b46:	f04f 0cff 	mov.w	ip, #255	; 0xff
+  401b4a:	f44c 6ce0 	orr.w	ip, ip, #1792	; 0x700
+  401b4e:	ea1c 5411 	ands.w	r4, ip, r1, lsr #20
+  401b52:	bf1d      	ittte	ne
+  401b54:	ea1c 5513 	andsne.w	r5, ip, r3, lsr #20
+  401b58:	ea94 0f0c 	teqne	r4, ip
+  401b5c:	ea95 0f0c 	teqne	r5, ip
+  401b60:	f000 f8de 	bleq	401d20 <__aeabi_dmul+0x1dc>
+  401b64:	442c      	add	r4, r5
+  401b66:	ea81 0603 	eor.w	r6, r1, r3
+  401b6a:	ea21 514c 	bic.w	r1, r1, ip, lsl #21
+  401b6e:	ea23 534c 	bic.w	r3, r3, ip, lsl #21
+  401b72:	ea50 3501 	orrs.w	r5, r0, r1, lsl #12
+  401b76:	bf18      	it	ne
+  401b78:	ea52 3503 	orrsne.w	r5, r2, r3, lsl #12
+  401b7c:	f441 1180 	orr.w	r1, r1, #1048576	; 0x100000
+  401b80:	f443 1380 	orr.w	r3, r3, #1048576	; 0x100000
+  401b84:	d038      	beq.n	401bf8 <__aeabi_dmul+0xb4>
+  401b86:	fba0 ce02 	umull	ip, lr, r0, r2
+  401b8a:	f04f 0500 	mov.w	r5, #0
+  401b8e:	fbe1 e502 	umlal	lr, r5, r1, r2
+  401b92:	f006 4200 	and.w	r2, r6, #2147483648	; 0x80000000
+  401b96:	fbe0 e503 	umlal	lr, r5, r0, r3
+  401b9a:	f04f 0600 	mov.w	r6, #0
+  401b9e:	fbe1 5603 	umlal	r5, r6, r1, r3
+  401ba2:	f09c 0f00 	teq	ip, #0
+  401ba6:	bf18      	it	ne
+  401ba8:	f04e 0e01 	orrne.w	lr, lr, #1
+  401bac:	f1a4 04ff 	sub.w	r4, r4, #255	; 0xff
+  401bb0:	f5b6 7f00 	cmp.w	r6, #512	; 0x200
+  401bb4:	f564 7440 	sbc.w	r4, r4, #768	; 0x300
+  401bb8:	d204      	bcs.n	401bc4 <__aeabi_dmul+0x80>
+  401bba:	ea5f 0e4e 	movs.w	lr, lr, lsl #1
+  401bbe:	416d      	adcs	r5, r5
+  401bc0:	eb46 0606 	adc.w	r6, r6, r6
+  401bc4:	ea42 21c6 	orr.w	r1, r2, r6, lsl #11
+  401bc8:	ea41 5155 	orr.w	r1, r1, r5, lsr #21
+  401bcc:	ea4f 20c5 	mov.w	r0, r5, lsl #11
+  401bd0:	ea40 505e 	orr.w	r0, r0, lr, lsr #21
+  401bd4:	ea4f 2ece 	mov.w	lr, lr, lsl #11
+  401bd8:	f1b4 0cfd 	subs.w	ip, r4, #253	; 0xfd
+  401bdc:	bf88      	it	hi
+  401bde:	f5bc 6fe0 	cmphi.w	ip, #1792	; 0x700
+  401be2:	d81e      	bhi.n	401c22 <__aeabi_dmul+0xde>
+  401be4:	f1be 4f00 	cmp.w	lr, #2147483648	; 0x80000000
+  401be8:	bf08      	it	eq
+  401bea:	ea5f 0e50 	movseq.w	lr, r0, lsr #1
+  401bee:	f150 0000 	adcs.w	r0, r0, #0
+  401bf2:	eb41 5104 	adc.w	r1, r1, r4, lsl #20
+  401bf6:	bd70      	pop	{r4, r5, r6, pc}
+  401bf8:	f006 4600 	and.w	r6, r6, #2147483648	; 0x80000000
+  401bfc:	ea46 0101 	orr.w	r1, r6, r1
+  401c00:	ea40 0002 	orr.w	r0, r0, r2
+  401c04:	ea81 0103 	eor.w	r1, r1, r3
+  401c08:	ebb4 045c 	subs.w	r4, r4, ip, lsr #1
+  401c0c:	bfc2      	ittt	gt
+  401c0e:	ebd4 050c 	rsbsgt	r5, r4, ip
+  401c12:	ea41 5104 	orrgt.w	r1, r1, r4, lsl #20
+  401c16:	bd70      	popgt	{r4, r5, r6, pc}
+  401c18:	f441 1180 	orr.w	r1, r1, #1048576	; 0x100000
+  401c1c:	f04f 0e00 	mov.w	lr, #0
+  401c20:	3c01      	subs	r4, #1
+  401c22:	f300 80ab 	bgt.w	401d7c <__aeabi_dmul+0x238>
+  401c26:	f114 0f36 	cmn.w	r4, #54	; 0x36
+  401c2a:	bfde      	ittt	le
+  401c2c:	2000      	movle	r0, #0
+  401c2e:	f001 4100 	andle.w	r1, r1, #2147483648	; 0x80000000
+  401c32:	bd70      	pople	{r4, r5, r6, pc}
+  401c34:	f1c4 0400 	rsb	r4, r4, #0
+  401c38:	3c20      	subs	r4, #32
+  401c3a:	da35      	bge.n	401ca8 <__aeabi_dmul+0x164>
+  401c3c:	340c      	adds	r4, #12
+  401c3e:	dc1b      	bgt.n	401c78 <__aeabi_dmul+0x134>
+  401c40:	f104 0414 	add.w	r4, r4, #20
+  401c44:	f1c4 0520 	rsb	r5, r4, #32
+  401c48:	fa00 f305 	lsl.w	r3, r0, r5
+  401c4c:	fa20 f004 	lsr.w	r0, r0, r4
+  401c50:	fa01 f205 	lsl.w	r2, r1, r5
+  401c54:	ea40 0002 	orr.w	r0, r0, r2
+  401c58:	f001 4200 	and.w	r2, r1, #2147483648	; 0x80000000
+  401c5c:	f021 4100 	bic.w	r1, r1, #2147483648	; 0x80000000
+  401c60:	eb10 70d3 	adds.w	r0, r0, r3, lsr #31
+  401c64:	fa21 f604 	lsr.w	r6, r1, r4
+  401c68:	eb42 0106 	adc.w	r1, r2, r6
+  401c6c:	ea5e 0e43 	orrs.w	lr, lr, r3, lsl #1
+  401c70:	bf08      	it	eq
+  401c72:	ea20 70d3 	biceq.w	r0, r0, r3, lsr #31
+  401c76:	bd70      	pop	{r4, r5, r6, pc}
+  401c78:	f1c4 040c 	rsb	r4, r4, #12
+  401c7c:	f1c4 0520 	rsb	r5, r4, #32
+  401c80:	fa00 f304 	lsl.w	r3, r0, r4
+  401c84:	fa20 f005 	lsr.w	r0, r0, r5
+  401c88:	fa01 f204 	lsl.w	r2, r1, r4
+  401c8c:	ea40 0002 	orr.w	r0, r0, r2
+  401c90:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  401c94:	eb10 70d3 	adds.w	r0, r0, r3, lsr #31
+  401c98:	f141 0100 	adc.w	r1, r1, #0
+  401c9c:	ea5e 0e43 	orrs.w	lr, lr, r3, lsl #1
+  401ca0:	bf08      	it	eq
+  401ca2:	ea20 70d3 	biceq.w	r0, r0, r3, lsr #31
+  401ca6:	bd70      	pop	{r4, r5, r6, pc}
+  401ca8:	f1c4 0520 	rsb	r5, r4, #32
+  401cac:	fa00 f205 	lsl.w	r2, r0, r5
+  401cb0:	ea4e 0e02 	orr.w	lr, lr, r2
+  401cb4:	fa20 f304 	lsr.w	r3, r0, r4
+  401cb8:	fa01 f205 	lsl.w	r2, r1, r5
+  401cbc:	ea43 0302 	orr.w	r3, r3, r2
+  401cc0:	fa21 f004 	lsr.w	r0, r1, r4
+  401cc4:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  401cc8:	fa21 f204 	lsr.w	r2, r1, r4
+  401ccc:	ea20 0002 	bic.w	r0, r0, r2
+  401cd0:	eb00 70d3 	add.w	r0, r0, r3, lsr #31
+  401cd4:	ea5e 0e43 	orrs.w	lr, lr, r3, lsl #1
+  401cd8:	bf08      	it	eq
+  401cda:	ea20 70d3 	biceq.w	r0, r0, r3, lsr #31
+  401cde:	bd70      	pop	{r4, r5, r6, pc}
+  401ce0:	f094 0f00 	teq	r4, #0
+  401ce4:	d10f      	bne.n	401d06 <__aeabi_dmul+0x1c2>
+  401ce6:	f001 4600 	and.w	r6, r1, #2147483648	; 0x80000000
+  401cea:	0040      	lsls	r0, r0, #1
+  401cec:	eb41 0101 	adc.w	r1, r1, r1
+  401cf0:	f411 1f80 	tst.w	r1, #1048576	; 0x100000
+  401cf4:	bf08      	it	eq
+  401cf6:	3c01      	subeq	r4, #1
+  401cf8:	d0f7      	beq.n	401cea <__aeabi_dmul+0x1a6>
+  401cfa:	ea41 0106 	orr.w	r1, r1, r6
+  401cfe:	f095 0f00 	teq	r5, #0
+  401d02:	bf18      	it	ne
+  401d04:	4770      	bxne	lr
+  401d06:	f003 4600 	and.w	r6, r3, #2147483648	; 0x80000000
+  401d0a:	0052      	lsls	r2, r2, #1
+  401d0c:	eb43 0303 	adc.w	r3, r3, r3
+  401d10:	f413 1f80 	tst.w	r3, #1048576	; 0x100000
+  401d14:	bf08      	it	eq
+  401d16:	3d01      	subeq	r5, #1
+  401d18:	d0f7      	beq.n	401d0a <__aeabi_dmul+0x1c6>
+  401d1a:	ea43 0306 	orr.w	r3, r3, r6
+  401d1e:	4770      	bx	lr
+  401d20:	ea94 0f0c 	teq	r4, ip
+  401d24:	ea0c 5513 	and.w	r5, ip, r3, lsr #20
+  401d28:	bf18      	it	ne
+  401d2a:	ea95 0f0c 	teqne	r5, ip
+  401d2e:	d00c      	beq.n	401d4a <__aeabi_dmul+0x206>
+  401d30:	ea50 0641 	orrs.w	r6, r0, r1, lsl #1
+  401d34:	bf18      	it	ne
+  401d36:	ea52 0643 	orrsne.w	r6, r2, r3, lsl #1
+  401d3a:	d1d1      	bne.n	401ce0 <__aeabi_dmul+0x19c>
+  401d3c:	ea81 0103 	eor.w	r1, r1, r3
+  401d40:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  401d44:	f04f 0000 	mov.w	r0, #0
+  401d48:	bd70      	pop	{r4, r5, r6, pc}
+  401d4a:	ea50 0641 	orrs.w	r6, r0, r1, lsl #1
+  401d4e:	bf06      	itte	eq
+  401d50:	4610      	moveq	r0, r2
+  401d52:	4619      	moveq	r1, r3
+  401d54:	ea52 0643 	orrsne.w	r6, r2, r3, lsl #1
+  401d58:	d019      	beq.n	401d8e <__aeabi_dmul+0x24a>
+  401d5a:	ea94 0f0c 	teq	r4, ip
+  401d5e:	d102      	bne.n	401d66 <__aeabi_dmul+0x222>
+  401d60:	ea50 3601 	orrs.w	r6, r0, r1, lsl #12
+  401d64:	d113      	bne.n	401d8e <__aeabi_dmul+0x24a>
+  401d66:	ea95 0f0c 	teq	r5, ip
+  401d6a:	d105      	bne.n	401d78 <__aeabi_dmul+0x234>
+  401d6c:	ea52 3603 	orrs.w	r6, r2, r3, lsl #12
+  401d70:	bf1c      	itt	ne
+  401d72:	4610      	movne	r0, r2
+  401d74:	4619      	movne	r1, r3
+  401d76:	d10a      	bne.n	401d8e <__aeabi_dmul+0x24a>
+  401d78:	ea81 0103 	eor.w	r1, r1, r3
+  401d7c:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  401d80:	f041 41fe 	orr.w	r1, r1, #2130706432	; 0x7f000000
+  401d84:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  401d88:	f04f 0000 	mov.w	r0, #0
+  401d8c:	bd70      	pop	{r4, r5, r6, pc}
+  401d8e:	f041 41fe 	orr.w	r1, r1, #2130706432	; 0x7f000000
+  401d92:	f441 0178 	orr.w	r1, r1, #16252928	; 0xf80000
+  401d96:	bd70      	pop	{r4, r5, r6, pc}
+
+00401d98 <__aeabi_ddiv>:
+  401d98:	b570      	push	{r4, r5, r6, lr}
+  401d9a:	f04f 0cff 	mov.w	ip, #255	; 0xff
+  401d9e:	f44c 6ce0 	orr.w	ip, ip, #1792	; 0x700
+  401da2:	ea1c 5411 	ands.w	r4, ip, r1, lsr #20
+  401da6:	bf1d      	ittte	ne
+  401da8:	ea1c 5513 	andsne.w	r5, ip, r3, lsr #20
+  401dac:	ea94 0f0c 	teqne	r4, ip
+  401db0:	ea95 0f0c 	teqne	r5, ip
+  401db4:	f000 f8a7 	bleq	401f06 <__aeabi_ddiv+0x16e>
+  401db8:	eba4 0405 	sub.w	r4, r4, r5
+  401dbc:	ea81 0e03 	eor.w	lr, r1, r3
+  401dc0:	ea52 3503 	orrs.w	r5, r2, r3, lsl #12
+  401dc4:	ea4f 3101 	mov.w	r1, r1, lsl #12
+  401dc8:	f000 8088 	beq.w	401edc <__aeabi_ddiv+0x144>
+  401dcc:	ea4f 3303 	mov.w	r3, r3, lsl #12
+  401dd0:	f04f 5580 	mov.w	r5, #268435456	; 0x10000000
+  401dd4:	ea45 1313 	orr.w	r3, r5, r3, lsr #4
+  401dd8:	ea43 6312 	orr.w	r3, r3, r2, lsr #24
+  401ddc:	ea4f 2202 	mov.w	r2, r2, lsl #8
+  401de0:	ea45 1511 	orr.w	r5, r5, r1, lsr #4
+  401de4:	ea45 6510 	orr.w	r5, r5, r0, lsr #24
+  401de8:	ea4f 2600 	mov.w	r6, r0, lsl #8
+  401dec:	f00e 4100 	and.w	r1, lr, #2147483648	; 0x80000000
+  401df0:	429d      	cmp	r5, r3
+  401df2:	bf08      	it	eq
+  401df4:	4296      	cmpeq	r6, r2
+  401df6:	f144 04fd 	adc.w	r4, r4, #253	; 0xfd
+  401dfa:	f504 7440 	add.w	r4, r4, #768	; 0x300
+  401dfe:	d202      	bcs.n	401e06 <__aeabi_ddiv+0x6e>
+  401e00:	085b      	lsrs	r3, r3, #1
+  401e02:	ea4f 0232 	mov.w	r2, r2, rrx
+  401e06:	1ab6      	subs	r6, r6, r2
+  401e08:	eb65 0503 	sbc.w	r5, r5, r3
+  401e0c:	085b      	lsrs	r3, r3, #1
+  401e0e:	ea4f 0232 	mov.w	r2, r2, rrx
+  401e12:	f44f 1080 	mov.w	r0, #1048576	; 0x100000
+  401e16:	f44f 2c00 	mov.w	ip, #524288	; 0x80000
+  401e1a:	ebb6 0e02 	subs.w	lr, r6, r2
+  401e1e:	eb75 0e03 	sbcs.w	lr, r5, r3
+  401e22:	bf22      	ittt	cs
+  401e24:	1ab6      	subcs	r6, r6, r2
+  401e26:	4675      	movcs	r5, lr
+  401e28:	ea40 000c 	orrcs.w	r0, r0, ip
+  401e2c:	085b      	lsrs	r3, r3, #1
+  401e2e:	ea4f 0232 	mov.w	r2, r2, rrx
+  401e32:	ebb6 0e02 	subs.w	lr, r6, r2
+  401e36:	eb75 0e03 	sbcs.w	lr, r5, r3
+  401e3a:	bf22      	ittt	cs
+  401e3c:	1ab6      	subcs	r6, r6, r2
+  401e3e:	4675      	movcs	r5, lr
+  401e40:	ea40 005c 	orrcs.w	r0, r0, ip, lsr #1
+  401e44:	085b      	lsrs	r3, r3, #1
+  401e46:	ea4f 0232 	mov.w	r2, r2, rrx
+  401e4a:	ebb6 0e02 	subs.w	lr, r6, r2
+  401e4e:	eb75 0e03 	sbcs.w	lr, r5, r3
+  401e52:	bf22      	ittt	cs
+  401e54:	1ab6      	subcs	r6, r6, r2
+  401e56:	4675      	movcs	r5, lr
+  401e58:	ea40 009c 	orrcs.w	r0, r0, ip, lsr #2
+  401e5c:	085b      	lsrs	r3, r3, #1
+  401e5e:	ea4f 0232 	mov.w	r2, r2, rrx
+  401e62:	ebb6 0e02 	subs.w	lr, r6, r2
+  401e66:	eb75 0e03 	sbcs.w	lr, r5, r3
+  401e6a:	bf22      	ittt	cs
+  401e6c:	1ab6      	subcs	r6, r6, r2
+  401e6e:	4675      	movcs	r5, lr
+  401e70:	ea40 00dc 	orrcs.w	r0, r0, ip, lsr #3
+  401e74:	ea55 0e06 	orrs.w	lr, r5, r6
+  401e78:	d018      	beq.n	401eac <__aeabi_ddiv+0x114>
+  401e7a:	ea4f 1505 	mov.w	r5, r5, lsl #4
+  401e7e:	ea45 7516 	orr.w	r5, r5, r6, lsr #28
+  401e82:	ea4f 1606 	mov.w	r6, r6, lsl #4
+  401e86:	ea4f 03c3 	mov.w	r3, r3, lsl #3
+  401e8a:	ea43 7352 	orr.w	r3, r3, r2, lsr #29
+  401e8e:	ea4f 02c2 	mov.w	r2, r2, lsl #3
+  401e92:	ea5f 1c1c 	movs.w	ip, ip, lsr #4
+  401e96:	d1c0      	bne.n	401e1a <__aeabi_ddiv+0x82>
+  401e98:	f411 1f80 	tst.w	r1, #1048576	; 0x100000
+  401e9c:	d10b      	bne.n	401eb6 <__aeabi_ddiv+0x11e>
+  401e9e:	ea41 0100 	orr.w	r1, r1, r0
+  401ea2:	f04f 0000 	mov.w	r0, #0
+  401ea6:	f04f 4c00 	mov.w	ip, #2147483648	; 0x80000000
+  401eaa:	e7b6      	b.n	401e1a <__aeabi_ddiv+0x82>
+  401eac:	f411 1f80 	tst.w	r1, #1048576	; 0x100000
+  401eb0:	bf04      	itt	eq
+  401eb2:	4301      	orreq	r1, r0
+  401eb4:	2000      	moveq	r0, #0
+  401eb6:	f1b4 0cfd 	subs.w	ip, r4, #253	; 0xfd
+  401eba:	bf88      	it	hi
+  401ebc:	f5bc 6fe0 	cmphi.w	ip, #1792	; 0x700
+  401ec0:	f63f aeaf 	bhi.w	401c22 <__aeabi_dmul+0xde>
+  401ec4:	ebb5 0c03 	subs.w	ip, r5, r3
+  401ec8:	bf04      	itt	eq
+  401eca:	ebb6 0c02 	subseq.w	ip, r6, r2
+  401ece:	ea5f 0c50 	movseq.w	ip, r0, lsr #1
+  401ed2:	f150 0000 	adcs.w	r0, r0, #0
+  401ed6:	eb41 5104 	adc.w	r1, r1, r4, lsl #20
+  401eda:	bd70      	pop	{r4, r5, r6, pc}
+  401edc:	f00e 4e00 	and.w	lr, lr, #2147483648	; 0x80000000
+  401ee0:	ea4e 3111 	orr.w	r1, lr, r1, lsr #12
+  401ee4:	eb14 045c 	adds.w	r4, r4, ip, lsr #1
+  401ee8:	bfc2      	ittt	gt
+  401eea:	ebd4 050c 	rsbsgt	r5, r4, ip
+  401eee:	ea41 5104 	orrgt.w	r1, r1, r4, lsl #20
+  401ef2:	bd70      	popgt	{r4, r5, r6, pc}
+  401ef4:	f441 1180 	orr.w	r1, r1, #1048576	; 0x100000
+  401ef8:	f04f 0e00 	mov.w	lr, #0
+  401efc:	3c01      	subs	r4, #1
+  401efe:	e690      	b.n	401c22 <__aeabi_dmul+0xde>
+  401f00:	ea45 0e06 	orr.w	lr, r5, r6
+  401f04:	e68d      	b.n	401c22 <__aeabi_dmul+0xde>
+  401f06:	ea0c 5513 	and.w	r5, ip, r3, lsr #20
+  401f0a:	ea94 0f0c 	teq	r4, ip
+  401f0e:	bf08      	it	eq
+  401f10:	ea95 0f0c 	teqeq	r5, ip
+  401f14:	f43f af3b 	beq.w	401d8e <__aeabi_dmul+0x24a>
+  401f18:	ea94 0f0c 	teq	r4, ip
+  401f1c:	d10a      	bne.n	401f34 <__aeabi_ddiv+0x19c>
+  401f1e:	ea50 3401 	orrs.w	r4, r0, r1, lsl #12
+  401f22:	f47f af34 	bne.w	401d8e <__aeabi_dmul+0x24a>
+  401f26:	ea95 0f0c 	teq	r5, ip
+  401f2a:	f47f af25 	bne.w	401d78 <__aeabi_dmul+0x234>
+  401f2e:	4610      	mov	r0, r2
+  401f30:	4619      	mov	r1, r3
+  401f32:	e72c      	b.n	401d8e <__aeabi_dmul+0x24a>
+  401f34:	ea95 0f0c 	teq	r5, ip
+  401f38:	d106      	bne.n	401f48 <__aeabi_ddiv+0x1b0>
+  401f3a:	ea52 3503 	orrs.w	r5, r2, r3, lsl #12
+  401f3e:	f43f aefd 	beq.w	401d3c <__aeabi_dmul+0x1f8>
+  401f42:	4610      	mov	r0, r2
+  401f44:	4619      	mov	r1, r3
+  401f46:	e722      	b.n	401d8e <__aeabi_dmul+0x24a>
+  401f48:	ea50 0641 	orrs.w	r6, r0, r1, lsl #1
+  401f4c:	bf18      	it	ne
+  401f4e:	ea52 0643 	orrsne.w	r6, r2, r3, lsl #1
+  401f52:	f47f aec5 	bne.w	401ce0 <__aeabi_dmul+0x19c>
+  401f56:	ea50 0441 	orrs.w	r4, r0, r1, lsl #1
+  401f5a:	f47f af0d 	bne.w	401d78 <__aeabi_dmul+0x234>
+  401f5e:	ea52 0543 	orrs.w	r5, r2, r3, lsl #1
+  401f62:	f47f aeeb 	bne.w	401d3c <__aeabi_dmul+0x1f8>
+  401f66:	e712      	b.n	401d8e <__aeabi_dmul+0x24a>
+
+00401f68 <__aeabi_d2uiz>:
+  401f68:	004a      	lsls	r2, r1, #1
+  401f6a:	d211      	bcs.n	401f90 <__aeabi_d2uiz+0x28>
+  401f6c:	f512 1200 	adds.w	r2, r2, #2097152	; 0x200000
+  401f70:	d211      	bcs.n	401f96 <__aeabi_d2uiz+0x2e>
+  401f72:	d50d      	bpl.n	401f90 <__aeabi_d2uiz+0x28>
+  401f74:	f46f 7378 	mvn.w	r3, #992	; 0x3e0
+  401f78:	ebb3 5262 	subs.w	r2, r3, r2, asr #21
+  401f7c:	d40e      	bmi.n	401f9c <__aeabi_d2uiz+0x34>
+  401f7e:	ea4f 23c1 	mov.w	r3, r1, lsl #11
+  401f82:	f043 4300 	orr.w	r3, r3, #2147483648	; 0x80000000
+  401f86:	ea43 5350 	orr.w	r3, r3, r0, lsr #21
+  401f8a:	fa23 f002 	lsr.w	r0, r3, r2
+  401f8e:	4770      	bx	lr
+  401f90:	f04f 0000 	mov.w	r0, #0
+  401f94:	4770      	bx	lr
+  401f96:	ea50 3001 	orrs.w	r0, r0, r1, lsl #12
+  401f9a:	d102      	bne.n	401fa2 <__aeabi_d2uiz+0x3a>
+  401f9c:	f04f 30ff 	mov.w	r0, #4294967295
+  401fa0:	4770      	bx	lr
+  401fa2:	f04f 0000 	mov.w	r0, #0
+  401fa6:	4770      	bx	lr
+
+00401fa8 <__libc_init_array>:
+  401fa8:	b570      	push	{r4, r5, r6, lr}
+  401faa:	4e0f      	ldr	r6, [pc, #60]	; (401fe8 <__libc_init_array+0x40>)
+  401fac:	4d0f      	ldr	r5, [pc, #60]	; (401fec <__libc_init_array+0x44>)
+  401fae:	1b76      	subs	r6, r6, r5
+  401fb0:	10b6      	asrs	r6, r6, #2
+  401fb2:	bf18      	it	ne
+  401fb4:	2400      	movne	r4, #0
+  401fb6:	d005      	beq.n	401fc4 <__libc_init_array+0x1c>
+  401fb8:	3401      	adds	r4, #1
+  401fba:	f855 3b04 	ldr.w	r3, [r5], #4
+  401fbe:	4798      	blx	r3
+  401fc0:	42a6      	cmp	r6, r4
+  401fc2:	d1f9      	bne.n	401fb8 <__libc_init_array+0x10>
+  401fc4:	4e0a      	ldr	r6, [pc, #40]	; (401ff0 <__libc_init_array+0x48>)
+  401fc6:	4d0b      	ldr	r5, [pc, #44]	; (401ff4 <__libc_init_array+0x4c>)
+  401fc8:	1b76      	subs	r6, r6, r5
+  401fca:	f000 f891 	bl	4020f0 <_init>
+  401fce:	10b6      	asrs	r6, r6, #2
+  401fd0:	bf18      	it	ne
+  401fd2:	2400      	movne	r4, #0
+  401fd4:	d006      	beq.n	401fe4 <__libc_init_array+0x3c>
+  401fd6:	3401      	adds	r4, #1
+  401fd8:	f855 3b04 	ldr.w	r3, [r5], #4
+  401fdc:	4798      	blx	r3
+  401fde:	42a6      	cmp	r6, r4
+  401fe0:	d1f9      	bne.n	401fd6 <__libc_init_array+0x2e>
+  401fe2:	bd70      	pop	{r4, r5, r6, pc}
+  401fe4:	bd70      	pop	{r4, r5, r6, pc}
+  401fe6:	bf00      	nop
+  401fe8:	004020fc 	.word	0x004020fc
+  401fec:	004020fc 	.word	0x004020fc
+  401ff0:	00402104 	.word	0x00402104
+  401ff4:	004020fc 	.word	0x004020fc
+
+00401ff8 <register_fini>:
+  401ff8:	4b02      	ldr	r3, [pc, #8]	; (402004 <register_fini+0xc>)
+  401ffa:	b113      	cbz	r3, 402002 <register_fini+0xa>
+  401ffc:	4802      	ldr	r0, [pc, #8]	; (402008 <register_fini+0x10>)
+  401ffe:	f000 b805 	b.w	40200c <atexit>
+  402002:	4770      	bx	lr
+  402004:	00000000 	.word	0x00000000
+  402008:	00402019 	.word	0x00402019
+
+0040200c <atexit>:
+  40200c:	4601      	mov	r1, r0
+  40200e:	2000      	movs	r0, #0
+  402010:	4602      	mov	r2, r0
+  402012:	4603      	mov	r3, r0
+  402014:	f000 b816 	b.w	402044 <__register_exitproc>
+
+00402018 <__libc_fini_array>:
+  402018:	b538      	push	{r3, r4, r5, lr}
+  40201a:	4b08      	ldr	r3, [pc, #32]	; (40203c <__libc_fini_array+0x24>)
+  40201c:	4d08      	ldr	r5, [pc, #32]	; (402040 <__libc_fini_array+0x28>)
+  40201e:	1aed      	subs	r5, r5, r3
+  402020:	10ac      	asrs	r4, r5, #2
+  402022:	bf18      	it	ne
+  402024:	18ed      	addne	r5, r5, r3
+  402026:	d005      	beq.n	402034 <__libc_fini_array+0x1c>
+  402028:	3c01      	subs	r4, #1
+  40202a:	f855 3d04 	ldr.w	r3, [r5, #-4]!
+  40202e:	4798      	blx	r3
+  402030:	2c00      	cmp	r4, #0
+  402032:	d1f9      	bne.n	402028 <__libc_fini_array+0x10>
+  402034:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
+  402038:	f000 b864 	b.w	402104 <_fini>
+  40203c:	00402110 	.word	0x00402110
+  402040:	00402114 	.word	0x00402114
+
+00402044 <__register_exitproc>:
+  402044:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+  402048:	4c25      	ldr	r4, [pc, #148]	; (4020e0 <__register_exitproc+0x9c>)
+  40204a:	6825      	ldr	r5, [r4, #0]
+  40204c:	f8d5 4148 	ldr.w	r4, [r5, #328]	; 0x148
+  402050:	4606      	mov	r6, r0
+  402052:	4688      	mov	r8, r1
+  402054:	4692      	mov	sl, r2
+  402056:	4699      	mov	r9, r3
+  402058:	b3cc      	cbz	r4, 4020ce <__register_exitproc+0x8a>
+  40205a:	6860      	ldr	r0, [r4, #4]
+  40205c:	281f      	cmp	r0, #31
+  40205e:	dc18      	bgt.n	402092 <__register_exitproc+0x4e>
+  402060:	1c43      	adds	r3, r0, #1
+  402062:	b17e      	cbz	r6, 402084 <__register_exitproc+0x40>
+  402064:	eb04 0580 	add.w	r5, r4, r0, lsl #2
+  402068:	2101      	movs	r1, #1
+  40206a:	f8c5 a088 	str.w	sl, [r5, #136]	; 0x88
+  40206e:	f8d4 7188 	ldr.w	r7, [r4, #392]	; 0x188
+  402072:	fa01 f200 	lsl.w	r2, r1, r0
+  402076:	4317      	orrs	r7, r2
+  402078:	2e02      	cmp	r6, #2
+  40207a:	f8c4 7188 	str.w	r7, [r4, #392]	; 0x188
+  40207e:	f8c5 9108 	str.w	r9, [r5, #264]	; 0x108
+  402082:	d01e      	beq.n	4020c2 <__register_exitproc+0x7e>
+  402084:	3002      	adds	r0, #2
+  402086:	6063      	str	r3, [r4, #4]
+  402088:	f844 8020 	str.w	r8, [r4, r0, lsl #2]
+  40208c:	2000      	movs	r0, #0
+  40208e:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+  402092:	4b14      	ldr	r3, [pc, #80]	; (4020e4 <__register_exitproc+0xa0>)
+  402094:	b303      	cbz	r3, 4020d8 <__register_exitproc+0x94>
+  402096:	f44f 70c8 	mov.w	r0, #400	; 0x190
+  40209a:	f3af 8000 	nop.w
+  40209e:	4604      	mov	r4, r0
+  4020a0:	b1d0      	cbz	r0, 4020d8 <__register_exitproc+0x94>
+  4020a2:	f8d5 3148 	ldr.w	r3, [r5, #328]	; 0x148
+  4020a6:	2700      	movs	r7, #0
+  4020a8:	e880 0088 	stmia.w	r0, {r3, r7}
+  4020ac:	f8c5 4148 	str.w	r4, [r5, #328]	; 0x148
+  4020b0:	4638      	mov	r0, r7
+  4020b2:	2301      	movs	r3, #1
+  4020b4:	f8c4 7188 	str.w	r7, [r4, #392]	; 0x188
+  4020b8:	f8c4 718c 	str.w	r7, [r4, #396]	; 0x18c
+  4020bc:	2e00      	cmp	r6, #0
+  4020be:	d0e1      	beq.n	402084 <__register_exitproc+0x40>
+  4020c0:	e7d0      	b.n	402064 <__register_exitproc+0x20>
+  4020c2:	f8d4 118c 	ldr.w	r1, [r4, #396]	; 0x18c
+  4020c6:	430a      	orrs	r2, r1
+  4020c8:	f8c4 218c 	str.w	r2, [r4, #396]	; 0x18c
+  4020cc:	e7da      	b.n	402084 <__register_exitproc+0x40>
+  4020ce:	f505 74a6 	add.w	r4, r5, #332	; 0x14c
+  4020d2:	f8c5 4148 	str.w	r4, [r5, #328]	; 0x148
+  4020d6:	e7c0      	b.n	40205a <__register_exitproc+0x16>
+  4020d8:	f04f 30ff 	mov.w	r0, #4294967295
+  4020dc:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+  4020e0:	004020ec 	.word	0x004020ec
+  4020e4:	00000000 	.word	0x00000000
+  4020e8:	00000043 	.word	0x00000043
+
+004020ec <_global_impure_ptr>:
+  4020ec:	20000010                                ... 
+
+004020f0 <_init>:
+  4020f0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+  4020f2:	bf00      	nop
+  4020f4:	bcf8      	pop	{r3, r4, r5, r6, r7}
+  4020f6:	bc08      	pop	{r3}
+  4020f8:	469e      	mov	lr, r3
+  4020fa:	4770      	bx	lr
+
+004020fc <__init_array_start>:
+  4020fc:	00401ff9 	.word	0x00401ff9
+
+00402100 <__frame_dummy_init_array_entry>:
+  402100:	004000f1                                ..@.
+
+00402104 <_fini>:
+  402104:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+  402106:	bf00      	nop
+  402108:	bcf8      	pop	{r3, r4, r5, r6, r7}
+  40210a:	bc08      	pop	{r3}
+  40210c:	469e      	mov	lr, r3
+  40210e:	4770      	bx	lr
+
+00402110 <__fini_array_start>:
+  402110:	004000cd 	.word	0x004000cd
