@@ -1,2 +1,0 @@
-# Entegas
-Entrega de Relatórios
