@@ -346,9 +346,8 @@ static void configure_tc(void)
 }
 
 
-
-float converteAngulo(float tmp2){
-	float phi = ((PI)/3.3)*tmp2;
+float converteAngulo(float temporaria){
+	float phi = ((PI)/3.3)*temporaria;
 	return phi;
 }
 
@@ -358,10 +357,11 @@ void desenha_circulo(void){
 
 void desenha_linha(void){
 	int raioQueOParta = 60;
+	float angulo = converteAngulo(tmp2);
 	int pontoCentroX = ILI93XX_LCD_WIDTH/2;
 	int pontoCentroY = ILI93XX_LCD_HEIGHT/2;
-	int pontoFinalX =  (int)(ILI93XX_LCD_WIDTH/2) + (raioQueOParta*cos(converteAngulo(tmp2)));
-	int pontoFinalY =  (int)(ILI93XX_LCD_HEIGHT/2) - (raioQueOParta*sin(converteAngulo(tmp2)));
+	int pontoFinalX =  (int)(ILI93XX_LCD_WIDTH/2) + (raioQueOParta*cos(angulo));
+	int pontoFinalY =  (int)(ILI93XX_LCD_HEIGHT/2) - (raioQueOParta*sin(angulo));
 	
 	ili93xx_draw_line(pontoCentroX, pontoCentroY, pontoFinalX, pontoFinalY);
 }
