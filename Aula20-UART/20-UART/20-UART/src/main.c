@@ -171,6 +171,8 @@ void config_uart(void){
 	
 	stdio_serial_init((Usart *)CONF_UART, &uart_serial_options);
 	
+	uint32_t uart_interrupt_options = IMPLEMENTAR;
+	
 	uart_enable_interrupt(UART0, &uart_serial_options);
 }
 
